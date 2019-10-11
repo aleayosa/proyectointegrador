@@ -1,0 +1,40 @@
+*{
+padding: 0;
+margin: 0 auto;
+}
+
+body{
+  background-color: #FFFFFF;
+}
+
+header{
+  height: 100px;
+  background-color: #01949A
+
+}
+
+h1{
+  color: white;
+}
+
+p{
+  color: #0C1446;
+}
+
+footer{
+  height: 200px;
+  background-color: #0C1446;
+
+}
+
+main{
+  height: 500px;
+}
+
+nav{
+  position:relative;
+  right: 650px;
+  width: 250px;
+  height: 500px;
+  background-color: #87ACA3
+}
