@@ -1,6 +1,6 @@
 *{
 padding: 0;
-margin: 0 auto;
+margin: 0;
 }
 
 body{
@@ -9,7 +9,7 @@ body{
 
 header{
   height: 100px;
-  background-color: #01949A
+  background-color: #01949A;
 
 }
 
@@ -27,14 +27,7 @@ footer{
 
 }
 
-main{
-  height: 500px;
-}
-
-nav{
-  position:relative;
-  right: 650px;
-  width: 250px;
-  height: 500px;
-  background-color: #87ACA3
+.container-fluid{
+padding: 0;
+margin: 0;
 }
