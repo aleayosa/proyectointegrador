@@ -10,8 +10,37 @@
   <body>
 <div class="">
   <header>
-    <h1>ESTO ES UNA HERMOSA PRUEBA</h1>
-    <p>a ver como queda esto</p>
+    <header>
+      <div class="Navegacion">
+          <nav class="row d-flex justify-content-around align-center p-2 bd-highlight navbar navbar-expand-lg navbar-light navbar container-fluid">
+            <a class="col-2 offset-1 navbar-brand linkHome logo" href="home.html"><img class="img-fluid" src="imgs/logo.png" alt="logo de marca" id="logo"></a>
+            <div class="col-4 d-flex align-center justify-content-around  input-group barraBusca container-fluid">
+              <input class="col-9 form-control" type="text" placeholder="¿Qué estas buscando?" aria-label="Buscador" aria-describedby="button-addon2" id="buscador">
+              <button class="col-2 offset-1 btn btn-outline-dark" type="button" id="button-addon2"><img class="lupita" src="imgs/buscar.png" alt="lupita"></button>
+            </div>
+            <div class="col-4  justify-content-between">
+             <button class="col-4 Navegacion" type="button" class="btn btn-outline-dark"><a href="login.html">Log in</a></button>
+             <button class="col-4 Navegacion" type="button" class="btn btn-outline-dark"><a href="registro.html">Registro</a></button>
+             <button class="col-3 Navegacion" type="button" class="btn btn-outline-dark"><img class="Carrito" src="imgs/shopping-cart.png" alt=""></button>
+           </div>
+          </nav>
+         </div>
+         <div class="row Col-xs-12 col-sm-12 col-md-12  d-lg-none justify-content-around align-center" id="Menu">
+          <img class="col-2 logo2"src="imgs\logo.png" alt="logo">
+          <button class="col-8 btn btn-light collapseMenu" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><b>MENU</b></button>
+          <div class="row collapse" id="collapseMenu">
+           <div class="card card-body">
+             <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a class="menu" href="login.html">Log in</a></li>
+              <li class="list-group-item"><a class="menu" href="registro.html">Registro</a></li>
+              <li class="list-group-item"><a class="menu" href="#">Mi carrito</a></li>
+              <li class="list-group-item"><a class="menu" href="faq.html">Preguntas frecuentes</a></li>
+             </ul>
+           </div>
+         </div>
+         </div>
+
+    </header>
   </header>
   <main>
     <nav>
@@ -22,7 +51,25 @@
     </form>
   </main>
   <footer>
-  </footer>
+    <div class="row d-flex align-item-center justify-content-around container-fluid" id="pie">
+     <div class="row col-lg-3 col-md-4 col-sm-6 seguinos d-flex align-item-center justify-content-around container-fluid ">
+      <h5 class="col-12 d-flex">Seguinos</h5>
+      <a class= "col-2" href="http:www.facebook.com"><img class="seguinos" src="imgs/socialmedia/fb.png" alt="facebook"></a>
+      <a class= "col-2" href="http:www.instagram.com"><img class="seguinos" src="imgs/socialmedia/ig.png" alt="instagram"></a>
+      <a class= "col-2" href="http:www.pinterest.com"><img class="seguinos" src="imgs/socialmedia/pi.png" alt="pinterest"></a>
+      <a class= "col-2" href="http:www.twitter.com"><img class="seguinos" src="imgs/socialmedia/tw.png" alt="twitter"></a>
+      <a class= "col-2" href="http:www.youtube.com"><img class="seguinos" src="imgs/socialmedia/yt.png" alt="youtube"></a>
+     </div>
+    <a class="col-lg-4 d-flex align-item-center justify-content-around container-fluid" href="faq.html" id="faq"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
+    <div class="col-lg-5 col-md-4 col-sm-6 d-flex align-item-center justify-content-around container-fluid input-group mb-3 ">
+      <img class="col-2 icon" src="imgs/news.png" alt="imgs/news.png">
+      <input class="col-8" type="text" class="form-control" placeholder="ingresá tu e-email" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <div class="col-2 input-group-append">
+      <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+    </div>
+   </div>
+  </div>
+ </footer>
 </div>
   </body>
 </html>

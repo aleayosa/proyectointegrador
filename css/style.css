@@ -8,9 +8,10 @@ body{
 }
 
 header{
-  height: 100px;
-  background-color: #EBF5F7;
+  height: 70px;
   border-bottom: solid 1px #01949A;
+  margin-bottom: 10%;
+  }
 
 }
 
@@ -23,12 +24,105 @@ p{
 }
 
 footer{
-  height: 200px;
-  background-color: #0C1446;
-
+  height: 70px;
 }
 
 .container-fluid{
 padding: 0;
 margin: 0;
+}
+
+#logo{
+  width: 80%;
+}
+
+.barraBusca{
+  padding: 0px;
+  height: 40px;
+}
+#buscador{
+  height: 40px;
+  padding: 0px;
+}
+
+#button-addon2{
+  width: 100%;
+  height: 40px;
+  padding: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.lupita{
+  width:40%;
+}
+
+button.Navegacion{
+  padding: 0px;
+  margin-top: 0px;
+}
+
+img.Carrito{
+  width: 40px;
+  height: auto;
+  }
+
+.Menu{
+  height: 50px;
+  margin-bottom: 5px;
+  padding: 0px;
+}
+
+.logo2{
+  margin-top:5px;
+  margin-bottom: 5px;
+  width: 10%;
+  height: auto;
+  padding: 0px;
+  }
+
+.collapseMenu{
+  margin-top: 40px;
+  width: 100%;
+  height: 60px;
+  padding: 0px;
+}
+
+.icon{
+  width: 20%;
+}
+
+#pie{
+  width: 100%;
+  height: 80px;
+}
+
+
+@media (max-width:989px){
+  .Navegacion{
+    display: none;
+  }
+
+  #faq{
+    display: none;
+  }
+
+  header{
+    height: 145px;
+    margin-bottom: 2%;
+    }
+  }
+
+@media(max-width:625 max-width:989){
+  .Navegacion{
+    display: none;
+  }
+  #faq{
+    display: none;
+  }
+  header{
+    height: 100px;
+    margin-bottom: 2%;
+    }
+
 }

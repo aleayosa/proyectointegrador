@@ -93,6 +93,30 @@ button.fav:focus{
   width: 100%;
 }
 
+
+.navbar{
+  padding: 0px;
+}
+
+
+@media (max-width:579px) {
+  article{
+    border-right: none;
+    border-bottom: solid 1px lightgrey;
+  }
+  article:last-child{
+    border-bottom: none;
+  }
+
+  nav{
+    background-color: #87ACA3;
+  }
+
+  a{
+    color: #EBF5F7;
+  }
+}
+
 @media (max-width:579px) {
   article{
     border-right: none;
