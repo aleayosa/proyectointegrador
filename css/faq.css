@@ -1,0 +1,13 @@
+nav ul{
+    list-style-type: none;
+    overflow: hidden;
+   
+}
+nav ul li{
+    float: center;
+    width: 95%;
+}
+nav ul li a{
+    float: center;
+   
+}
