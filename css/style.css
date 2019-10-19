@@ -9,10 +9,9 @@ body{
 
 header{
   height: 70px;
-  border-bottom: solid 1px #01949A;
+  border: none;
   margin-bottom: 10%;
   }
-
 }
 
 h1{
@@ -24,7 +23,7 @@ p{
 }
 
 footer{
-  height: 70px;
+  height:50px;
 }
 
 .container-fluid{
@@ -32,38 +31,40 @@ padding: 0;
 margin: 0;
 }
 
-#logo{
-  width: 80%;
+.navConte{
+  background-color: #7488a0;
+}
+nav.navegacion{
+  border: none;
 }
 
-.barraBusca{
-  padding: 0px;
-  height: 40px;
-}
-#buscador{
-  height: 40px;
-  padding: 0px;
+.logo{
+  width: 60%;
 }
 
-#button-addon2{
+.btn-light{
+  position: sticky;
   width: 100%;
   height: 40px;
-  padding: 0px;
-  margin-top: 0px;
-  margin-left: 0px;
 }
 
 .lupita{
   width:40%;
 }
 
-button.Navegacion{
-  padding: 0px;
-  margin-top: 0px;
+a.Navegacion {
+  color: #666666;
+  font-style: ;
+  text-decoration: none;
+}
+
+input.navegacion{
+  border: none;
+  height: 40px;
 }
 
 img.Carrito{
-  width: 40px;
+  width: 30px;
   height: auto;
   }
 
@@ -96,10 +97,21 @@ img.Carrito{
   width: 100%;
   height: 80px;
 }
+#faq{
+  width: 50%
+}
+
+.icon{
+  width: 20%;
+}
+.news img{
+  width: 100%;
+  border:
+}
 
 
 @media (max-width:989px){
-  .Navegacion{
+  .navConte{
     display: none;
   }
 
@@ -114,7 +126,7 @@ img.Carrito{
   }
 
 @media(max-width:625 max-width:989){
-  .Navegacion{
+  .navConte{
     display: none;
   }
   #faq{
