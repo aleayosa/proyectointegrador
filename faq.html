@@ -13,20 +13,20 @@
   <body>
 <div class="container-fluid">
   <header>
-    <div class="Navegacion">
-        <nav class="row d-flex justify-content-around align-center p-2 bd-highlight navbar navbar-expand-lg navbar-light navbar container-fluid">
-          <a class="col-2 offset-1 navbar-brand linkHome logo" href="home.html"><img class="img-fluid" src="imgs/logo.png" alt="logo de marca" id="logo"></a>
-          <div class="col-4 d-flex align-center justify-content-around  input-group barraBusca container-fluid">
-            <input class="col-9 form-control" type="text" placeholder="¿Qué estas buscando?" aria-label="Buscador" aria-describedby="button-addon2" id="buscador">
-            <button class="col-2 offset-1 btn btn-outline-dark" type="button" id="button-addon2"><img class="lupita" src="imgs/buscar.png" alt="lupita"></button>
+    <div class="row col-12 container-fluid align-center justify-content-around navConte">
+      <a class="col-2 offset-1 p-1 m-0 d-flex justify-content-center" href="home.html"><img class="img-fluid m-0 p-0 logo" src="imgs/logo.png" alt="logo de marca"></a>
+      <div class="row col-9 d-flex justify-content-around p-5 navegacion">
+          <div class="col-5 d-flex align-center justify-content-center p-0">
+            <input class="col-9 p-0 form-control navegacion" type="text" placeholder="¿Qué estas buscando?">
+            <button class="col-2 p-0 m-0 btn btn-light navegacion" type="button"><img class="lupita" src="imgs/buscar.png" alt="lupita"></button>
           </div>
-          <div class="col-4  justify-content-between">
-           <button class="col-4 Navegacion" type="button" class="btn btn-outline-dark"><a href="login.html">Log in</a></button>
-           <button class="col-4 Navegacion" type="button" class="btn btn-outline-dark"><a href="registro.html">Registro</a></button>
-           <button class="col-3 Navegacion" type="button" class="btn btn-outline-dark"><img class="Carrito" src="imgs/shopping-cart.png" alt=""></button>
+          <div class="col-5 d-flex justify-content-around align-center p-0">
+           <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="login.html">Log in</a></button>
+           <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="registro.html">Registro</a></button>
+           <button class="col-3 p-0 m-0 navegacion btn btn-light" type="button"><img class="Carrito" src="imgs/shopping-cart.png" alt=""></button>
          </div>
-        </nav>
-       </div>
+     </div>
+   </div>
        <div class="row Col-xs-12 col-sm-12 col-md-12  d-lg-none justify-content-around align-center" id="Menu">
         <img class="col-2 logo2"src="imgs\logo.png" alt="logo">
         <button class="col-8 btn btn-light collapseMenu" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><b>MENU</b></button>

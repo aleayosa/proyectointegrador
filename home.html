@@ -15,32 +15,34 @@
     <div class="row col-12 container-fluid align-center justify-content-around navConte">
       <a class="col-2 offset-1 p-1 m-0 d-flex justify-content-center" href="#"><img class="img-fluid m-0 p-0 logo" src="imgs/logo.png" alt="logo de marca"></a>
       <div class="row col-9 d-flex justify-content-around p-5 navegacion">
-          <div class="col-5 d-flex align-center justify-content-center p-0">
-            <input class="col-9 p-0 form-control navegacion" type="text" placeholder="¿Qué estas buscando?">
-            <button class="col-2 p-0 m-0 btn btn-light navegacion" type="button"><img class="lupita" src="imgs/buscar.png" alt="lupita"></button>
-          </div>
-          <div class="col-5 d-flex justify-content-around align-center p-0">
-           <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="login.html">Log in</a></button>
-           <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="registro.html">Registro</a></button>
-           <button class="col-3 p-0 m-0 navegacion btn btn-light" type="button"><img class="Carrito" src="imgs/shopping-cart.png" alt=""></button>
-         </div>
+        <div class="col-5 d-flex align-center justify-content-center p-0">
+          <input class="col-9 p-0 form-control navegacion" type="text" placeholder="¿Qué estas buscando?">
+          <button class="col-2 p-0 m-0 btn btn-light navegacion" type="button"><img class="lupita" src="imgs/buscar.png" alt="lupita"></button>
+        </div>
+        <div class="col-5 d-flex justify-content-around align-center p-0">
+          <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="login.html">Log in</a></button>
+          <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="registro.html">Registro</a></button>
+          <button class="col-3 p-0 m-0 navegacion btn btn-light" type="button"><img class="Carrito" src="imgs/shopping-cart.png" alt=""></button>
+        </div>
      </div>
    </div>
-       <div class="row Col-xs-12 col-sm-12 col-md-12  d-lg-none justify-content-around align-center" id="Menu">
-        <img class="col-2 logo2"src="imgs\logo.png" alt="logo">
-        <button class="col-8 btn btn-light collapseMenu" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><b>MENU</b></button>
-        <div class="row collapse" id="collapseMenu">
+
+   <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
+      <img class="col-2 p-0 m-4 logo2"src="imgs\logo.png" alt="logo">
+      <div class="col-8 p-0">
+        <div class="col- 8 menu" >
+          <button class="col-8 p-0 m-0 btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">MENU</button>
+       <div class="collapse" id="collapseExample">
          <div class="card card-body">
            <ul class="list-group list-group-flush">
-            <li class="list-group-item"><a class="menu" href="login.html">Log in</a></li>
-            <li class="list-group-item"><a class="menu" href="registro.html">Registro</a></li>
-            <li class="list-group-item"><a class="menu" href="#">Mi carrito</a></li>
-            <li class="list-group-item"><a class="menu" href="faq.html">Preguntas frecuentes</a></li>
-           </ul>
+           <li class="list-group-item"><a class="menu" href="login.html">Log in</a></li>
+           <li class="list-group-item"><a class="menu" href="registro.html">Registro</a></li>
+           <li class="list-group-item"><a class="menu" href="#">Mi carrito</a></li>
+           <li class="list-group-item"><a class="menu" href="faq.html">Preguntas frecuentes</a></li>
+         </ul>
          </div>
        </div>
-       </div>
-
+    </div>
   </header>
   <main>
     <div class="row">
@@ -154,3 +156,9 @@
 </div>
   </body>
 </html>
+
+<!- "no borrar el script! lo necesitamos para el dropdown menu" -!>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
