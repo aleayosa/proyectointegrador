@@ -23,9 +23,8 @@ p{
 }
 
 footer{
-  height: 150px;
+  height: 200px;
   background-color: #7488a0;
-  padding-top: 50%;
 }
 
 .container-fluid{
@@ -92,19 +91,29 @@ img.Carrito{
 }
 
 .icon{
-  height: 40%;
+  height: 100%;
   width: auto;
 }
 
+div .seguinos{
+  height: 50px;
+}
 
+.faq{
+  height: 50px;
+}
+
+div .newsletter{
+  height: 50px;
+}
 
 @media (max-width:989px){
   .navConte{
     display: none;
   }
 
-  #faq{
-    display: none;
+ .newsletter div{
+    display:none;
   }
 
   header{
@@ -118,12 +127,12 @@ img.Carrito{
     display: none;
   }
 
-
-  #faq{
-    display: none;
-  }
   header{
     height: 100px;
     margin-bottom: 2%;
-}
+  }
+
+ .newsletter div{
+    display:none;
+  }
 }
