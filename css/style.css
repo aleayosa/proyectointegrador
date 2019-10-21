@@ -101,6 +101,7 @@ div .seguinos{
 }
 
 div .newsletter{
+  display: flex;
   height: 50px;
 }
 
@@ -109,17 +110,26 @@ div .newsletter{
     display: none;
   }
 
- .newsletter div{
-    display:none;
+ div .newsletter{
+  display: none;
   }
 
   header{
     height: 145px;
     margin-bottom: 2%;
     }
-  }
 
-@media(max-width:625 max-width:989){
+      div .seguinos{
+        height: 20px;
+      }
+
+      .faq{
+        height: 20px;
+      }
+
+  }
+/*
+@media(min-width:625){
   .navConte{
     display: none;
   }
@@ -129,7 +139,16 @@ div .newsletter{
     margin-bottom: 2%;
   }
 
- .newsletter div{
+ .newsletter{
     display:none;
   }
+
+  div .seguinos{
+    height: 10px;
+  }
+
+  .faq{
+    height: 10px;
+  }
 }
+*/
