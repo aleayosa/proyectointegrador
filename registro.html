@@ -14,62 +14,44 @@
         <a class="col-2 offset-1 p-1 m-0 d-flex justify-content-center" href="home.html"><img class="img-fluid m-0 p-0 logo" src="imgs/logo.png" alt="logo de marca"></a>
       </div>
     </header>
-   <main>
-    <form class="" action="index.html" method="post">
-        <div id="Formulario" class="Registro">
-          <div><div class="Texto">Nombre: </div></div><input type="text" id="Nombre" class="col-2 control" required /><div></div>
-            <div>Apellido: <input type="text" id="Apellido" class="col-2 control" required ></div>
-            <div>Email: <input type="email" id="Email"  class="col-2 control" required ></div>
-            <div>Contraseña: <input type="password" id="Contraseña" class="col-2 control" required  ></div>
-            <div>Confirmar contraseña: <input type="password" id="ConfirmarContraseña" class="col-2 control" required  ></div>
-            <div>Numero de Documento: <input type="number" id="NumeroDocumento" class="col-2 control" required ></div>
-            <div>Sexo:
+    <main>
+      <div class="row container-fluid justify-content-center">
+      <form class="col-4" action="home.html" method="post">
+            <h4>Registrate</h4>
+            <label for="Nombre" >Nombre:</label><input type="text" id="Nombre" required />
+            <label for="Apellido">Apellido:</label> <input type="text" id="Apellido"  required />
+            <label for="Email" >Email:</label><input type="email" id="Email"   required />
+            <label for="Contraseña">Contraseña:</label>  <input type="password" id="Contraseña"  required  />
+            <label for="ConfirmarContraseña:">Confirmar contraseña:</label> <input type="password" id="ConfirmarContraseña"  required  />
+            <label for="NumeroDocumento">Numero de Documento:</label> <input type="number" id="NumeroDocumento"  required />
+            <label for="Sexo">Sexo</label>
+              Masculino <input type="radio" id="Sexo" name="Sexo" value="Sexo" class="radiobutton" />
+              Femenino <input type="radio" id="Sexo"  name="Sexo" value="Sexo"  class="radiobutton" />
+              Otros <input type="radio" id="Sexo"  name="Sexo" value="Otros"  class="radiobutton" />
 
-              Masculino<input type="radio" id="Sexo" name="Sexo" value="Sexo"  />
-              Femenino<input type="radio" id="Sexo"  name="Sexo" value="Sexo"  />
-              Binario<input type="radio" id="Sexo"  name="Sexo" value="Sexo"  />
-              Delfin<input type="radio" id="Sexo"  name="Sexo" value="Sexo"  />
-              Transexual:<input type="radio" id="Sexo"  name="Sexo" value="Sexo"  />
-              Prefiero no decirlo:<input type="radio" id="Sexo"  name="Sexo" value="Sexo" />
-              Otros: <input type="radio" id="Sexo"  name="Sexo" value="Sexo"  />
+            <label for="FechaNacimiento">Fecha de Nacimiento:</label><input type="date" value="FechaNacimiento" id="FechaNacimiento"  required  >
+            <label for="TelefonoContacto">Telefono de contacto:</label> <input type="number" value="TelefonoContacto" id="TelefonoContacto"  required >
+            <div class="Botones">
+              <button type="submit" value="Registrar" id="Registrarme" class="col-5 btn btn-dark" >Registrar</button>
+              <button type="reset" value="Borrar todo" id="borrar"  class="col-5 btn btn-light">Borrar</button>
             </div>
-            <div>Fecha de Nacimiento:<input type="date" value="FechaNacimiento" id="FechaNacimiento" class="col-2 control" required ></div>
-            <div>Telefono de contacto: <input type="number" value="TelefonoContacto" id="TelefonoContacto" class="col-2 control" required ></div>
-        </div>
-    </form>
-  </main>
-
-  <footer class="row d-flex align-center justify-content-around container-fluid p-5">
-      <div class="col-lg-4 col-md-6 col-sm-4 d-flex align-center justify-content-around container-fluid seguinos">
-        <a class= "col-2 p-0" href="http:www.facebook.com"><img class="icon" src="imgs/socialmedia/fb.png" alt="facebook"></a>
-        <a class= "col-2 p-0" href="http:www.instagram.com"><img class="icon" src="imgs/socialmedia/ig.png" alt="instagram"></a>
-        <a class= "col-2 p-0" href="http:www.pinterest.com"><img class="icon" src="imgs/socialmedia/pi.png" alt="pinterest"></a>
-        <a class= "col-2 p-0" href="http:www.twitter.com"><img class="icon" src="imgs/socialmedia/tw.png" alt="twitter"></a>
-        <a class= "col-2 p-0" href="http:www.youtube.com"><img class="icon" src="imgs/socialmedia/yt.png" alt="youtube"></a>
-     </div>
-     <a class="col-lg-2 col-md-6 col-sm-6 d-flex align-item-center justify-content-around container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
-     <div class="col-lg-5 col-md-12 col-sm-12 p-0 d-flex justify-content-center align-center container-fluid newsletter">
-        <input class="col-10 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
-        <button class="col-1  btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
-    </div>
-
-    <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
-            <div class="col-2 p-0 m-4 logo2">
-             <img class="col-10 p-0 m-0 logo2"src="imgs\logo.png" alt="logo">
-            </div>
-           <div class="col-7 p-0 menu" >
-            <div class="dropdown">
-             <button class="col-8 p-0 m-5 btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><b>MENU</b></button>
-               <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown	0:54 19/10/2019Menu2">
-               <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
-               <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
-               <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
-               <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
-            </div>
-           </div>
-          </div>
-      </div>    
-   </footer>
+        </form>
+      </div>
+    </main>
+    <footer class="row d-flex align-center justify-content-around container-fluid p-5">
+        <div class="col-lg-4 col-md-6 col-sm-4 d-flex align-center justify-content-around container-fluid seguinos">
+          <a class= "col-2 p-0" href="http:www.facebook.com"><img class="icon" src="imgs/socialmedia/fb.png" alt="facebook"></a>
+          <a class= "col-2 p-0" href="http:www.instagram.com"><img class="icon" src="imgs/socialmedia/ig.png" alt="instagram"></a>
+          <a class= "col-2 p-0" href="http:www.pinterest.com"><img class="icon" src="imgs/socialmedia/pi.png" alt="pinterest"></a>
+          <a class= "col-2 p-0" href="http:www.twitter.com"><img class="icon" src="imgs/socialmedia/tw.png" alt="twitter"></a>
+          <a class= "col-2 p-0" href="http:www.youtube.com"><img class="icon" src="imgs/socialmedia/yt.png" alt="youtube"></a>
+       </div>
+       <a class="col-lg-2 col-md-6 col-sm-6 d-flex align-item-center justify-content-around container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
+       <div class="col-lg-5 col-md-12 col-sm-12 p-0 d-flex justify-content-center align-center container-fluid newsletter">
+          <input class="col-10 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
+          <button class="col-1  btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+      </div>
+     </footer>
 </div>
   </body>
 </html>

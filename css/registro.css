@@ -1,34 +1,26 @@
-header{
-  height: 60px;
+
+
+label{
+  display: block;
+}
+input
+{
+  width: 100%;
+  margin-bottom: 15px;
+}
+.radiobutton
+{
+  width: auto;
+  margin-bottom: 20px;
+}
+main
+{
+  margin-top: 25px;
+  margin-bottom:  25px;
 }
 
-.seguinos
+.Botones
 {
-  height: 20px;
-  width: 20px;
-}
-.Registro
-{
-   align: center;
-   font-size: 14px;
-   background-color: white;
-   margin: 20px 0 20px;
-   align-items: center;
-   margin-left: 50px;
-   margin-right: 50px;
-   position: fixed;
-   left:25%;
-   right: 25%;
-   top: 20%;
-}
-.control
-{
-  margin-left: 10px;
-  margin-right: 10px;
-  margin: 5px 0 5px;
-}
-.olvidastecontraseña
-{
-  color: black;
-
+  margin-top: 25px;
+  margin-bottom:  25px;
 }

@@ -8,9 +8,7 @@ body{
 }
 
 header{
-  height: 70px;
   border: none;
-  margin-bottom: 10%;
   }
 }
 
@@ -23,7 +21,6 @@ p{
 }
 
 footer{
-  height: 200px;
   background-color: #7488a0;
 }
 
