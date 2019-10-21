@@ -1,13 +1,16 @@
+h4{
+    margin-bottom: 30px;
+}
 nav ul{
     list-style-type: none;
-    overflow: hidden;
-   
+    overflow: hidden; 
 }
 nav ul li{
     float: center;
     width: 95%;
+    margin: 15px 0;
 }
 nav ul li a{
     float: center;
-   
+  
 }
