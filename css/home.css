@@ -53,8 +53,8 @@ img{
   width: 100%;
 }
 
-button{
-  position: relative;
+.fav, .carrito{
+  position: absolute;
   right: 10px;
   bottom: 10px;
   width: 40px;
@@ -84,6 +84,7 @@ button.fav{
   top: 0px;
   background-color: transparent;
 }
+
 button.fav:focus{
   background-color: rgba(255, 0, 0, 0.5);
   border-style: none;

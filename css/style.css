@@ -9,7 +9,6 @@ body{
 
 header{
   border: none;
-  }
 }
 
 h1{
@@ -32,6 +31,7 @@ margin: 0;
 .navConte{
   background-color: #7488a0;
 }
+
 nav.navegacion{
   border: none;
 }
@@ -72,37 +72,50 @@ img.Carrito{
   margin-bottom: 1px;
   background-color: #7488a0;
 }
+
 .dropdown-item a{
   color: #666666;
-  font-style: ;
   text-decoration: none;
+  font-style: ;
   background-color: inherit;
 }
+
 .dropdown-menu{
   border: none;
 }
-
 
 .form-control{
   height: 40px;
 }
 
-.icon{
+/*.icon{
   height: 100%;
   width: auto;
+}*/
+
+img{
+  width: 100%;
 }
 
-div .seguinos{
-  height: 50px;
+a.iconos-redes{
+  display: block;
+  width: 40px;
+  padding-top: 10px;
 }
 
-.faq{
-  height: 50px;
+a.faq{
+  display: block;
+  width: 80px;
+  padding: 10px;
 }
-
-div .newsletter{
+div.newsletter{
   display: flex;
   height: 50px;
+  padding-top: 20px;
+}
+
+div.seguinos{
+  padding-top: 15px;
 }
 
 @media (max-width:989px){
@@ -110,24 +123,15 @@ div .newsletter{
     display: none;
   }
 
- div .newsletter{
-  display: none;
+  div .newsletter{
+    display: none;
   }
 
   header{
-    height: 145px;
     margin-bottom: 2%;
-    }
-
-      div .seguinos{
-        height: 20px;
-      }
-
-      .faq{
-        height: 20px;
-      }
-
   }
+}
+
 /*
 @media(min-width:625){
   .navConte{
