@@ -30,12 +30,12 @@ li{
 }
 
 nav{
-  background-color: #EBF5F7;
+  background-color: #f8f9fa;
   border-right: solid 2px #87ACA3;
 }
 
 section{
-  background-color: #EBF5F7;
+  background-color: #f8f9fa;
 }
 
 article{
@@ -74,6 +74,18 @@ h4{
   font-weight: bold;
 }
 
+.menuNav button{
+  background-color: #87ACA3;
+  color: #f8f9fa;
+}
+
+.menuNav div.dropdown-menu{
+  background-color: #87ACA3;
+}
+
+.menuNav div.dropdown-menu a{
+  color: #f8f9fa;
+}
 p{
   font-family: 'Open Sans', sans-serif;
 }
@@ -98,24 +110,13 @@ button.fav:focus{
   padding: 0px;
 }
 
-@media (max-width:579px) {
-  article{
-    border-right: none;
-    border-bottom: solid 1px lightgrey;
-  }
-  article:last-child{
-    border-bottom: none;
-  }
 
-  nav{
-    background-color: #87ACA3;
-  }
-
-  a{
-    color: #EBF5F7;
-  }
+img.fotos, img.fotos2{
+  margin-top: 2%;
+  width: 100%;
 }
 
+
 @media (max-width:579px) {
   article{
     border-right: none;
@@ -132,6 +133,13 @@ button.fav:focus{
   a{
     color: #EBF5F7;
   }
+
+ul{
+  display: none;
+}
+    img.fotos2{
+      display: none;
+    }
 }
 
 @media (min-width:580px) and (max-width:991px) {
@@ -146,4 +154,20 @@ button.fav:focus{
     a{
       color: #EBF5F7;
     }
+    ul{
+      display: none;
+    }
+
+        img.fotos2{
+          display: none;
+        }
+}
+
+@media (min-width:992px) {
+
+  .menuNav{
+    display: none;
+  }
+
+
 }

@@ -19,7 +19,7 @@
         </div>
         <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
           <div class="col-2 p-0 m-4 logo2">
-            <img class="col-10 p-0 m-0 logo2"src="imgs\logo.png" alt="logo">
+            <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
           </div>
           <div class="col-7 p-0 menu" >
             <div class="dropdown">
@@ -44,39 +44,41 @@
           </div>
         </div>
       </header>
-      <main class="container-fluid">
-        <div class="row justify-content-center">
-          <form class="row col-lg-4 col-md-10 justify-content-center" action="home.html">
-            <h3>Bienvenido</h3>
-            <h4>Ingresa con tu email y contraseña</h4>
+      <main class="row justify-content-center container-fluid">
+        <div class="row col-lg-6 col-sm-10 justify-content-center">
+          <form class="row col-10 justify-content-center" action="home.html">
+            <h3 class="col-10">Bienvenido</h3>
+            <h4 class="col-10">Ingresa tu email y contraseña</h4>
             <input type="email" placeholder="Correo Electrónico" class="col-8" required>
             <input type="password" placeholder="Contraseña"  class="col-8" required>
-            <div class="row col-12">
-              <a href="olvidecontraseña.html" class="col-6">¿Olvidaste tu contraseña?</a>
-              <a href="registro.html" class="col-6">¿Sos nuevo en el sitio?</a>
+            <div class="row col-12 justify-content-center">
+              <span class="col-6 olvide"><a href="olvidecontraseña.html">¿Olvidaste tu contraseña?</a></span>
             </div>
             <div class="row Botones">
               <button type="submit" value="ingresar" id="ingresar" class="btn btn-dark">Iniciar Sesión</button>
             </div>
           </form>
+          <div class="row col-10 justify-content-center registro">
+            <span>¿Sos nuevo en el sitio?<a href="registro.html" class="col-6">Registrate</a></span>
+          </div>
         </div>
       </main>
       <footer class="row d-flex align-center justify-content-around container-fluid p-5">
-                                      <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
-                                        <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
-                                        <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
-                                        <a class= "iconos-redes" href="http:www.pinterest.com"><img src="imgs/socialmedia/pi.png" alt="pinterest"></a>
-                                        <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
-                                        <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
-                                      </div>
-                                      <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center">
-                                        <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
-                                      </div>
-                                      <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
-                                        <input class="col-10 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
-                                        <button class="col-1  btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
-                                      </div>
-                                    </footer>
+        <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
+          <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
+          <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
+          <a class= "iconos-redes" href="http:www.pinterest.com"><img src="imgs/socialmedia/pi.png" alt="pinterest"></a>
+          <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
+          <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
+        </div>
+        <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center faqfooter">
+          <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
+        </div>
+        <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
+          <input class="col-10 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
+          <button class="col-1  btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

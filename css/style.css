@@ -4,7 +4,7 @@ margin: 0;
 }
 
 body{
-  background-color: #EBF5F7;
+  background-color: #f8f9fa;
 }
 
 header{
@@ -20,7 +20,7 @@ p{
 }
 
 footer{
-  background-color: #7488a0;
+  background-color: #133F50;
 }
 
 .container-fluid{
@@ -29,7 +29,7 @@ margin: 0;
 }
 
 .navConte{
-  background-color: #7488a0;
+  background-color: #FFE3E6;
 }
 
 nav.navegacion{
@@ -70,7 +70,7 @@ img.Carrito{
   width: 100%;
   height: 100%;
   margin-bottom: 1px;
-  background-color: #7488a0;
+  background-color: #FFE3E6;
 }
 
 .dropdown-item a{
@@ -130,6 +130,15 @@ div.seguinos{
   header{
     margin-bottom: 2%;
   }
+
+  .menuConte{
+    margin: 0;
+  }
+
+  div.faqfooter{
+    display: none;
+  }
+
 }
 
 /*
@@ -156,3 +165,6 @@ div.seguinos{
   }
 }
 */
+footer div a img{
+  color: white;
+}

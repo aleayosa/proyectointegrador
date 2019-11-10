@@ -28,7 +28,7 @@
         </div>
         <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
           <div class="col-2 p-0 m-4 logo2">
-              <img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo">
+              <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
            </div>
           <div class="col-7 p-0 menu">
             <div class="dropdown">
@@ -44,30 +44,39 @@
         </div>
       </header>
       <main>
-      <div class="row container-fluid justify-content-center">
-      <form class="col-lg-4 col-md-10" action="home.html" method="post">
-            <h4>Registrate</h4>
-            <label for="Nombre" >Nombre:</label><input type="text" id="Nombre" required />
-            <label for="Apellido">Apellido:</label> <input type="text" id="Apellido"  required />
-            <label for="Email" >Email:</label><input type="email" id="Email"   required />
-            <label for="Contraseña">Contraseña:</label>  <input type="password" id="Contraseña"  required  />
-            <label for="ConfirmarContraseña:">Confirmar contraseña:</label> <input type="password" id="ConfirmarContraseña"  required  />
-            <label for="NumeroDocumento">Numero de Documento:</label> <input type="number" id="NumeroDocumento"  required />
-            <label for="Sexo">Sexo</label>
-              Masculino <input type="radio" id="Sexo" name="Sexo" value="Sexo" class="radiobutton" />
-              Femenino <input type="radio" id="Sexo"  name="Sexo" value="Sexo"  class="radiobutton" />
-              Otros <input type="radio" id="Sexo"  name="Sexo" value="Otros"  class="radiobutton" />
-
-            <label for="FechaNacimiento">Fecha de Nacimiento:</label><input type="date" value="FechaNacimiento" id="FechaNacimiento"  required  >
-            <label for="TelefonoContacto">Telefono de contacto:</label> <input type="number" value="TelefonoContacto" id="TelefonoContacto"  required >
-            <div class="Botones">
+        <div class="row container-fluid justify-content-center">
+          <form class="row col-lg-4 col-md-10" action="home.html">
+            <h3 class="offset-1 col-10">Registrate</h3>
+            <div class="row col-12 datos">
+              <label class="campos col-12" for="Nombre"> Nombre: </label>
+              <input class="completar" type="text" id="Nombre" required>
+              <label class="campos col-12" for="Apellido"> Apellido: </label>
+              <input class="completar" type="text" id="Apellido"  required>
+              <label class="campos col-12" for="Email"> Email: </label>
+              <input class="completar" type="email" id="Email" required>
+              <label class="campos col-12" for="Contraseña"> Contraseña: </label>
+              <input class="completar" type="password" id="Contraseña"  required>
+              <label class="campos col-12" for="ConfirmarContraseña:"> Confirmar contraseña: </label>
+              <input class="completar" type="password" id="ConfirmarContraseña"  required>
+              <label class="campos col-12" for="NumeroDocumento"> Numero de Documento: </label>
+              <input class="completar" type="number" id="NumeroDocumento"  required>
+              <label class="campos col-12" for="Sexo">Sexo</label>
+              <label class="genero">Masculino</label> <input type="radio" id="Sexo" name="Sexo" value="Masculino" class="radiobutton">
+              <label class="genero">Femenino</label> <input type="radio" id="Sexo"  name="Sexo" value="Femenino"  class="radiobutton">
+              <label class="genero">Otros</label> <input type="radio" id="Sexo"  name="Sexo" value="Otros"  class="radiobutton">
+              <label class="campos col-12" for="FechaNacimiento"> Fecha de Nacimiento: </label>
+              <input class="completar" type="date" value="FechaNacimiento" id="FechaNacimiento" required>
+              <label class="campos col-12" for="TelefonoContacto">Telefono de contacto:</label>
+              <input class="completar" type="number" value="TelefonoContacto" id="TelefonoContacto"  required>
+            </div>
+            <div class="row col-12 Botones justify-content-center">
               <button type="submit" value="Registrar" id="Registrarme" class="col-5 btn btn-dark" >Registrar</button>
               <button type="reset" value="Borrar todo" id="borrar"  class="col-5 btn btn-light">Borrar</button>
             </div>
-        </form>
-      </div>
+          </form>
+        </div>
       </main>
-      <footer class="row d-flex align-center justify-content-around container-fluid p-5">
+    <footer class="row d-flex align-center justify-content-around container-fluid p-5">
       <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
         <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
         <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
@@ -75,7 +84,7 @@
         <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
         <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
       </div>
-      <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center">
+      <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center faqfooter">
         <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
       </div>
       <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
