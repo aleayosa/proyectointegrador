@@ -1,5 +1,7 @@
-h4{
-    margin-bottom: 30px;
+body {
+    color:#878787;
+    background-color: #fff;
+    font-family: Georgia, 'Times New Roman', Times, serif;  
 }
 nav ul{
     list-style-type: none;
@@ -9,8 +11,11 @@ nav ul li{
     float: center;
     width: 95%;
     margin: 15px 0;
+    color: #878787;
 }
-nav ul li a{
-    float: center;
-  
-}
+h5{
+    background-color: #fff;
+    margin-bottom: 30px;
+    color: #d32128;
+    list-style-type: none;
+   }
