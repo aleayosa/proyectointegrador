@@ -11,45 +11,46 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700|Raleway+Dots|Raleway:200,200i,300,300i,400,700|Work+Sans:300,400,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <div class="row col-12 container-fluid align-center justify-content-around navConte">
-          <a class="col-2 offset-1 p-1 m-0 d-flex justify-content-center" href="home.html"><img class="img-fluid m-0 p-0 logo" src="imgs/logo.png" alt="logo de marca"></a>
-            <div class="row col-9 d-flex justify-content-around p-5 navegacion">
-              <div class="col-5 d-flex align-center justify-content-center p-0">
-                <input class="col-9 p-0 form-control navegacion" type="text" placeholder="¿Qué estas buscando?">
-                <button class="col-2 p-0 m-0 btn btn-light navegacion" type="button"><img class="lupita" src="imgs/buscar.png" alt="lupita"></button>
-              </div>
-              <div class="col-5 d-flex justify-content-around align-center p-0">
-                <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="login.html">Log in</a></button>
-                <button class="col-4 p-0 m-0 navegacion btn btn-light" type="button"><a class="navegacion" href="registro.html">Registro</a></button>
-                <button class="col-3 p-0 m-0 navegacion btn btn-light" type="button"><img class="Carrito" src="imgs/shopping-cart.png" alt=""></button>
-              </div>
-           </div>
-        </div>
-        <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
-          <div class="col-2 p-0 m-4 logo2">
-            <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
+   <div class="container-fluid">
+     <header>
+
+       <div class="top-header container-fluid" >
+             <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
+       </div>
+      <div class="row col-12 container-fluid align-center justify-content-between navConte">
+               <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-alternativo.png" alt="logo de marca"></a>
+               <a class="volver col-4" href="home.html">
+                 <span class="col-8">Volver a la tienda</span>
+                 <img class="col-2" src="imgs/next.png" alt="">
+               </a>
+      </div>
+      <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
+               <div class="col-2 p-0 m-4 logo2">
+                 <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
+               </div>
+               <div class="col-7 p-0 menu" >
+                 <div class="dropdown">
+                   <button class="col-8 p-0 m-5 btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>MENU</strong></button>
+                     <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown	0:54 19/10/2019Menu2">
+                       <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
+                       <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
+                       <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
+                       <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
+                     </div>
+                 </div>
+               </div>
           </div>
-          <div class="col-7 p-0 menu" >
-            <div class="dropdown">
-              <button class="col-8 p-0 m-5 btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>MENU</strong></button>
-                <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown	0:54 19/10/2019Menu2">
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
-                </div>
-            </div>
+          <div class="bottom-header row container-fluid">
+            <button class="store-locator col-4 offset-6 d-flex align-center justify-content-center" type="button" class="btn btn-link">
+              <img src="IMGS/alfiler.png" alt=""> SUCURSALES</button>
           </div>
-        </div>
-      </header>
+           </header>
       <main>
         <div class="row d-flex align-center justify-content-around container-fluid">
           <nav class="col-lg-10 col-md-10 col-sm-10 Col-xs-10 justify-content-around align-center">
             <ul>
               <li><h3><strong href="#">PREGUNTAS FRECUENTES</strong></h3></li>
-            </ul>  
+            </ul>
           </nav>
         </div>
         <div class="accordion" id="accordionExample">
@@ -61,7 +62,7 @@
                 </button>
               </h5>
             </div>
-        
+
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 Para poder registrarte, hacé click en "Registrarme" en la parte superior derecha del sitio. Automáticamente se abrirá una página para crear tu cuenta. Luego completá el formulario, hacé click en enviar y habrás creado tu cuenta. En Open Sports tenemos una política de privacidad por la cual ningún dato personal será divulgado a terceros.
@@ -164,9 +165,9 @@
             <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
               <div class="card-body">
                 Podés gestionar un cambio o devolución de producto por los siguientes motivos:
-                <BR>• Recibiste algo que no pediste: el producto recibido difiere al solicitado. 
-                <BR>• Recibiste un producto fallado: el producto recibido tiene alguna falla o rotura, previa al uso. 
-                <BR>• El producto falló al usarse: el producto recibido tiene alguna falla o rotura, luego de ser utilizado. 
+                <BR>• Recibiste algo que no pediste: el producto recibido difiere al solicitado.
+                <BR>• Recibiste un producto fallado: el producto recibido tiene alguna falla o rotura, previa al uso.
+                <BR>• El producto falló al usarse: el producto recibido tiene alguna falla o rotura, luego de ser utilizado.
                 <BR>• Te queda chico / Te queda grande.
                 <BR>• No te gustó.
               </div>
@@ -244,11 +245,10 @@
           </div>
         </div>
       </main>
-      <footer class="row d-flex align-center justify-content-around container-fluid p-5">
+      <footer class="row align-center justify-content-around container-fluid p-5">
         <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
           <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
           <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
-          <a class= "iconos-redes" href="http:www.pinterest.com"><img src="imgs/socialmedia/pi.png" alt="pinterest"></a>
           <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
           <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
         </div>
@@ -256,12 +256,12 @@
           <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
         </div>
         <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
-          <input class="col-10 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
-          <button class="col-1  btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+          <input class="col-9 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
+          <button class="send col-1 btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
         </div>
       </footer>
     </div>
-    <script src="https://getbootstrap.com/docs/4.1/components/collapse//bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+    <script src="https://getbootstrap.com/docs/4.1/components/collapse//bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
 

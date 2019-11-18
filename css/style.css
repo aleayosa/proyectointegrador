@@ -95,10 +95,19 @@ img.Carrito{
   background-color: #333333;
   height: 50px;
 }
-img.smIcon{
-  width: 30px;
-  margin-top: 7px;
-  padding: 1px;
+
+a.volver{
+  height: 40px;
+}
+a.volver img{
+  width: 80%;
+  margin-top: 4px;
+}
+a.volver span{
+  font-family: "Open Sans Condensed", arial, tahoma, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  margin-top: 2px;
 }
 .menuConte{
   width: 100%;
@@ -150,6 +159,11 @@ div.newsletter{
 
 div.seguinos{
   padding-top: 15px;
+}
+
+button.send{
+  background-color: #333;
+  border: none;
 }
 
 @media (max-width:989px){
