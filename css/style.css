@@ -3,12 +3,13 @@ padding: 0;
 margin: 0;
 }
 
-body{
-  background-color: #f8f9fa;
-}
-
 header{
   border: none;
+  background-color: #d32128;
+}
+
+body{
+  background-color: #f8f9fa;
 }
 
 h1{
@@ -20,52 +21,85 @@ p{
 }
 
 footer{
-  background-color: #133F50;
+  background-color: #333;
 }
 
 .container-fluid{
-padding: 0;
-margin: 0;
+ padding: 0;
+ margin: 0;
 }
 
-.navConte{
-  background-color: #FFE3E6;
+.logo-desktop{
+ width: 100%;
 }
 
-nav.navegacion{
-  border: none;
+div.navegacion{
+ padding: 2%;
 }
 
-.logo{
-  width: 60%;
+div.busqueda{
+  padding: 0%;
 }
 
 .btn-light{
   position: sticky;
   width: 100%;
   height: 40px;
+  background-color: #FFFFFF;
 }
 
 .lupita{
-  width:40%;
+  width: 40%;
 }
 
-a.navegacion {
-  color: #666666;
-  font-style: ;
-  text-decoration: none;
+a.navegacion{
+ color: #FFFFFF;
+ font-family: "Open Sans Condensed", arial, tahoma, sans-serif;
+ font-size: 20px;
+ text-decoration: none;
+ padding: 0;
+ margin: 0;
 }
 
-input.navegacion{
+img.Carrito{
+  width: 50%;
+}
+
+.button-submit{
   border: none;
   height: 40px;
 }
 
-img.Carrito{
+.bottom-header{
+  background-color: #333333;
+}
+.store-locator{
+  background-color: #333333;
+  border: none;
+  padding: 0%;
+  font-family: "Open Sans Condensed", arial, tahoma, sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 2px;
+}
+.store-locator img{
+  width: 4%;
+}
+.barrita{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: around;
+}
+.barrabaja{
+  background-color: #333333;
+  height: 50px;
+}
+img.smIcon{
   width: 30px;
-  height: auto;
-  }
-
+  margin-top: 7px;
+  padding: 1px;
+}
 .menuConte{
   width: 100%;
   height: 100%;
@@ -122,6 +156,7 @@ div.seguinos{
   .navConte{
     display: none;
   }
+
 
   div .newsletter{
     display: none;
