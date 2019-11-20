@@ -11,52 +11,52 @@
   </head>
   <body>
     <div class="container-fluid">
-
-   <header>
-
-     <div class="top-header container-fluid" >
-           <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
+      <header>
+      <div class="top-header container-fluid" >
+      <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
      </div>
-    <div class="row col-12 container-fluid align-center justify-content-between navConte">
-             <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-alternativo.png" alt="logo de marca"></a>
-             <a class="volver col-4" href="home.html">
-               <span class="col-8">Volver a la tienda</span>
-               <img class="col-2" src="imgs/next.png" alt="">
-             </a>
-    </div>
-    <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
-             <div class="col-2 p-0 m-4 logo2">
-               <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
-             </div>
-             <div class="col-7 p-0 menu" >
-               <div class="dropdown">
-                 <button class="col-8 p-0 m-5 btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>MENU</strong></button>
-                   <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown	0:54 19/10/2019Menu2">
-                     <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
-                     <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
-                     <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
-                     <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
-                   </div>
-               </div>
-             </div>
+      <div class="row col-12 container-fluid align-center justify-content-between navConte">
+        <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-alternativo.png" alt="logo de marca"></a>
+        <a class="volver col-4" href="home.html">
+        <span class="col-8">Volver a la tienda</span>
+        <img class="col-2" src="imgs/next.png" alt="">
+        </a>
+      </div>
+      <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center menuConte">
+        <div class="col-2 p-0 m-4 logo2">
+          <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
         </div>
-        <div class="bottom-header row container-fluid">
-          <button class="store-locator col-4 offset-6 d-flex align-center justify-content-center" type="button" class="btn btn-link">
-            <img src="IMGS/alfiler.png" alt=""> SUCURSALES</button>
+        <div class="col-7 p-0 menu" >
+          <div class="dropdown">
+            <button class="col-8 p-0 m-5 btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>MENU</strong></button>
+            <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown	0:54 19/10/2019Menu2">
+              <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
+              <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
+              <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
+              <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
+            </div>
+          </div>
         </div>
-         </header>
-         <main class="row justify-content-center container-fluid">
+      </div>
+      <div class="bottom-header row container-fluid">
+        <button class="store-locator col-4 offset-6 d-flex align-center justify-content-center" type="button" class="btn btn-link">
+        <img src="IMGS/alfiler.png" alt=""> SUCURSALES</button>
+      </div>
+    </header>
+      <main class="row justify-content-center container-fluid">
         <div class="row col-lg-6 col-sm-10 justify-content-center">
           <form class="row col-10 justify-content-center" action="home.html">
             <h3 class="col-10">Bienvenido</h3>
             <h4 class="col-10">Ingresa tu email y contraseña</h4>
-            <input type="email" placeholder="Correo Electrónico" class="col-8" required>
-            <input type="password" placeholder="Contraseña"  class="col-8" required>
+            <input type="text" placeholder="Correo Electrónico" class="email col-8">
+            <span class="col-8 errormail"></span>
+            <input type="password" placeholder="Contraseña"  class="passw col-8">
+            <span class="col-8 errorpass"></span>
             <div class="row col-12 justify-content-center">
               <span class="col-6 olvide"><a href="olvidecontraseña.html">¿Olvidaste tu contraseña?</a></span>
             </div>
             <div class="row Botones">
-              <button type="submit" value="ingresar" id="ingresar" class="btn btn-dark">Iniciar Sesión</button>
+              <button type="button" value="ingresar" id="ingresar" class="btn btn-dark">Iniciar Sesión</button>
             </div>
           </form>
           <div class="row col-10 justify-content-center registro">
@@ -65,21 +65,56 @@
         </div>
       </main>
       <footer class="row align-center justify-content-around container-fluid p-5">
-        <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
-          <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
-          <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
-          <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
-          <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
-        </div>
-        <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center faqfooter">
-          <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
-        </div>
-        <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
-          <input class="col-9 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
-          <button class="send col-1 btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
-        </div>
-      </footer>
+      <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
+        <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
+        <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
+        <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
+        <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
+      </div>
+      <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center faqfooter">
+        <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
+      </div>
+      <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
+        <input class="col-9 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
+        <button class="send col-1 btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+      </div>
+    </footer>
     </div>
+    <script>
+      window.addEventListener('load',function(){
+      //Cuando hace click en el boton ingresar
+      var botonIngresar = document.querySelector("button#ingresar");
+      botonIngresar.addEventListener('click',function(){
+        //validar los datos solicitados
+        //mostrar errores
+        var email = document.querySelector("input.email");
+        var pass = document.querySelector("input.passw");
+        var errorEmail = document.querySelector("span.errormail");
+        var errorPass = document.querySelector("span.errorpass");
+        var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        if(email.value == ""){
+          errorEmail.innerHTML = "Este campo es obligatorio";
+          errorEmail.style.color = "red";
+          email.style.border = "solid 1px red";
+        }else if(regexEmail.test(email.value) != true){
+          errorEmail.innerHTML = "No has ingresado un correo electrónico válido";
+          errorEmail.style.color = "red";
+          email.style.border = "solid 1px red";
+        }else{
+          errorEmail.innerHTML = "";
+          email.style.border = "solid 1px lightgreen";
+        }
+        if(pass.value == ""){
+          errorPass.innerHTML = "Este campo es obligatorio";
+          errorPass.style.color = "red";
+          pass.style.border = "solid 1px red";
+        }else{
+          errorPass.innerHTML = "";
+          pass.style.border = "solid 1px lightgreen";
+        }
+      });
+      });
+    </script>
   </body>
 </html>
 
