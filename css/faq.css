@@ -1,21 +1,28 @@
 body {
     color:#878787;
-    background-color: #fff;
+    background-color: whitesmoke;
     font-family: Georgia, 'Times New Roman', Times, serif;  
+    text-align: left;
 }
 nav ul{
     list-style-type: none;
     overflow: hidden; 
+    
 }
 nav ul li{
     float: center;
     width: 95%;
-    margin: 15px 0;
+    margin: 50px 0;
     color: #878787;
+   }
+.card-header{
+    background-color: whitesmoke;
+    text-align: left;
 }
-h5{
-    background-color: #fff;
+.btn-link{
+    background-color: whitesmoke;
     margin-bottom: 30px;
     color: #d32128;
-    list-style-type: none;
+    text-align: left;
    }
+   
