@@ -135,7 +135,12 @@ button.dropdown-toggle{
 }
 
 button.dropdown-toggle img{
-  width: 70%;
+  width: 100%;
+}
+
+button.dropdown-toggle{
+  width: 25%;
+  margin-top: 12%;
 }
 
 .dropdown-menu{
@@ -153,6 +158,11 @@ button.dropdown-toggle img{
 .top-header{
   background-color: black;
 }
+
+div.logo-desktop img{
+  width: 100%;
+}
+
 .logo-mobile{
   margin-left: 15%;
   margin-right: 15%;
@@ -227,12 +237,18 @@ div.seguinos{
 div.newsletter{
   margin-top: 2%;
 }
+
+.navConte{
+  display: none;
+}
+
 }
 
 @media (min-width:992px) {
   .menuConte{
     display: none;
   }
+
   .logo-mobile{
     display: none;
   }
