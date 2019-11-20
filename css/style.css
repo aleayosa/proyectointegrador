@@ -131,6 +131,7 @@ a.volver span{
 button.dropdown-toggle{
   background-color: #d32128;
   border: none;
+  margin: 0;
 }
 
 button.dropdown-toggle img{
@@ -146,14 +147,15 @@ button.dropdown-toggle img{
   text-decoration: none;
   font-style: ;
   background-color: inherit;
+  padding: 0%;
 }
 
 .top-header{
   background-color: black;
 }
 .logo-mobile{
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 div .newsletter{
@@ -206,8 +208,8 @@ header{
      display:none;
    }
 
-div.medium-header{
-     display: none;
+.medium-header{
+  display:none;
 }
 
 .bottom-header{
