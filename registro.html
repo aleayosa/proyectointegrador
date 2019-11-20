@@ -78,19 +78,20 @@
           </form>
         </div>
       </main>
-      <footer class="row align-center justify-content-around container-fluid p-5">
-        <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
+      <footer class="row d-flex justify-content-between align-item-center container-fluid p-2">
+        <div class="newsletter row col-lg-4 col-md-6 col-sm-11 d-flex justify-content-center align-items-center">
+          <input class="col-9 send" type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" id="newsletter">
+          <button class="col-2 send" type="button"><img src="imgs/send.png" alt="new"></button>
+          <span style= "color.red; font.size:10px;" class="errorNewsletter"></span>
+        </div>
+        <div class="row col-lg-4 col-md-6 d-flex align-items-center justify-content-around seguinos">
           <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
           <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
           <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
           <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
         </div>
-        <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center faqfooter">
-          <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
-        </div>
-        <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
-          <input class="col-9 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
-          <button class="send col-1 btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+        <div class="col-lg-3 faqfooter">
+          <a href="faq.html"><img class="faq" src="imgs/pregunta.png" alt="pregunta"></a>
         </div>
       </footer>
     </div>

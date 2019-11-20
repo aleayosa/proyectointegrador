@@ -22,15 +22,12 @@ p{
 
 footer{
   background-color: #333;
+  padding: 2px;
 }
 
 .container-fluid{
  padding: 0;
  margin: 0;
-}
-
-.logo-desktop{
- width: 100%;
 }
 
 div.navegacion{
@@ -41,6 +38,15 @@ div.busqueda{
   padding: 0%;
 }
 
+div.busqueda input{
+  padding: 0%;
+}
+
+div.busqueda button{
+  padding: 0%;
+  margin: 0%;
+}
+
 .btn-light{
   position: sticky;
   width: 100%;
@@ -48,11 +54,15 @@ div.busqueda{
   background-color: #FFFFFF;
 }
 
-.lupita{
+div.busqueda button img{
   width: 40%;
 }
 
-a.navegacion{
+div.barrita{
+  padding: 0%;
+}
+
+div.barrita a{
  color: #FFFFFF;
  font-family: "Open Sans Condensed", arial, tahoma, sans-serif;
  font-size: 20px;
@@ -65,32 +75,32 @@ img.Carrito{
   width: 50%;
 }
 
-.button-submit{
-  border: none;
-  height: 40px;
-}
-
 .bottom-header{
   background-color: #333333;
 }
+
 .store-locator{
-  background-color: #333333;
-  border: none;
-  padding: 0%;
   font-family: "Open Sans Condensed", arial, tahoma, sans-serif;
   font-size: 20px;
   color: #ffffff;
   padding: 2px;
 }
-.store-locator img{
-  width: 4%;
+
+a.store-locator img{
+  padding: 1%;
 }
+
+a.store-locator span{
+  padding: 0%;
+}
+
 .barrita{
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: around;
 }
+
 .barrabaja{
   background-color: #333333;
   height: 50px;
@@ -99,21 +109,36 @@ img.Carrito{
 a.volver{
   height: 40px;
 }
+
 a.volver img{
   width: 80%;
   margin-top: 4px;
 }
+
 a.volver span{
   font-family: "Open Sans Condensed", arial, tahoma, sans-serif;
   font-size: 18px;
   color: #ffffff;
   margin-top: 2px;
 }
+
 .menuConte{
   width: 100%;
   height: 100%;
   margin-bottom: 1px;
-  background-color: #FFE3E6;
+}
+
+button.dropdown-toggle{
+  background-color: #d32128;
+  border: none;
+}
+
+button.dropdown-toggle img{
+  width: 70%;
+}
+
+.dropdown-menu{
+  border: none;
 }
 
 .dropdown-item a{
@@ -123,97 +148,91 @@ a.volver span{
   background-color: inherit;
 }
 
-.dropdown-menu{
-  border: none;
+.top-header{
+  background-color: black;
+}
+.logo-mobile{
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.form-control{
+div .newsletter{
   height: 40px;
-}
+  padding:0%;
+  }
 
-/*.icon{
-  height: 100%;
-  width: auto;
-}*/
-
-img{
-  width: 100%;
-}
-
-a.iconos-redes{
-  display: block;
-  width: 40px;
-  padding-top: 10px;
-}
-
-a.faq{
-  display: block;
-  width: 80px;
-  padding: 10px;
-}
-div.newsletter{
-  display: flex;
-  height: 50px;
-  padding-top: 20px;
-}
-
-div.seguinos{
-  padding-top: 15px;
+input.send{
+  padding: 0%;
+  height: 40px;
+  margin: 0%;
 }
 
 button.send{
   background-color: #333;
   border: none;
+  padding: 0px;
+  height: 40px;
 }
 
-@media (max-width:989px){
-  .navConte{
-    display: none;
+button.send img{
+  width: 40px;
+  padding: 0%;
+  margin: 0%;
+}
+
+a.iconos-redes img{
+  width: 40px;
+    }
+
+.faq{
+  width: 40px;
+}
+
+div.seguinos{
+  padding: 0%;
+}
+
+@media (max-width:991px){
+header{
+      margin-bottom: 2%;
   }
 
-
-  div .newsletter{
-    display: none;
-  }
-
-  header{
-    margin-bottom: 2%;
-  }
 
   .menuConte{
-    margin: 0;
+      margin: 0;
   }
 
-  div.faqfooter{
+   .logo-desktop{
+     display:none;
+   }
+
+div.medium-header{
+     display: none;
+}
+
+.bottom-header{
+     display: none;
+}
+
+ div .faqfooter{
+  display: none;
+}
+
+div.seguinos{
+  margin-top: 2%;
+}
+
+div.newsletter{
+  margin-top: 2%;
+}
+}
+
+@media (min-width:992px) {
+  .menuConte{
+    display: none;
+  }
+  .logo-mobile{
     display: none;
   }
 
-}
-
-/*
-@media(min-width:625){
-  .navConte{
-    display: none;
-  }
-
-  header{
-    height: 100px;
-    margin-bottom: 2%;
-  }
-
- .newsletter{
-    display:none;
-  }
-
-  div .seguinos{
-    height: 10px;
-  }
-
-  .faq{
-    height: 10px;
-  }
-}
-*/
-footer div a img{
-  color: white;
 }

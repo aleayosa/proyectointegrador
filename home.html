@@ -15,48 +15,48 @@
       <header>
         <div class="top-header container-fluid" >
           <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
-       </div>
-       <div class="medium-Header row container-fluid align-center justify-content-around">
+          <div class="logo-mobile"><img src="imgs/headerBannerMobile.gif" alt=""></div>
+        </div>
+        <div class="medium-header row container-fluid d-flex align-items-center justify-content-around">
           <a class="col-2 d-flex justify-content-center" href="home.html"><img class="logo" src="imgs/logo-open.svg" alt="logo-open"></a>
           <div class="navegacion row col-9 d-flex justify-content-around">
-              <div class="busqueda col-5 d-flex align-center justify-content-center">
-                <input class="col-9 p-0" type="text" placeholder="¿Qué estas buscando?">
-                <button class="busqueda col-2 p-0 m-0 btn btn-light" type="button"><img class="lupita" src="imgs/buscar.png" alt="">
-                </button>
-              </div>
-            <div class="barrita col-5">
-                <a class="navegacion col-4" href="login.html"><strong>LOG IN</strong></a>
-                <a class="navegacion col-4" href="registro.html"><strong>REGISTRO</strong></a>
-                <a class="navegacion col-2" href=""><img class="Carrito" src="imgs/bolsa.png" alt=""></a>
-            </div>
+           <div class="busqueda col-5 d-flex align-center justify-content-center">
+             <input class="col-9 " type="text" placeholder="¿Qué estas buscando?">
+             <button class="col-2 btn btn-light" type="button"><img src="imgs/buscar.png" alt="">
+             </button>
+           </div>
+           <div class="barrita col-5">
+             <a class="col-4" href="login.html"><strong>LOG IN</strong></a>
+             <a class="col-4" href="registro.html"><strong>REGISTRO</strong></a>
+             <a class="col-2" href=""><img class="Carrito" src="imgs/bolsa.png" alt=""></a>
+           </div>
           </div>
         </div>
         <div class="bottom-header row container-fluid">
-          <button class="store-locator col-4 offset-6 d-flex align-center justify-content-center" type="button" class="btn btn-link">
-            <img src="IMGS/alfiler.png" alt=""> SUCURSALES</button>
+          <a class="store-locator col-4 offset-8 d-flex align-items-center justify-content-center" href="#">
+             <img class="col-1" src="IMGS/alfiler.png" alt="">
+             <span class="col-8">SUCURSALES</span>
+          </a>
         </div>
-
         <div class="menuConte">
           <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center">
-          <div class="col-2 p-0 m-4 logo2">
-            <a href="home.html"><img class="col-10 p-0 m-0 logo2" src="imgs\logo.png" alt="logo"></a>
+           <div class="col-4 p-0 m-4 logo2">
+              <a href="home.html"><img src="imgs\logo-open.svg" alt="logo"></a>
            </div>
-          <div class="col-7 p-0 menu">
-            <div class="dropdown">
-                <button class="col-8 p-0 m-5 btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><strong>MENU</strong></button>
+           <div class="col-4 p-0 menu">
+             <div class="dropdown">
+                <button class="col-8 p-0 m-5 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="imgs/hamburguesa.png" alt=""></button>
                 <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown 0:54 19/10/2019Menu2">
                   <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
                   <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
                   <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
                   <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
                 </div>
-            </div>
-          </div>
-        </div>
+             </div>
+           </div>
+         </div>
         </div>
       </header>
-
-
       <main>
         <div class="row">
           <nav class="col-lg-2 col-md-12 col-sm-12">
@@ -181,19 +181,20 @@
           </section>
         </div>
       </main>
-      <footer class="row align-center justify-content-around container-fluid p-5">
-        <div class="row col-lg-4 col-md-6 col-sm-6 align-center justify-content-around container-fluid seguinos">
+      <footer class="row d-flex justify-content-between align-item-center container-fluid p-2">
+        <div class="newsletter row col-lg-4 col-md-6 col-sm-11 d-flex justify-content-center align-items-center">
+          <input class="col-9 send" type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" id="newsletter">
+          <button class="col-2 send" type="button"><img src="imgs/send.png" alt="new"></button>
+          <span style= "color.red; font.size:10px;" class="errorNewsletter"></span>
+        </div>
+        <div class="row col-lg-4 col-md-6 d-flex align-items-center justify-content-around seguinos">
           <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
           <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
           <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
           <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
         </div>
-        <div class="row faq col-lg-4 col-md-6 col-sm-4 align-item-center justify-content-center faqfooter">
-          <a class="container-fluid faq" href="faq.html"><img class="icon" src="imgs/pregunta.png" alt="pregunta"></a>
-        </div>
-        <div class="col-lg-4 col-md-12 justify-content-center align-center container-fluid newsletter">
-          <input class="col-9 p-0 m-0 form-control " type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" >
-          <button class="send col-1 btn btn-light p-0 m-0" type="button"><img class="icon" src="imgs/send.png" alt="imgs/news.png"></button>
+        <div class="col-lg-3 faqfooter">
+          <a href="faq.html"><img class="faq" src="imgs/pregunta.png" alt="pregunta"></a>
         </div>
       </footer>
     </div>
@@ -205,3 +206,4 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script href="Home.js" charset="utf-8"></script>
