@@ -18,7 +18,7 @@
               <div class="logo-mobile"> <img src="imgs/headerBannerMobile.gif" alt=""></div>
         </div>
        <div class="row col-12 container-fluid align-center justify-content-between navConte">
-                <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-alternativo.png" alt="logo de marca"></a>
+                <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-open.svg" alt="logo de marca"></a>
                 <a class="volver col-4" href="home.html">
                   <span class="col-8">Volver a la tienda</span>
                   <img class="col-2" src="imgs/next.png" alt="">
@@ -115,11 +115,11 @@
           </form>
         </div>
       </main>
-      <footer class="row d-flex justify-content-between align-item-center container-fluid p-2">
+      <footer class="row d-flex justify-content-between align-item-center container-fluid p-4">
         <div class="newsletter row col-lg-4 col-md-6 col-sm-11 d-flex justify-content-center align-items-center">
-          <input class="col-9 send" type="text" placeholder="ingresá tu e-mail para recibir novedades!" aria-label="Recipient's username" aria-describedby="button-addon2" id="newsletter">
+          <input class="col-8 send" type="text" placeholder="ingresá tu e-mail!">
           <button class="col-2 send" type="button"><img src="imgs/send.png" alt="new"></button>
-          <span style= "color.red; font.size:10px;" class="errorNewsletter"></span>
+          <span class="col-12 errormail"></span>
         </div>
         <div class="row col-lg-4 col-md-6 d-flex align-items-center justify-content-around seguinos">
           <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
@@ -317,9 +317,31 @@
       errorprovincias.innerHTML = "";
       provincias.style.border = "solid 1px lightgreen";
     }
-
-
   });
+  });
+
+  window.addEventListener('load',function(){
+    //Cuando hace click en el boton enviar
+    var botonEnviar = document.querySelector("button.send");
+    botonEnviar.addEventListener('click',function(){
+      //validar los datos solicitados
+      //mostrar errores
+      var email = document.querySelector("input.send");
+      var errorEmail = document.querySelector("span.errormail");
+      var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+      if(email.value == ""){
+        errorEmail.innerHTML = "Este campo es obligatorio";
+        errorEmail.style.color = "red";
+        send.style.border = "solid 1px red";
+      }else if(regexEmail.test(email.value) != true){
+        errorEmail.innerHTML = "No has ingresado un correo electrónico válido";
+        errorEmail.style.color = "red";
+        email.style.border = "solid 1px red";
+      }else{
+        errorEmail.innerHTML = "";
+        email.style.border = "solid 1px lightgreen";
+      }
+      });
   });
 </script>
 
