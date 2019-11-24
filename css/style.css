@@ -168,6 +168,9 @@ div.logo-desktop img{
   margin-right: 15%;
 }
 
+.navConte{
+  padding: 2%;
+}
 div .newsletter{
   height: 40px;
   padding:0%;
@@ -204,13 +207,16 @@ div.seguinos{
   padding: 0%;
 }
 
+p.titulo{
+  font-size: 18px;
+  color: #d32128;
+}
 @media (max-width:991px){
 header{
       margin-bottom: 2%;
   }
 
-
-  .menuConte{
+.menuConte{
       margin: 0;
   }
 
@@ -232,16 +238,20 @@ header{
 
 div.seguinos{
   margin-top: 2%;
-}
+  margin-bottom: 5%;
+  }
 
 div.newsletter{
   margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 .navConte{
   display: none;
 }
-
+iframe{
+  display: none;
+}
 }
 
 @media (min-width:992px) {
