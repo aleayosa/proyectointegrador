@@ -268,11 +268,11 @@
           }
 
           //FechaNacimiento
-          if(fechanacimiento.value != "DD/MM/YYYY"){
+          if(fechanacimiento.value == ""){
             errorfechanacimiento.innerHTML = "Ingrese la fecha de nacimiento";
             errorfechanacimiento.style.color = "red";
             fechanacimiento.style.border = "solid 1px red";
-          }else if(fechanacimiento.value.length >= 10) {
+          }else if(fechanacimiento.value.length != 10) {
             errorfechanacimiento.innerHTML = "La fecha de nacimiento no es valida";
             errorfechanacimiento.style.color = "red";
             fechanacimiento.style.border = "solid 1px red";
