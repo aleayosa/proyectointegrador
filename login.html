@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Login</title>
+  <title>Iniciar Sesión</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/login.css">
@@ -19,7 +19,7 @@
       <div class="row col-12 container-fluid align-center justify-content-between navConte">
         <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-open.svg" alt="logo de marca"></a>
         <a class="volver col-4" href="home.html">
-          <span class="col-8">Volver a la tienda</span>
+          <span class="col-8">VOLVER A LA TIENDA</span>
           <img class="col-2" src="imgs/next.png" alt="">
         </a>
       </div>
@@ -98,6 +98,7 @@
       var errorEmail = document.querySelector("span.errormail");
       var errorPass = document.querySelector("span.errorpass");
       var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
       if(email.value == ""){
         errorEmail.innerHTML = "Este campo es obligatorio";
         errorEmail.style.color = "red";
@@ -110,6 +111,7 @@
         errorEmail.innerHTML = "";
         email.style.border = "solid 1px lightgreen";
       }
+
       if(pass.value == ""){
         errorPass.innerHTML = "Este campo es obligatorio";
         errorPass.style.color = "red";
@@ -118,32 +120,8 @@
         errorPass.innerHTML = "";
         pass.style.border = "solid 1px lightgreen";
       }
-    });
-  });
 
-  <script>
-  window.addEventListener('load',function(){
-    //Cuando hace click en el boton enviar
-    var botonEnviar = document.querySelector("button.send");
-    botonEnviar.addEventListener('click',function(){
-      //validar los datos solicitados
-      //mostrar errores
-      var email = document.querySelector("input.send");
-      var errorEmail = document.querySelector("span.errormail");
-      var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-      if(email.value == ""){
-        errorEmail.innerHTML = "Este campo es obligatorio";
-        errorEmail.style.color = "red";
-        send.style.border = "solid 1px red";
-      }else if(regexEmail.test(email.value) != true){
-        errorEmail.innerHTML = "No has ingresado un correo electrónico válido";
-        errorEmail.style.color = "red";
-        email.style.border = "solid 1px red";
-      }else{
-        errorEmail.innerHTML = "";
-        email.style.border = "solid 1px lightgreen";
-      }
-      });
+    });
   });
   </script>
 </body>
