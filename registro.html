@@ -200,6 +200,10 @@
             errorapellido.innerHTML = "Ingrese su Apellido";
             errorapellido.style.color = "red";
             apellido.style.border = "solid 1px red";
+          }else if(apellido.value.length < 3 || letras.test(nombre.value) != true){
+            errorapellido.innerHTML = "Ingrese un apellido válido";
+            errorapellido.style.color = "red";
+            apellido.style.border = "solid 1px red";
           }else if(letras.test(apellido.value) != true){
             errorapellido.innerHTML = "Ingrese un apellido válido";
             errorapellido.style.color = "red";
@@ -258,6 +262,10 @@
             errornumerodocumento.innerHTML = "Ingrese su numero de documento";
             errornumerodocumento.style.color = "red";
             numerodocumento.style.border = "solid 1px red";
+          }else if(numerodocumento.value.length < 8){
+            errornumerodocumento.innerHTML = "El documento debe ser válido";
+            errornumerodocumento.style.color = "red";
+            numerodocumento.style.border = "solid 1px red";
           }else if(numeros.test(numerodocumento.value) != true) {
             errornumerodocumento.innerHTML = "El documento debe ser válido";
             errornumerodocumento.style.color = "red";
@@ -300,6 +308,10 @@
             errordomicilio.innerHTML = "Ingrese el domicilio";
             errordomicilio.style.color = "red";
             domicilio.style.border = "solid 1px red";
+          }else if(domicilio.value.length < 4){
+            errordomicilio.innerHTML = "El domicilio debe ser válido";
+            errordomicilio.style.color = "red";
+            domicilio.style.border = "solid 1px red";
           }else{
             errordomicilio.innerHTML = "";
             domicilio.style.border = "solid 1px lightgreen";
@@ -308,6 +320,10 @@
           //CodigoPostal
           if(codigopostal.value == ""){
             errorcodigopostal.innerHTML = "Ingrese el Código Postal";
+            errorcodigopostal.style.color = "red";
+            codigopostal.style.border = "solid 1px red";
+          }else if(codigopostal.value.length < 4){
+            errorcodigopostal.innerHTML = "El codigo postal debe ser válido";
             errorcodigopostal.style.color = "red";
             codigopostal.style.border = "solid 1px red";
           }else if(numeros.test(codigopostal.value) != true) {
@@ -322,6 +338,10 @@
           //localidad
           if(localidad.value == ""){
             errorlocalidad.innerHTML = "Ingrese una localidad";
+            errorlocalidad.style.color = "red";
+            localidad.style.border = "solid 1px red";
+          }else if(localidad.value.length < 4){
+            errorlocalidad.innerHTML = "La localidad debe ser válida";
             errorlocalidad.style.color = "red";
             localidad.style.border = "solid 1px red";
           }else{
