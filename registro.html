@@ -275,6 +275,7 @@
             numerodocumento.style.border = "solid 1px lightgreen";
           }
 
+          var hoy = new Date();
           //FechaNacimiento
           if(fechanacimiento.value == ""){
             errorfechanacimiento.innerHTML = "Ingrese la fecha de nacimiento";
@@ -282,6 +283,10 @@
             fechanacimiento.style.border = "solid 1px red";
           }else if(fechanacimiento.value.length != 10) {
             errorfechanacimiento.innerHTML = "La fecha de nacimiento no es valida";
+            errorfechanacimiento.style.color = "red";
+            fechanacimiento.style.border = "solid 1px red";
+          }else if(fechanacimiento.valueAsDate > hoy){
+            errorfechanacimiento.innerHTML = "La fecha de nacimiento es posterior a la permitida";
             errorfechanacimiento.style.color = "red";
             fechanacimiento.style.border = "solid 1px red";
           }else {
