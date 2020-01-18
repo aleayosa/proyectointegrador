@@ -1,28 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cliente extends Usuario{
-	private Venta unaVenta;
+	private List<Carrito> listaDeCarritos;
 	private Integer dni;
 	
-	public Cliente(Integer unId, String nombre, String apellido, String email, String contrasenia, Venta unaVenta,
-			Integer dni) {
+	public Cliente(Integer unId, String nombre, String apellido, String email, String contrasenia, Integer dni) {
 		super(unId, nombre, apellido, email, contrasenia);
-		this.unaVenta = unaVenta;
+		this.listaDeCarritos = new ArrayList<>();
 		this.dni = dni;
 	}
 
-	public Venta getUnaVenta() {
-		return unaVenta;
+	public List<Carrito> getUnCarrito() {
+		return listaDeCarritos;
 	}
 
 	public Integer getDni() {
 		return dni;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Cliente [unaVenta=" + unaVenta + ", dni=" + dni + "]";
+		return "Cliente [listaDeCarritos=" + listaDeCarritos + ", dni=" + dni + "]";
 	}
-	
+
 	public boolean equals(Object compara) {
 		Cliente algoAComparar = (Cliente) compara;
 		Boolean esIgual = false;
@@ -30,6 +31,5 @@ public class Cliente extends Usuario{
 			esIgual = true;
 		} return esIgual;
 	}
-	
 	
 }

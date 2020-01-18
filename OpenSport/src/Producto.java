@@ -16,12 +16,12 @@ public class Producto {
 		this.cantidad = cantidad;
 	}
 
+	
 	@Override
 	public String toString() {
 		return "Producto [marca=" + marca + ", nombre=" + nombre + ", id=" + id + ", precio=" + precio + ", categoria="
 				+ categoria + ", cantidad=" + cantidad + "]";
 	}
-
 
 
 	public String getMarca() {

@@ -1,4 +1,3 @@
-
 public class Usuario {
 	private Integer ID;
 	private String nombre;
@@ -19,6 +18,8 @@ public class Usuario {
 		return "Usuario [ID=" + ID + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email
 				+ ", contrasenia=" + contrasenia + "]";
 	}
+
+
 
 	public Integer getID() {
 		return ID;
