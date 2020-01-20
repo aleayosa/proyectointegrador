@@ -19,8 +19,6 @@ public class Usuario {
 				+ ", contrasenia=" + contrasenia + "]";
 	}
 
-
-
 	public Integer getID() {
 		return ID;
 	}
@@ -50,6 +48,12 @@ public class Usuario {
 	}
 	
 	public boolean iniciarSesion(String email, String contrasenia) {
+		if(email.equals(this.getEmail()) && contrasenia.equals(this.getContrasenia())) {
+			System.out.println("Bienvenido "+ getNombre());
+		}else {
+			System.out.println("Has ingresado datos incorrectos");
+		}
 		return (email.equals(this.getEmail()) && contrasenia.equals(this.getContrasenia()));
+		
 	}
 }
