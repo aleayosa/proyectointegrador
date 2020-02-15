@@ -1,0 +1,173 @@
+.row{
+  margin: 0;
+  padding: 0:
+}
+
+ul{
+  margin-top: 20px;
+}
+
+main{
+  margin: 2% 0;
+}
+
+a{
+  text-decoration: none;
+  color: #87aca3;
+}
+
+.nombre-producto{
+  color: #666;
+}
+
+.nombre-producto:hover{
+  color: #0C1446
+}
+
+li{
+  list-style: none;
+  padding-left: 5px;
+}
+
+nav{
+  background-color: #f8f9fa;
+  border-right: solid 2px #87ACA3;
+}
+
+section{
+  background-color: #f8f9fa;
+}
+
+article{
+  display: inline-block;
+  background-color: ;
+  border-right: solid 1px lightgrey;
+  margin: 20px 0;
+}
+
+article:nth-child(4n){
+  border-right: none;
+}
+
+img{
+  width: 100%;
+}
+
+.fav, .carrito{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+h4{
+  display: inline-block;
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menuNav button{
+  background-color: #87ACA3;
+  color: #f8f9fa;
+}
+
+.menuNav div.dropdown-menu{
+  background-color: #87ACA3;
+}
+
+.menuNav div.dropdown-menu a{
+  color: #f8f9fa;
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+}
+
+button.fav{
+  position: absolute;
+  right: 5%;
+  top: 0px;
+  background-color: transparent;
+}
+
+button.fav:focus{
+  background-color: rgba(255, 0, 0, 0.5);
+  border-style: none;
+}
+
+.producto{
+  width: 100%;
+}
+
+.navbar{
+  padding: 0px;
+}
+
+
+img.fotos, img.fotos2{
+  margin-top: 2%;
+  width: 100%;
+}
+
+
+@media (max-width:579px) {
+  article{
+    border-right: none;
+    border-bottom: solid 1px lightgrey;
+  }
+  article:last-child{
+    border-bottom: none;
+  }
+
+  nav{
+    background-color: #87ACA3;
+  }
+
+  a{
+    color: #EBF5F7;
+  }
+
+ul{
+  display: none;
+}
+    img.fotos2{
+      display: none;
+    }
+}
+
+@media (min-width:580px) and (max-width:991px) {
+  article:nth-child(2n){
+    border-right: none;
+  }
+
+    nav{
+      background-color: #87ACA3;
+    }
+
+    a{
+      color: #EBF5F7;
+    }
+    ul{
+      display: none;
+    }
+
+        img.fotos2{
+          display: none;
+        }
+}
+
+@media (min-width:992px) {
+
+  .menuNav{
+    display: none;
+  }
+
+
+}
