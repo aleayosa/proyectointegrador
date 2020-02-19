@@ -1,5 +1,10 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  * POJO USUARIO.
  * 
@@ -8,12 +13,21 @@ package com.dh.proyectointegrador.Open.Sport.model;
  *
  */
 
+@Entity
 public class Usuario {
+	private static final String generationType = null;
+	@Id	
+	@GeneratedValue(strategy=generationType.IDENTITY)
 
-	private Integer ID;
+	@Column (nullable=false)
 	private String nombre;
+
+	@Column (nullable=false) 
 	private String apellido;
+
+	@Column (nullable=false) 
 	private String email;
+	@Column (nullable=false)
 	private String contrasenia;
 
 
