@@ -1,343 +1,39 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!doctype html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title>Producto Nuevo</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/registro.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700|Raleway+Dots|Raleway:200,200i,300,300i,400,700|Work+Sans:300,400,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Alta de producto</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <header>
-        <div class="top-header container-fluid" >
-          <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
-          <div class="logo-mobile"> <img src="imgs/headerBannerMobile.gif" alt=""></div>
-        </div>
-        <div class="row col-12 container-fluid align-center justify-content-between navConte">
-          <a class="col-2 offset-1 d-flex justify-content-center" href="home.html"><img src="imgs/logo-open.svg" alt="logo de marca"></a>
-          <a class="volver col-4" href="home.html">
-            <span class="col-8">VOLVER A LA TIENDA</span>
-            <img class="col-2" src="imgs/next.png" alt="">
-          </a>
-        </div>
-        <div class="bottom-header row container-fluid">
-          <a class="store-locator col-4 offset-8 d-flex align-items-center justify-content-center" href="Sucursales.html">
-            <img class="col-1" src="imgs/alfiler.png" alt="">
-            <span class="col-8">SUCURSALES</span>
-          </a>
-        </div>
-        <div class="menuConte">
-          <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center">
-            <div class="col-4 p-0 m-4 logo2">
-              <a href="home.html"><img src="imgs\logo-open.svg" alt="logo"></a>
-            </div>
-            <div class="col-4 p-0 menu">
-              <div class="dropdown">
-                <button class="col-8 p-0 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="imgs/hamburguesa.png" alt=""></button>
-                <div class="col-8 p-0 m-0 dropdown-menu" aria-labelledby="dropdown 0:54 19/10/2019Menu2">
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="login.html">Log in</a></button>
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="registro.html">Registro</a></button>
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="carrito.html">Mi carrito</a></button>
-                  <button class="p-3 m-0 dropdown-item" type="button"><a class="menu" href="faq.html">Preguntas frecuentes</a></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="row container-fluid justify-content-center ">
-          <form class="row col-lg-4 col-md-10" action="home.html">
-            <h3 class="offset-1 col-10">Ingresar Nuevo Producto</h3>
-            <div class="row col-12 datos">
-              <label class="campos col-12" for="Nombre">Nombre del Producto:</label>
-              <input class="nombre completar" type="text" id="Nombre">
-              <span class="col-8 errornombre"></span>
-
-              <label class="campos col-12" for="Marca">Marca:</label>
-              <input class="marca completar" type="text" id="Marca">
-              <span class="col-8 errormarca"></span>
-
-              <label class="campos col-12" for="Descripcion"> Descripcion: </label>
-              <input class="descripcion completar" type="descripcion" id="Descripcion" >
-              <span class="col-8 errodescripcion"></span>
-
-              <label class="campos col-12" for="Precio">Precio: </label>
-              <input class="precio completar" type="Precio" id="Precio" >
-              <span class="col-8 errorprecio"></span>
-
-              <label class="campos col-12" for="Estado:">Estado: </label>
-              <input class="estado completar" type="pestado" id="estado">
-              <span class="col-8 errorestado"></span>
-
-              
-            <div class="row col-12 Botones justify-content-center" id="botones">
-              <button type="button" value="Registrar" id="Registrarme" class="col-5 btn btn-dark">Enviar</button>
-            </div>
-          </form>
-        </div>
-      </main>
-      <footer class="row d-flex justify-content-between align-item-center container-fluid p-4">
-        <div class="newsletter row col-lg-4 col-md-6 col-sm-11 d-flex justify-content-center align-items-center">
-          <input class="col-8 send" type="text" placeholder="ingresá tu e-mail!">
-          <button class="col-2 send" type="button"><img src="imgs/send.png" alt="new"></button>
-          <span class="col-12 errormail"></span>
-        </div>
-        <div class="row col-lg-4 col-md-6 d-flex align-items-center justify-content-around seguinos">
-          <a class= "iconos-redes" href="http:www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
-          <a class= "iconos-redes" href="http:www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
-          <a class= "iconos-redes" href="http:www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
-          <a class= "iconos-redes" href="http:www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
-        </div>
-        <div class="col-lg-3 faqfooter">
-          <a href="faq.html"><img class="faq" src="imgs/pregunta.png" alt="pregunta"></a>
-        </div>
-      </footer>
+  <h1> Ingrese los datos del producto a dar de alta </1>
+  
+   <form action="" method="POST">
+  <div >
+    <div class="form-group col-md-6">
+      <label for="inputNombre">Nombre del producto</label>
+      <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese aqui el nombre del producto" name= "nombre">
     </div>
-    <script>
-      window.addEventListener('load',function(){
-        var provincias = document.querySelector("select#Provincias");
-
-        fetch("https://apis.datos.gob.ar/georef/api/provincias")
-        .then(function(response){
-          return response.json();
-        })
-        .then(function(datosProvincias){
-          for(var i=0; i<datosProvincias.provincias.length;i++){
-            provincias.innerHTML = provincias.innerHTML+"<option value='"+datosProvincias.provincias[i].nombre+"'>"+datosProvincias.provincias[i].nombre+"</option>";
-          }
-        })
-        .catch(function(error){
-          console.log(error);
-        });
-
-        //Cuando hace click en el boton registrarme
-        var botonRegistrarme = document.querySelector("button#Registrarme");
-        botonRegistrarme.addEventListener('click',function(){
-
-          //variables para utilizar
-          var nombre = document.querySelector("input.nombre");
-          var apellido = document.querySelector("input.apellido");
-          var email = document.querySelector("input.email");
-          var contraseña = document.querySelector("input.contraseña");
-          var confirmarcontraseña = document.querySelector("input.confirmarcontraseña");
-          var numerodocumento = document.querySelector("input.numerodocumento");
-          var fechanacimiento = document.querySelector("input.fechanacimiento");
-          var telefonocontacto = document.querySelector("input.telefonocontacto");
-          var domicilio = document.querySelector("input.domicilio");
-          var codigopostal = document.querySelector("input.codigopostal");
-          var localidad = document.querySelector("input.localidad");
-
-          var errornombre = document.querySelector("span.errornombre");
-          var errorapellido = document.querySelector("span.errorapellido");
-          var erroremail = document.querySelector("span.erroremail");
-          var errorcontraseña = document.querySelector("span.errorcontraseña");
-          var errorconfirmarcontraseña = document.querySelector("span.errorconfirmarcontraseña");
-          var errornumerodocumento = document.querySelector("span.errornumerodocumento");
-          var errorfechanacimiento = document.querySelector("span.errorfechanacimiento");
-          var errortelefonocontacto =  document.querySelector("span.errortelefonocontacto");
-          var errordomicilio =  document.querySelector("span.errordomicilio");
-          var errorcodigopostal =  document.querySelector("span.errorcodigopostal");
-          var errorlocalidad =  document.querySelector("span.errorlocalidad");
-          var errorprovincias =  document.querySelector("span.errorprovincias");
-
-          //validaciones para cada variable
-          //Nombre
-          var letras = /^[a-zA-Z]+$/;
-          if (nombre.value  == ""){
-            errornombre.innerHTML = "Ingrese su Nombre";
-            errornombre.style.color = "red";
-            nombre.style.border = "solid 1px red";
-          }else if(nombre.value.length < 3 || letras.test(nombre.value) != true){
-            errornombre.innerHTML = "Ingrese un nombre válido";
-            errornombre.style.color = "red";
-            nombre.style.border = "solid 1px red";
-          }else{
-            errornombre.innerHTML = "";
-            nombre.style.border = "solid 1px lightgreen";
-          };
-
-          //Apellido
-          if (apellido.value  == ""){
-            errorapellido.innerHTML = "Ingrese su Apellido";
-            errorapellido.style.color = "red";
-            apellido.style.border = "solid 1px red";
-          }else if(apellido.value.length < 3 || letras.test(nombre.value) != true){
-            errorapellido.innerHTML = "Ingrese un apellido válido";
-            errorapellido.style.color = "red";
-            apellido.style.border = "solid 1px red";
-          }else if(letras.test(apellido.value) != true){
-            errorapellido.innerHTML = "Ingrese un apellido válido";
-            errorapellido.style.color = "red";
-            apellido.style.border = "solid 1px red";
-          }else{
-            errorapellido.innerHTML = "";
-            apellido.style.border = "solid 1px lightgreen";
-          }
-
-          //Email
-          var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-          if(email.value == ""){
-            erroremail.innerHTML = "Este campo es obligatorio";
-            erroremail.style.color = "red";
-            email.style.border = "solid 1px red";
-          }else if(regexEmail.test(email.value) != true) {
-            erroremail.innerHTML = "No has ingresado un correo electrónico válido";
-            erroremail.style.color = "red";
-            email.style.border = "solid 1px red";
-          }else{
-            erroremail.innerHTML = "";
-            email.style.border = "solid 1px lightgreen";
-          }
-
-          //Contraseña
-          if(contraseña.value == ""){
-            errorcontraseña.innerHTML = "Este campo es obligatorio";
-            errorcontraseña.style.color = "red";
-            contraseña.style.border = "solid 1px red";
-          }else if(contraseña.value.length < 6){
-            errorcontraseña.innerHTML = "La contraseña debe contener un mínimo de 6 carácteres";
-            errorcontraseña.style.color = "red";
-            contraseña.style.border = "solid 1px red";
-          }else{
-            errorcontraseña.innerHTML = "";
-            contraseña.style.border = "solid 1px lightgreen";
-          }
-
-          //Confirmacion Contraseña
-          if(confirmarcontraseña.value == ""){
-            errorconfirmarcontraseña.innerHTML = "Este campo es obligatorio";
-            errorconfirmarcontraseña.style.color = "red";
-            confirmarcontraseña.style.border = "solid 1px red";
-          }else if(confirmarcontraseña.value != contraseña.value){
-            errorconfirmarcontraseña.innerHTML = "Las contraseñas proporcionadas no coinciden";
-            errorconfirmarcontraseña.style.color = "red";
-            confirmarcontraseña.style.border = "solid 1px red";
-          } else {
-            errorconfirmarcontraseña.innerHTML = "";
-            confirmarcontraseña.style.border = "solid 1px lightgreen";
-          }
-
-          //NumeroDocumento
-          var numeros = /^([0-9])*$/
-          if(numerodocumento.value == ""){
-            errornumerodocumento.innerHTML = "Ingrese su numero de documento";
-            errornumerodocumento.style.color = "red";
-            numerodocumento.style.border = "solid 1px red";
-          }else if(numerodocumento.value.length < 8){
-            errornumerodocumento.innerHTML = "El documento debe ser válido";
-            errornumerodocumento.style.color = "red";
-            numerodocumento.style.border = "solid 1px red";
-          }else if(numeros.test(numerodocumento.value) != true) {
-            errornumerodocumento.innerHTML = "El documento debe ser válido";
-            errornumerodocumento.style.color = "red";
-            numerodocumento.style.border = "solid 1px red";
-          } else {
-            errornumerodocumento.innerHTML = "";
-            numerodocumento.style.border = "solid 1px lightgreen";
-          }
-
-          var hoy = new Date();
-          //FechaNacimiento
-          if(fechanacimiento.value == ""){
-            errorfechanacimiento.innerHTML = "Ingrese la fecha de nacimiento";
-            errorfechanacimiento.style.color = "red";
-            fechanacimiento.style.border = "solid 1px red";
-          }else if(fechanacimiento.value.length != 10) {
-            errorfechanacimiento.innerHTML = "La fecha de nacimiento no es valida";
-            errorfechanacimiento.style.color = "red";
-            fechanacimiento.style.border = "solid 1px red";
-          }else if(fechanacimiento.valueAsDate > hoy){
-            errorfechanacimiento.innerHTML = "La fecha de nacimiento es posterior a la permitida";
-            errorfechanacimiento.style.color = "red";
-            fechanacimiento.style.border = "solid 1px red";
-          }else {
-            errorfechanacimiento.innerHTML = "";
-            fechanacimiento.style.border = "solid 1px lightgreen";
-          }
-
-          //Telefono
-          if(telefonocontacto.value == ""){
-            errortelefonocontacto.innerHTML = "Ingrese un telefono de contacto";
-            errortelefonocontacto.style.color = "red";
-            telefonocontacto.style.border = "solid 1px red";
-          }else if(telefonocontacto.value.length <= 6 || numeros.test(telefonocontacto.value) != true) {
-            errortelefonocontacto.innerHTML = "El telefono de contacto debe ser válido";
-            errortelefonocontacto.style.color = "red";
-            telefonocontacto.style.border = "solid 1px red";
-          }else{
-            errortelefonocontacto.innerHTML = "";
-            telefonocontacto.style.border = "solid 1px lightgreen";
-          }
-
-          //Domicilio
-          if(domicilio.value == ""){
-            errordomicilio.innerHTML = "Ingrese el domicilio";
-            errordomicilio.style.color = "red";
-            domicilio.style.border = "solid 1px red";
-          }else if(domicilio.value.length < 4){
-            errordomicilio.innerHTML = "El domicilio debe ser válido";
-            errordomicilio.style.color = "red";
-            domicilio.style.border = "solid 1px red";
-          }else{
-            errordomicilio.innerHTML = "";
-            domicilio.style.border = "solid 1px lightgreen";
-          }
-
-          //CodigoPostal
-          if(codigopostal.value == ""){
-            errorcodigopostal.innerHTML = "Ingrese el Código Postal";
-            errorcodigopostal.style.color = "red";
-            codigopostal.style.border = "solid 1px red";
-          }else if(codigopostal.value.length < 4){
-            errorcodigopostal.innerHTML = "El codigo postal debe ser válido";
-            errorcodigopostal.style.color = "red";
-            codigopostal.style.border = "solid 1px red";
-          }else if(numeros.test(codigopostal.value) != true) {
-            errorcodigopostal.innerHTML = "El código postal debe ser válido";
-            errorcodigopostal.style.color = "red";
-            codigopostal.style.border = "solid 1px red";
-          }else{
-            errorcodigopostal.innerHTML = "";
-            codigopostal.style.border = "solid 1px lightgreen";
-          }
-
-          //localidad
-          if(localidad.value == ""){
-            errorlocalidad.innerHTML = "Ingrese una localidad";
-            errorlocalidad.style.color = "red";
-            localidad.style.border = "solid 1px red";
-          }else if(localidad.value.length < 4){
-            errorlocalidad.innerHTML = "La localidad debe ser válida";
-            errorlocalidad.style.color = "red";
-            localidad.style.border = "solid 1px red";
-          }else{
-            errorlocalidad.innerHTML = "";
-            localidad.style.border = "solid 1px lightgreen";
-          }
-
-          //Provincias
-          if(provincias.value == ""){
-            errorprovincias.innerHTML = "Seleccione una provincia";
-            errorprovincias.style.color = "red";
-            provincias.style.border = "solid 1px red";
-          }else {
-            errorprovincias.innerHTML = "";
-            provincias.style.border = "solid 1px lightgreen";
-          };
-
-        });
-      });
-
-
-    </script>
+    <div class="form-group col-md-6">
+      <label for="inputMarca">Marca</label>
+      <input type="text" class="form-control" id="inputMarca" placeholder="Ingrese aqui la marca" name="marca">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputDescripcion">Descripcion del producto</label>
+    <input type="text" class="form-control" id="inputDescripcion" placeholder="ingrese la descripcion aqui" name="descripcion">
+  </div>
+  <div class="form-group">
+    <label for="inputPrecio">Precio del producto</label>
+    <input type="number" class="form-control" id="inputPrecio" placeholder="Ingrese el precio del producto" name="precio">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
   </body>
 </html>
-<!- "no borrar el script! lo necesitamos para el dropdown menu" -!>
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

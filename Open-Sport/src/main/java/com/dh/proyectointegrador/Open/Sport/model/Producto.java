@@ -1,82 +1,85 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
-/**
- * POJO PRODUCTO.
- * 
- * @author Sil
- *  
- *
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="productos")
 public class Producto {
-	private String marca;
+	@Id
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String nombre;
-	private Integer id;
+	private String marca;
+	private String descripcion;
 	private Double precio;
-	private String categoria;
-	private Integer cantidad;
 	
+
 	public Producto() {
-		super();
-	}
-
-	public Producto(String marca, String nombre, Integer unId, Double precio, String categoria, Integer cantidad) {
-		this.categoria = categoria;
-		this.id = unId;
-		this.marca = marca;
-		this.nombre = nombre;
-		this.precio = precio;
-		this.cantidad = cantidad;
-	}
-
 	
-	public String getMarca() {
-		return marca;
 	}
+
+
+	public Producto(Long id, String nombre, String marca, String descripcion, Double precio) {
+		this.id = id;
+		this.nombre = nombre;
+		this.marca = marca;
+		this.descripcion = descripcion;
+		this.precio = precio;
+	}
+
+
+	public Long getId() {
+		return id;
+	}
+
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 
 	public String getNombre() {
 		return nombre;
 	}
 
-	public Integer getId() {
-		return id;
-	}
-
-	public Integer getCantidad() {
-		return cantidad;
-	}
-
-	public Double getPrecio() {
-		return precio;
-	}
-
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+
+	public String getMarca() {
+		return marca;
 	}
+
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+
+
+	public Double getPrecio() {
+		return precio;
+	}
+
 
 	public void setPrecio(Double precio) {
 		this.precio = precio;
 	}
 
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
-	public void setCantidad(Integer cantidad) {
-		this.cantidad = cantidad;
-	}
-	
 	
 }

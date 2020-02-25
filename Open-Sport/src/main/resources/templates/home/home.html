@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en" dir="ltr">
   <head>
+  	<link rel="stylesheet" type="text/css" media="all"  
+      href="../../style.css" th:href="@{/style.css}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>HOME</title>
@@ -28,7 +31,7 @@
            <div class="barrita col-5 d-flex justify-content-around">
              <a class="col-6" href="/login"><strong>INICIAR SESIÓN</strong></a>
              <a class="col-4" href="/registro"><strong>REGISTRO</strong></a>
-             <a class="col-2" href=""><img class="Carrito" src="imgs/bolsa.png" alt=""></a>
+             <a class="col-2" href="/carrito"><img class="Carrito" src="imgs/bolsa.png" alt=""></a>
            </div>
           </div>
         </div>
