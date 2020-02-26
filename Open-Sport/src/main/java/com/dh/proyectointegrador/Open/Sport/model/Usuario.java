@@ -1,6 +1,6 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
-import java.util.Date;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,14 +27,47 @@ public class Usuario {
 	private String nombre;
 	private Integer dni;
 	
-	
-	
-	
 	public Usuario() {
 		
 	}
 
-	
+	public Usuario(Integer iD, String apellido, String nombre, Integer dni) {
+		ID = iD;
+		this.apellido = apellido;
+		this.nombre = nombre;
+		this.dni = dni;
+	}
 
-		
+	public Integer getID() {
+		return ID;
+	}
+
+	public void setID(Integer iD) {
+		ID = iD;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Integer getDni() {
+		return dni;
+	}
+
+	public void setDni(Integer dni) {
+		this.dni = dni;
+	}
+
 }

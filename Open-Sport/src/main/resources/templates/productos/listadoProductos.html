@@ -18,16 +18,18 @@
     <tr >
       <th scope="col" >Id</th>
       <th scope="col">Nombre</th>
+      <th scope="col">Marca</th>
       <th scope="col">Descripción</th>
       <th scope="col">Precio</th>
     </tr>
   </thead>
   <tbody>
-    <tr th:each="unProducto:${listaDeProductos}">
-      <th scope="row" th:text="${unProducto.id}></th>
-      <td th:text="${unProducto.nombre}></td>
-      <td th:text="${unProducto.descripcion}></td>
-      <td th:text="${unProducto.precio}>@</td>
+    <tr th:each="unProducto : ${listaDeProductos}">
+      <th scope="row" th:text="${unProducto.id}"></th>
+      <td th:text="${unProducto.nombre}"></td>
+      <td th:text="${unProducto.marca}"></td>
+      <td th:text="${unProducto.descripcion}"></td>
+      <td th:text="${unProducto.precio}"></td>
     </tr>
     
   </tbody>

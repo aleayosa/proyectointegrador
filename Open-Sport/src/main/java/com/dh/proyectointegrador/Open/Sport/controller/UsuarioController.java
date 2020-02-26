@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import com.dh.proyectointegrador.Open.Sport.repository.usuarioJpaRepository;
 import com.dh.proyectointegrador.Open.Sport.model.Usuario;
 
@@ -19,9 +17,9 @@ public class UsuarioController {
 	public String getFormDeRegistro() {
 		return "registro/registro";
 }
-	@PostMapping("")
-	public String registrarUsuario(@RequestBody Usuario unUsuario) {
-		Usuario usuarioRegistrado = usuarioJpaRepository.save(unUsuario);
+	@PostMapping("registro")
+	public String registrarUsuario(Usuario unUsuario) {
+		usuarioJpaRepository.save(unUsuario);
 		return "/home/home";
 	}
 }
