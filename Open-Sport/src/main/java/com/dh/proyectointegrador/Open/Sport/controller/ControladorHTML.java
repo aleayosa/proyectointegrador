@@ -12,10 +12,6 @@ public class ControladorHTML {
 		return "/home/home";
 	}
 	
-	@PostMapping("home")
-	public String irAHome() {
-		return "/home/home";
-	}
 	
 	@GetMapping("login")
 	public String irAlLogin() {

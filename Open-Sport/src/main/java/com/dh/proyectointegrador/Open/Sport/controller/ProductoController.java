@@ -47,4 +47,5 @@ public class ProductoController {
 			model.addAttribute("listaDeProductos", listaDeProductos);
 			return "/productos/listadoProductos";
 		}
-     }
+}
+		

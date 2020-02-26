@@ -15,51 +15,7 @@
   </head>
   <body>
     <div class="container-fluid">
-      <header>
-        <div class="top-header container-fluid" >
-          <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
-          <div class="logo-mobile"><img src="imgs/headerBannerMobile.gif" alt=""></div>
-        </div>
-        <div class="medium-header row container-fluid align-items-center justify-content-around">
-          <a class="col-2 d-flex justify-content-center" href="/home"><img class="logo" src="imgs/logo-open.svg" alt="logo-open"></a>
-          <div class="navegacion row col-9 d-flex justify-content-around">
-           <div class="busqueda col-5 d-flex align-center justify-content-center">
-             <input class="col-9 " type="text" placeholder="¿Qué estas buscando?">
-             <button class="col-2 btn btn-light" type="button"><img src="imgs/buscar.png" alt="">
-             </button>
-           </div>
-           <div class="barrita col-5 d-flex justify-content-around">
-             <a class="col-6" href="/login"><strong>INICIAR SESIÓN</strong></a>
-             <a class="col-4" href="/registro"><strong>REGISTRO</strong></a>
-             <a class="col-2" href="/carrito"><img class="Carrito" src="imgs/bolsa.png" alt=""></a>
-           </div>
-          </div>
-        </div>
-        <div class="bottom-header row container-fluid">
-          <a class="store-locator col-4 offset-8 d-flex align-items-center justify-content-center" href="/sucursales">
-             <img class="col-1" src="imgs/alfiler.png" alt="">
-             <span class="col-8">SUCURSALES</span>
-          </a>
-        </div>
-        <div class="menuConte">
-          <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center">
-           <div class="col-4 logo2">
-              <a href="/home"><img src="imgs\logo-open.svg" alt="logo"></a>
-           </div>
-           <div class="col-4 p-0 menu">
-             <div class="dropdown">
-                <button class="col-8 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="imgs/hamburguesa.png" alt=""></button>
-                <div class="col-8 dropdown-menu" aria-labelledby="dropdown Menu2">
-                  <button class="dropdown-item" type="button"><a class="menu" href="/login">Log in</a></button>
-                  <button class="dropdown-item" type="button"><a class="menu" href="/registro">Registro</a></button>
-                  <button class="dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
-                  <button class="dropdown-item" type="button"><a class="menu" href="/faq">Preguntas frecuentes</a></button>
-                </div>
-             </div>
-           </div>
-         </div>
-        </div>
-      </header>
+      <header th:replace="/fragments/header::header"></header>
       <main>
         <div class="row">
           <nav class="col-lg-2 col-md-12 col-sm-12">
@@ -183,48 +139,7 @@
           </section>
         </div>
       </main>
-      <footer class="row d-flex justify-content-between align-item-center container-fluid p-4">
-        <div class="newsletter row col-lg-4 col-md-6 col-sm-11 d-flex justify-content-center align-items-center">
-          <input class="col-8 send" type="text" placeholder="ingresá tu e-mail!">
-          <button class="col-2 send" type="button"><img src="imgs/send.png" alt="new"></button>
-          <span class="col-12 errormail"></span>
-        </div>
-        <div class="row col-lg-4 col-md-6 d-flex align-items-center justify-content-around seguinos">
-          <a class= "iconos-redes" href="https://www.facebook.com"><img src="imgs/socialmedia/fb.png" alt="facebook"></a>
-          <a class= "iconos-redes" href="https://www.instagram.com"><img src="imgs/socialmedia/ig.png" alt="instagram"></a>
-          <a class= "iconos-redes" href="https://www.twitter.com"><img src="imgs/socialmedia/tw.png" alt="twitter"></a>
-          <a class= "iconos-redes" href="https://www.youtube.com"><img src="imgs/socialmedia/yt.png" alt="youtube"></a>
-        </div>
-        <div class="col-lg-3 faqfooter">
-          <a href="/faq"><img class="faq" src="imgs/pregunta.png" alt="pregunta"></a>
-        </div>
-      </footer>
-    </div>
-    <script>
-    window.addEventListener('load',function(){
-      //Cuando hace click en el boton enviar
-      var botonEnviar = document.querySelector("button.send");
-      botonEnviar.addEventListener('click',function(){
-        //validar los datos solicitados
-        //mostrar errores
-        var email = document.querySelector("input.send");
-        var errorEmail = document.querySelector("span.errormail");
-        var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-        if(email.value == ""){
-          errorEmail.innerHTML = "Este campo es obligatorio";
-          errorEmail.style.color = "red";
-          send.style.border = "solid 1px red";
-        }else if(regexEmail.test(email.value) != true){
-          errorEmail.innerHTML = "No has ingresado un correo electrónico válido";
-          errorEmail.style.color = "red";
-          email.style.border = "solid 1px red";
-        }else{
-          errorEmail.innerHTML = "";
-          email.style.border = "solid 1px lightgreen";
-        }
-        });
-    });
-    </script>
+      <footer th:replace="/fragments/footer::footer"></footer>
   </body>
 </html>
 

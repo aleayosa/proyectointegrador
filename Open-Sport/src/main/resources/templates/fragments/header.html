@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" dir="ltr">
+  <head>
+  	<link rel="stylesheet" type="text/css" media="all"  
+      href="../../style.css" th:href="@{/style.css}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700|Raleway+Dots|Raleway:200,200i,300,300i,400,700|Work+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="script" href="/home.js">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header th:fragment="header">
+        <div class="top-header container-fluid" >
+          <div class="logo-desktop"><img src="imgs/headerBannerDesktop.gif" alt=""></div>
+          <div class="logo-mobile"><img src="imgs/headerBannerMobile.gif" alt=""></div>
+        </div>
+        <div class="medium-header row container-fluid align-items-center justify-content-around">
+          <a class="col-2 d-flex justify-content-center" href="/home"><img class="logo" src="imgs/logo-open.svg" alt="logo-open"></a>
+          <div class="navegacion row col-9 d-flex justify-content-around">
+           <div class="busqueda col-5 d-flex align-center justify-content-center">
+             <input class="col-9 " type="text" placeholder="¿Qué estas buscando?">
+             <button class="col-2 btn btn-light" type="button"><img src="imgs/buscar.png" alt="">
+             </button>
+           </div>
+           <div class="barrita col-5 d-flex justify-content-around">
+             <a class="col-6" href="/login"><strong>INICIAR SESIÓN</strong></a>
+             <a class="col-4" href="/registro"><strong>REGISTRO</strong></a>
+             <a class="col-2" href="/carrito"><img class="Carrito" src="imgs/bolsa.png" alt=""></a>
+           </div>
+          </div>
+        </div>
+        <div class="bottom-header row container-fluid">
+          <a class="store-locator col-4 offset-8 d-flex align-items-center justify-content-center" href="/sucursales">
+             <img class="col-1" src="imgs/alfiler.png" alt="">
+             <span class="col-8">SUCURSALES</span>
+          </a>
+        </div>
+        <div class="menuConte">
+          <div class="row Col-xs-12 col-sm-12 col-md-12 p-0 d-lg-none justify-content-around align-center">
+           <div class="col-4 logo2">
+              <a href="/home"><img src="imgs\logo-open.svg" alt="logo"></a>
+           </div>
+           <div class="col-4 p-0 menu">
+             <div class="dropdown">
+                <button class="col-8 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="imgs/hamburguesa.png" alt=""></button>
+                <div class="col-8 dropdown-menu" aria-labelledby="dropdown Menu2">
+                  <button class="dropdown-item" type="button"><a class="menu" href="/login">Log in</a></button>
+                  <button class="dropdown-item" type="button"><a class="menu" href="/registro">Registro</a></button>
+                  <button class="dropdown-item" type="button"><a class="menu" href="#">Mi carrito</a></button>
+                  <button class="dropdown-item" type="button"><a class="menu" href="/faq">Preguntas frecuentes</a></button>
+                </div>
+             </div>
+           </div>
+         </div>
+        </div>
+      </header>
+  </body>
+</html>
+
+<!-- "no borrar el script! lo necesitamos para el dropdown menu" -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
