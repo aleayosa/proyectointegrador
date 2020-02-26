@@ -1,15 +1,10 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
-
-
-import java.util.List;
-
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
 import javax.persistence.Table;
 
 /**
@@ -29,17 +24,15 @@ public class Usuario {
 	private String apellido;
 	private String nombre;
 	private Integer dni;
-	@ManyToMany
-	private List<Producto> productos;
 	
-	public Usuario(Integer iD, String apellido, String nombre, Integer dni, List<Producto> productos) {
+
+	public Usuario(Integer iD, String apellido, String nombre, Integer dni) {
 		this.ID = iD;
 		this.apellido = apellido;
 		this.nombre = nombre;
 		this.dni = dni;
-		this.productos = productos;
+		
 	}
-	
 	public Integer getID() {
 		return ID;
 	}
@@ -64,12 +57,6 @@ public class Usuario {
 	public void setDni(Integer dni) {
 		this.dni = dni;
 	}
-	public List<Producto> getProductos() {
-		return productos;
-	}
-	public void setProductos(List<Producto> productos) {
-		this.productos = productos;
-	}
-	
+
 	
 }
