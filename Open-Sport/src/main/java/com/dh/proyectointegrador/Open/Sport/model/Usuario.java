@@ -1,11 +1,13 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  * POJO USUARIO.
@@ -23,6 +25,7 @@ public class Usuario {
 	private Integer ID;
 	private String apellido;
 	private String nombre;
+	@Column(nullable=false)
 	private Integer dni;
 	private String fechaDeNacimiento;
 	private String email;
@@ -32,10 +35,10 @@ public class Usuario {
 	private String provincia;
 	private String telefono;
 	private String codigoPostal;
+	
 	public Usuario(Integer iD, String apellido, String nombre, Integer dni, String fechaDeNacimiento, String email,
 			String password, String domicilio, String localidad, String provincia, String telefono,
 			String codigoPostal) {
-		super();
 		ID = iD;
 		this.apellido = apellido;
 		this.nombre = nombre;
