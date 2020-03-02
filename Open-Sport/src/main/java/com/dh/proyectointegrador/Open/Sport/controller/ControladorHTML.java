@@ -1,16 +1,20 @@
 package com.dh.proyectointegrador.Open.Sport.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.dh.proyectointegrador.Open.Sport.model.Producto;
+import com.dh.proyectointegrador.Open.Sport.repository.productoJpaRepository;
 
 @Controller
 public class ControladorHTML {
 
-	@GetMapping("home")
-	public String irAlHome() {
-		return "/home/home";
-	}
+	
+
 	
 	
 	@GetMapping("login")
@@ -31,15 +35,8 @@ public class ControladorHTML {
 	public String irAlCarrito() {
 		return "/carrito/carrito";
 	}
-	
-	@GetMapping("pago")
+	@GetMapping("pagar")
 	public String irAPagar() {
 		return "/carrito/pago";
 	}
-	
-	@GetMapping("listaProductos")
-	public String irALaListaDeProductos() {
-		return "/productos/ListadoProductos";
-	}
-	
 }

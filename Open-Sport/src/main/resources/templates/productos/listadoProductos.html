@@ -12,28 +12,27 @@
   </head>
   <body>
     <h1>Estos son nuestros productos</h1>
-
     <table class="table">
-  <thead>
-    <tr >
-      <th scope="col" >Id</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Marca</th>
-      <th scope="col">Descripción</th>
-      <th scope="col">Precio</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr th:each="unProducto : ${listaDeProductos}">
-      <th scope="row" th:text="${unProducto.id}"></th>
-      <td th:text="${unProducto.nombre}"></td>
-      <td th:text="${unProducto.marca}"></td>
-      <td th:text="${unProducto.descripcion}"></td>
-      <td th:text="${unProducto.precio}"></td>
-      <td th:text="${unProducto.imagen}"></td>
-    </tr>
-    
-  </tbody>
-</table>
+	  <thead>
+    	<tr >
+      		<th scope="col">Id</th>
+      		<th scope="col">Nombre</th>
+	        <th scope="col">Marca</th>
+      		<th scope="col">Descripción</th>
+      		<th scope="col">Precio</th>
+      		<th scope="col">Imagen</th>
+    	</tr>
+  	  </thead>
+      <tbody>
+    	<tr th:each="producto : ${listaDeProductos}">
+      		<th scope="row" th:text="${producto.id}"></th>
+      		<td th:text="${producto.nombre}"></td>
+      		<td th:text="${producto.marca}"></td>
+	      	<td th:text="${producto.descripcion}"></td>
+      		<td th:text="${producto.precio}"></td>
+        	<td th:text="${producto.imagen}"></td>
+  	    </tr>
+     </tbody>
+	</table>
   </body>
 </html>

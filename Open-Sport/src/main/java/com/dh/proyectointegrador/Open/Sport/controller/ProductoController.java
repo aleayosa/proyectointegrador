@@ -3,9 +3,12 @@ package com.dh.proyectointegrador.Open.Sport.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +27,7 @@ public class ProductoController {
 		//ingresar un producto.
 		
 		@GetMapping("alta")
-		public String getFormDeAlta() {
+		public String getFormDeAlta(Producto producto) {
 			return "/productos/nuevoProducto";
 	    }
 		
@@ -32,8 +35,12 @@ public class ProductoController {
 		//de al ta y me devuelve al home del administrador:
 		
 		@PostMapping("alta")
-		public String ingresarProducto(Producto unProducto) {
-			productoJpaRepository.save(unProducto);
+		public String ingresarProducto(@Valid Producto producto, BindingResult bindingResult ) {
+			
+			if (bindingResult.hasErrors()) {
+				return "/productos/nuevoProducto";
+			}
+			productoJpaRepository.save(producto);
 			return "/productos/ABMProductos";
 		}
 

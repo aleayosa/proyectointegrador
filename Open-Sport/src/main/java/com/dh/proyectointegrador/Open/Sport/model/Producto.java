@@ -1,10 +1,13 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="productos")
@@ -12,6 +15,8 @@ public class Producto {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Long id;
+	@NotBlank(message ="Este campo no puede quedar vacío")
+	@Column(nullable=false)
 	private String nombre;
 	private String marca;
 	private String descripcion;
