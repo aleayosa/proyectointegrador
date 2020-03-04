@@ -10,6 +10,7 @@
 
     <title>Listado</title>
   </head>
+  
   <body>
     <h1>Estos son nuestros productos</h1>
     <h2 th:if="${mensaje!=null}" th:text="${mensaje}" > </h2>
@@ -23,6 +24,8 @@
       		<th scope="col">Precio</th>
       		<th scope="col">Imagen</th>
       		<th scope="col">Genero</th>
+      		<th scope="col">Editar</th>
+      		<th scope="col">Eliminar</th>
     	</tr>
   	  </thead>
       <tbody>
@@ -34,8 +37,9 @@
       		<td th:text="${producto.precio}"></td>
         	<td th:text="${producto.imagen}"></td>
         	<td th:text="${(producto.categoria != null ? producto.categoria.nombre : 'No tiene')}"></td>
-        	
-  	    </tr>
+        	<td ><button type="send" id="Registrarme" class="col-6 btn">Editar</button></td>
+        	<td ><button type="submit" id="Registrarme" class="col-6 btn">Eliminar</button></td>
+        </tr>
      </tbody>
 	</table>
 	<h5><a href="/">Volver al Inicio</a><h5>

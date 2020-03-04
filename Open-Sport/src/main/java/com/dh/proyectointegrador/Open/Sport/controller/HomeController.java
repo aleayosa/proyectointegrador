@@ -22,4 +22,5 @@ public class HomeController {
 		model.addAttribute("listaDeProductos", listaDeProductos);
 		return "/home/home";
 	}
+	
 }

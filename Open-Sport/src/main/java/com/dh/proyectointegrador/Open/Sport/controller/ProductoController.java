@@ -7,6 +7,7 @@ import java.util.Optional;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -73,20 +74,22 @@ public class ProductoController {
 			return "/productos/listadoProductos";
 		}
 		
-		//cuando entro POR GET en localhost:8080/producto/buscar obtengo el form de 
-		//busqueda de productos
+		@GetMapping("/edit/{id}")
+		public String editarProducto(@PathVariable("id") Producto prod, Model model) {
+			model.addAttribute("productos", prod);
+			return "/productos/editarProducto";
+		}
 		
-		@GetMapping("buscar")
-		public String irAlBuscador() {
-			return "/productos/buscaProducto";
-	    }
+		//entro por GET a localhost:8080/producto/edit y obtengo el form para editar productos:
 		
-		
-		@GetMapping("{id}")
-		public String getProductoPorID(@PathVariable("id") Long id) {
-			Optional<Producto> unOptionalProducto = productoJpaRepository.findById(id);
-			return "/productos/buscaProducto";
-	    }
-		
+		@PostMapping("/edit/{id}")
+		public String editadoProducto(@Valid Producto producto, BindingResult bindingResult, RedirectAttributes redirAtt) {
+			if(bindingResult.hasErrors()) {
+				return "registroProductos";
+			}
+			productoJpaRepository.save(producto);
+			redirAtt.addFlashAttribute("mensaje", "Producto editado Exitosamente :)");
+			return "redirect:/producto/todos";
+		}
 }
 		
