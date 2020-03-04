@@ -14,7 +14,7 @@
       <header th:replace="/fragments/header2::header"></header>
       <main>
         <div class="row container-fluid justify-content-center ">
-          <form class="row col-lg-4 col-md-10" action="" method="POST">
+          <form id="formRegistro" class="row col-lg-4 col-md-10" action="" method="POST">
             <h3 class="offset-1 col-10">Registrate</h3>
             <div class="row col-12 datos">
               <label class="campos col-12" for="Nombre">Nombre:</label>
@@ -94,8 +94,8 @@
         });
 
         //Cuando hace click en el boton registrarme
-        var botonRegistrarme = document.querySelector("button#Registrarme");
-        botonRegistrarme.addEventListener('submit',function(){
+        var botonRegistrarme = document.querySelector("form#formRegistro");
+        botonRegistrarme.onSubmit=function(evt){
 						
           //variables para utilizar
           var nombre = document.querySelector("input.nombre");
@@ -130,10 +130,12 @@
             errornombre.innerHTML = "Ingrese su Nombre";
             errornombre.style.color = "red";
             nombre.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(nombre.value.length < 3 || letras.test(nombre.value) != true){
             errornombre.innerHTML = "Ingrese un nombre válido";
             errornombre.style.color = "red";
             nombre.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errornombre.innerHTML = "";
             nombre.style.border = "solid 1px lightgreen";
@@ -144,14 +146,17 @@
             errorapellido.innerHTML = "Ingrese su Apellido";
             errorapellido.style.color = "red";
             apellido.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(apellido.value.length < 3 || letras.test(nombre.value) != true){
             errorapellido.innerHTML = "Ingrese un apellido válido";
             errorapellido.style.color = "red";
             apellido.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(letras.test(apellido.value) != true){
             errorapellido.innerHTML = "Ingrese un apellido válido";
             errorapellido.style.color = "red";
             apellido.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errorapellido.innerHTML = "";
             apellido.style.border = "solid 1px lightgreen";
@@ -163,10 +168,12 @@
             erroremail.innerHTML = "Este campo es obligatorio";
             erroremail.style.color = "red";
             email.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(regexEmail.test(email.value) != true) {
             erroremail.innerHTML = "No has ingresado un correo electrónico válido";
             erroremail.style.color = "red";
             email.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             erroremail.innerHTML = "";
             email.style.border = "solid 1px lightgreen";
@@ -177,10 +184,12 @@
             errorcontraseña.innerHTML = "Este campo es obligatorio";
             errorcontraseña.style.color = "red";
             contraseña.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(contraseña.value.length < 6){
             errorcontraseña.innerHTML = "La contraseña debe contener un mínimo de 6 carácteres";
             errorcontraseña.style.color = "red";
             contraseña.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errorcontraseña.innerHTML = "";
             contraseña.style.border = "solid 1px lightgreen";
@@ -191,10 +200,12 @@
             errorconfirmarcontraseña.innerHTML = "Este campo es obligatorio";
             errorconfirmarcontraseña.style.color = "red";
             confirmarcontraseña.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(confirmarcontraseña.value != contraseña.value){
             errorconfirmarcontraseña.innerHTML = "Las contraseñas proporcionadas no coinciden";
             errorconfirmarcontraseña.style.color = "red";
             confirmarcontraseña.style.border = "solid 1px red";
+            evt.preventDefault();
           } else {
             errorconfirmarcontraseña.innerHTML = "";
             confirmarcontraseña.style.border = "solid 1px lightgreen";
@@ -206,14 +217,17 @@
             errornumerodocumento.innerHTML = "Ingrese su numero de documento";
             errornumerodocumento.style.color = "red";
             numerodocumento.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(numerodocumento.value.length < 8){
             errornumerodocumento.innerHTML = "El documento debe ser válido";
             errornumerodocumento.style.color = "red";
             numerodocumento.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(numeros.test(numerodocumento.value) != true) {
             errornumerodocumento.innerHTML = "El documento debe ser válido";
             errornumerodocumento.style.color = "red";
             numerodocumento.style.border = "solid 1px red";
+            evt.preventDefault();
           } else {
             errornumerodocumento.innerHTML = "";
             numerodocumento.style.border = "solid 1px lightgreen";
@@ -225,14 +239,17 @@
             errorfechanacimiento.innerHTML = "Ingrese la fecha de nacimiento";
             errorfechanacimiento.style.color = "red";
             fechanacimiento.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(fechanacimiento.value.length != 10) {
             errorfechanacimiento.innerHTML = "La fecha de nacimiento no es valida";
             errorfechanacimiento.style.color = "red";
             fechanacimiento.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(fechanacimiento.valueAsDate > hoy){
             errorfechanacimiento.innerHTML = "La fecha de nacimiento es posterior a la permitida";
             errorfechanacimiento.style.color = "red";
             fechanacimiento.style.border = "solid 1px red";
+            evt.preventDefault();
           }else {
             errorfechanacimiento.innerHTML = "";
             fechanacimiento.style.border = "solid 1px lightgreen";
@@ -243,10 +260,12 @@
             errortelefonocontacto.innerHTML = "Ingrese un telefono de contacto";
             errortelefonocontacto.style.color = "red";
             telefonocontacto.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(telefonocontacto.value.length <= 6 || numeros.test(telefonocontacto.value) != true) {
             errortelefonocontacto.innerHTML = "El telefono de contacto debe ser válido";
             errortelefonocontacto.style.color = "red";
             telefonocontacto.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errortelefonocontacto.innerHTML = "";
             telefonocontacto.style.border = "solid 1px lightgreen";
@@ -257,10 +276,12 @@
             errordomicilio.innerHTML = "Ingrese el domicilio";
             errordomicilio.style.color = "red";
             domicilio.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(domicilio.value.length < 4){
             errordomicilio.innerHTML = "El domicilio debe ser válido";
             errordomicilio.style.color = "red";
             domicilio.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errordomicilio.innerHTML = "";
             domicilio.style.border = "solid 1px lightgreen";
@@ -271,14 +292,17 @@
             errorcodigopostal.innerHTML = "Ingrese el Código Postal";
             errorcodigopostal.style.color = "red";
             codigopostal.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(codigopostal.value.length < 4){
             errorcodigopostal.innerHTML = "El codigo postal debe ser válido";
             errorcodigopostal.style.color = "red";
             codigopostal.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(numeros.test(codigopostal.value) != true) {
             errorcodigopostal.innerHTML = "El código postal debe ser válido";
             errorcodigopostal.style.color = "red";
             codigopostal.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errorcodigopostal.innerHTML = "";
             codigopostal.style.border = "solid 1px lightgreen";
@@ -289,10 +313,12 @@
             errorlocalidad.innerHTML = "Ingrese una localidad";
             errorlocalidad.style.color = "red";
             localidad.style.border = "solid 1px red";
+            evt.preventDefault();
           }else if(localidad.value.length < 4){
             errorlocalidad.innerHTML = "La localidad debe ser válida";
             errorlocalidad.style.color = "red";
             localidad.style.border = "solid 1px red";
+            evt.preventDefault();
           }else{
             errorlocalidad.innerHTML = "";
             localidad.style.border = "solid 1px lightgreen";
@@ -303,12 +329,14 @@
             errorprovincias.innerHTML = "Seleccione una provincia";
             errorprovincias.style.color = "red";
             provincias.style.border = "solid 1px red";
-          }else {
+            evt.preventDefault();
+          } 
+          else {
             errorprovincias.innerHTML = "";
             provincias.style.border = "solid 1px lightgreen";
           };
 
-        });
+        };
       });
 
 

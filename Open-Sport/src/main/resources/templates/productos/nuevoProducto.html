@@ -25,14 +25,24 @@
       <input type="text" class="form-control" id="inputMarca" placeholder="Ingrese aqui la marca" name="marca">
     </div>
   </div>
+  
+  
   <div class="form-group">
     <label for="inputDescripcion">Descripcion del producto</label>
     <input type="text" class="form-control" id="inputDescripcion" placeholder="ingrese la descripcion aqui" name="descripcion">
   </div>
+  
   <div class="form-group">
     <label for="inputPrecio">Precio del producto</label>
     <input type="number" class="form-control" id="inputPrecio" placeholder="Ingrese el precio del producto" name="precio">
   </div>
+  
+  <div class="form-group">
+    <label for="inputCategoria">Género</label>
+    <select name="categoria" id="categoria">
+    	<option th:each="categoria : ${listaDeCategorias}" th:text="${categoria.nombre}" th:value="${categoria.id}"></option>
+  </div>
+  
   <div class="form-group">
     <label for="inputImagen">Imagen del producto</label>
     <input type="file" class="form-control-file" id="inputImagen" name="imagen">

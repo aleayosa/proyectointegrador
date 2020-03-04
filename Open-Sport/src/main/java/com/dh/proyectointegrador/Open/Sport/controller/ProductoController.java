@@ -2,6 +2,7 @@ package com.dh.proyectointegrador.Open.Sport.controller;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -10,10 +11,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.dh.proyectointegrador.Open.Sport.model.Categoria;
 import com.dh.proyectointegrador.Open.Sport.model.Producto;
+import com.dh.proyectointegrador.Open.Sport.repository.categoriaJpaRepository;
 import com.dh.proyectointegrador.Open.Sport.repository.productoJpaRepository;
 
 @Controller
@@ -23,11 +28,16 @@ public class ProductoController {
 		@Autowired
 		private productoJpaRepository productoJpaRepository;
 		
+		@Autowired
+		private categoriaJpaRepository categoriaJpaRepository;
+		
 		//cuando entro POR GET en localhost:8080/producto/alta obtengo el formulario para 
 		//ingresar un producto.
 		
 		@GetMapping("alta")
-		public String getFormDeAlta(Producto producto) {
+		public String getFormDeAlta(Producto producto, Model model) {
+			List<Categoria> listaDeCategorias = categoriaJpaRepository.findAll();
+			model.addAttribute("listaDeCategorias", listaDeCategorias);
 			return "/productos/nuevoProducto";
 	    }
 		
@@ -35,13 +45,14 @@ public class ProductoController {
 		//de al ta y me devuelve al home del administrador:
 		
 		@PostMapping("alta")
-		public String ingresarProducto(@Valid Producto producto, BindingResult bindingResult ) {
+		public String ingresarProducto(@Valid Producto producto, BindingResult bindingResult, RedirectAttributes redirAtt ) {
 			
 			if (bindingResult.hasErrors()) {
 				return "/productos/nuevoProducto";
 			}
 			productoJpaRepository.save(producto);
-			return "/productos/ABMProductos";
+			redirAtt.addFlashAttribute("mensaje", "Producto guardado exitosamente");
+			return "redirect:/producto/todos";
 		}
 
 		//cuando entro POR GET en localhost:8080/producto/todos obtengo el listado de 
@@ -54,5 +65,21 @@ public class ProductoController {
 			model.addAttribute("listaDeProductos", listaDeProductos);
 			return "/productos/listadoProductos";
 		}
+		
+		//cuando entro POR GET en localhost:8080/producto/buscar obtengo el form de 
+		//busqueda de productos
+		
+		@GetMapping("buscar")
+		public String irAlBuscador() {
+			return "/productos/buscaProducto";
+	    }
+		
+		
+		@GetMapping("{id}")
+		public String getProductoPorID(@PathVariable("id") Long id) {
+			Optional<Producto> unOptionalProducto = productoJpaRepository.findById(id);
+			return "/productos/buscaProducto";
+	    }
+		
 }
 		

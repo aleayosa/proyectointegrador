@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -23,16 +25,22 @@ public class Producto {
 	private Double precio;
 	private String imagen;
 	
+	@ManyToOne
+	@JoinColumn(name="categoria_id")
+	private Categoria categoria;
+	
 	public Producto() {
 		}
 
-	public Producto(Long id, String nombre, String marca, String descripcion, Double precio, String imagen) {
+	public Producto(Long id, @NotBlank(message = "Este campo no puede quedar vacío") String nombre, String marca,
+			String descripcion, Double precio, String imagen, Categoria categoria) {
 		this.id = id;
 		this.nombre = nombre;
 		this.marca = marca;
 		this.descripcion = descripcion;
 		this.precio = precio;
 		this.imagen = imagen;
+		this.categoria = categoria;
 	}
 
 	public Long getId() {
@@ -83,6 +91,13 @@ public class Producto {
 		this.imagen = imagen;
 	}
 
-	
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
+
 	
 }
