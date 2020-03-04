@@ -8,8 +8,8 @@
 	
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/nuevoproducto.css">
+	<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/nuevoproducto.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700|Raleway+Dots|Raleway:200,200i,300,300i,400,700|Work+Sans:300,400,700&display=swap" rel="stylesheet">
     <title>Alta de producto</title>
   </head>
@@ -27,7 +27,7 @@
 	       </div>
 	       <div class="row col-12">
 	    	  <label class="campos col-md-4" for="inputMarca">Marca:</label>
-              <select class="marcas completar col-md-6 " name="marcas" id="marca">
+              <select class="marcas completar col-md-6 " name="marca" id="marca">
                 <option>Seleccione una marca</option>
                 <option th:each="marca : ${listaDeMarcas}" th:text="${marca.nombre}" th:value="${marca.id}"></option>
               </select>

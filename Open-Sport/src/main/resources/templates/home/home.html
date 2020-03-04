@@ -70,14 +70,12 @@
               <article class="col-lg-3 col-sm-6" th:each="producto : ${listaDeProductos}">
                 <div class="imagenProducto">
                   <button type="button" class="fav"><img class="favorito" src="imgs/charla.png" alt="comentario favorito"></button>
-                  <a href=""><img class="producto" src="imgs/Productos/Adidas - Hombre - Pantalón Adidas Harden Commercial.jpg" alt="Imagen del producto"></a>
+                  <a href=""><img class="producto" th:src="@{'imgs/productos/'  + ${producto.imagen}}" alt="Imagen del producto"/></a>
                 </div>
                 <a href="#" class="nombre-producto"><h4 th:text="${producto.nombre}"></h4></a>
                 <p th:text="${producto.precio}" class="precio"></p>
                 <button type="button" name="button" class="carrito"><img src="imgs/shopping-cart.png" alt="carrito"></button>
               </article>
-             
-             
              
              
              
