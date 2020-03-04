@@ -9,7 +9,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+
 
 @Entity
 @Table(name="productos")
@@ -20,7 +20,11 @@ public class Producto {
 	@NotBlank(message ="Este campo no puede quedar vacío")
 	@Column(nullable=false)
 	private String nombre;
-	private String marca;
+	
+	@ManyToOne
+	@JoinColumn(name="marca_id")
+	private Marca marca;
+	
 	private String descripcion;
 	private Double precio;
 	private String imagen;
@@ -32,7 +36,7 @@ public class Producto {
 	public Producto() {
 		}
 
-	public Producto(Long id, @NotBlank(message = "Este campo no puede quedar vacío") String nombre, String marca,
+	public Producto(Long id, @NotBlank(message = "Este campo no puede quedar vacío") String nombre, Marca marca,
 			String descripcion, Double precio, String imagen, Categoria categoria) {
 		this.id = id;
 		this.nombre = nombre;
@@ -59,11 +63,11 @@ public class Producto {
 		this.nombre = nombre;
 	}
 
-	public String getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(String marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 

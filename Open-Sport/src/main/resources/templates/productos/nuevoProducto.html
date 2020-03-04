@@ -4,50 +4,58 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+	
+	
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nuevoproducto.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700|Raleway+Dots|Raleway:200,200i,300,300i,400,700|Work+Sans:300,400,700&display=swap" rel="stylesheet">
     <title>Alta de producto</title>
   </head>
+  
+  
   <body>
-  <h1> Ingrese los datos del producto a dar de alta </1>
-  
-   <form th:action="@{/producto/alta}" th:object="${producto}" method="POST">
-  <div >
-    <div class="form-group col-md-6">
-      <label for="inputNombre">Nombre del producto</label>
-      <input type="text" class="form-control" id="inputNombre" placeholder="Ingrese aqui el nombre del producto" th:field="*{nombre}" />
-      <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputMarca">Marca</label>
-      <input type="text" class="form-control" id="inputMarca" placeholder="Ingrese aqui la marca" name="marca">
-    </div>
-  </div>
-  
-  
-  <div class="form-group">
-    <label for="inputDescripcion">Descripcion del producto</label>
-    <input type="text" class="form-control" id="inputDescripcion" placeholder="ingrese la descripcion aqui" name="descripcion">
-  </div>
-  
-  <div class="form-group">
-    <label for="inputPrecio">Precio del producto</label>
-    <input type="number" class="form-control" id="inputPrecio" placeholder="Ingrese el precio del producto" name="precio">
-  </div>
-  
-  <div class="form-group">
-    <label for="inputCategoria">Género</label>
-    <select name="categoria" id="categoria">
-    	<option th:each="categoria : ${listaDeCategorias}" th:text="${categoria.nombre}" th:value="${categoria.id}"></option>
-  </div>
-  
-  <div class="form-group">
-    <label for="inputImagen">Imagen del producto</label>
-    <input type="file" class="form-control-file" id="inputImagen" name="imagen">
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar</button>
-</form>
+  	<h3> Ingrese los datos del producto a dar de alta </h3>
+
+   	<form th:action="@{/producto/alta}" th:object="${producto}" method="POST">
+   		<div class="row col-9 datos">
+   			<div class="row col-12">
+              <label class="campos col-md-4" for="inputNombre">Nombre del Producto:</label>
+              <input class="nombre completar col-md-6" type="text" id="inputNombre" th:field="*{nombre}" placeholder="Ingrese el nombre del producto"/>
+              <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+	       </div>
+	       <div class="row col-12">
+	    	  <label class="campos col-md-4" for="inputMarca">Marca:</label>
+              <select class="marcas completar col-md-6 " name="marcas" id="marca">
+                <option>Seleccione una marca</option>
+                <option th:each="marca : ${listaDeMarcas}" th:text="${marca.nombre}" th:value="${marca.id}"></option>
+              </select>
+	       </div>
+	       <div class="row col-12">
+	    	  <label class="campos col-md-4" for="inputPrecio">Precio del Producto:</label>
+              <input class="precio completar col-md-6 " type="number" id="inputPrecio" placeholder="Ingrese el valor en $" name="precio"/>
+           </div>
+	       <div class="row col-12">
+              <label class="campo col-md-4" for="inputCategoria">Género:</label>
+              <select class="categoria completar col-md-6" name="categoria" id="categoria">
+                <option>Seleccione un género</option>
+                <option th:each="categoria : ${listaDeCategorias}" th:text="${categoria.nombre}" th:value="${categoria.id}"></option>
+              </select>
+           </div>
+	       <div class="row col-12">
+              <label class="campos col-md-4" for="inputDescripcion">Descripción del Producto:</label>
+              <input class="descripcion completar col-md-6" type="text" id="inputDescipcion" name="descripcion" placeholder="Ingrese una breve descripción del producto"/>
+           </div>
+	       <div class="row col-12">
+              <label class="campos col-md-4" for="inputImagen">Imagen:</label>
+              <input class="imagen completar col-md-6 form-control-file" type="file" id="inputImagen" name="imagen">
+	       </div>
+	       <div class="row col-12">
+		      <div class="row col-5 Botones justify-content-center" id="botones">
+              	<button type="submit" id="Registrarme" class="col-5 btn btn-dark">Enviar</button>
+              </div>
+		</div>
+	</form>
   </body>
 </html>

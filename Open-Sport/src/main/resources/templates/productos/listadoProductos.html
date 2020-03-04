@@ -29,13 +29,15 @@
     	<tr th:each="producto : ${listaDeProductos}">
       		<th scope="row" th:text="${producto.id}"></th>
       		<td th:text="${producto.nombre}"></td>
-      		<td th:text="${producto.marca}"></td>
+      		<td th:text="${(producto.marca != null ? producto.marca.nombre : 'No tiene')}"></td>
 	      	<td th:text="${producto.descripcion}"></td>
       		<td th:text="${producto.precio}"></td>
         	<td th:text="${producto.imagen}"></td>
-        	<td th:text="${(producto.categoria != null ? producto.categoria.nombre : 'no tiene')}"></td>
+        	<td th:text="${(producto.categoria != null ? producto.categoria.nombre : 'No tiene')}"></td>
+        	
   	    </tr>
      </tbody>
 	</table>
+	<h5><a href="/">Volver al Inicio</a><h5>
   </body>
 </html>

@@ -17,9 +17,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.dh.proyectointegrador.Open.Sport.model.Categoria;
+import com.dh.proyectointegrador.Open.Sport.model.Marca;
 import com.dh.proyectointegrador.Open.Sport.model.Producto;
 import com.dh.proyectointegrador.Open.Sport.repository.categoriaJpaRepository;
 import com.dh.proyectointegrador.Open.Sport.repository.productoJpaRepository;
+import com.dh.proyectointegrador.Open.Sport.repository.marcaJpaRepository;
 
 @Controller
 @RequestMapping("producto")
@@ -31,6 +33,9 @@ public class ProductoController {
 		@Autowired
 		private categoriaJpaRepository categoriaJpaRepository;
 		
+		@Autowired
+		private marcaJpaRepository marcaJpaRepository;
+		
 		//cuando entro POR GET en localhost:8080/producto/alta obtengo el formulario para 
 		//ingresar un producto.
 		
@@ -38,6 +43,8 @@ public class ProductoController {
 		public String getFormDeAlta(Producto producto, Model model) {
 			List<Categoria> listaDeCategorias = categoriaJpaRepository.findAll();
 			model.addAttribute("listaDeCategorias", listaDeCategorias);
+			List<Marca> listaDeMarcas = marcaJpaRepository.findAll();
+			model.addAttribute("listaDeMarcas", listaDeMarcas);
 			return "/productos/nuevoProducto";
 	    }
 		
