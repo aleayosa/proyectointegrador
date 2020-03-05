@@ -12,8 +12,12 @@
   </head>
   
   <body>
-    <h1>Estos son nuestros productos</h1>
+    <h1>ADMINISTRACION DE PRODUCTOS</h1>
+    
+    <a href="/producto/alta" ><button type="submit" id="Registrarme" class=" btn btn-light">INGRESAR UN NUEVO PRODUCTO</button></a>
+    <br>
     <h2 th:if="${mensaje!=null}" th:text="${mensaje}" > </h2>
+    <br>
     <table class="table">
 	  <thead>
     	<tr >
@@ -37,11 +41,16 @@
       		<td th:text="${producto.precio}"></td>
         	<td th:text="${producto.imagen}"></td>
         	<td th:text="${(producto.categoria != null ? producto.categoria.nombre : 'No tiene')}"></td>
-        	<td ><button type="send" id="Registrarme" class="col-6 btn">Editar</button></td>
-        	<td ><button type="submit" id="Registrarme" class="col-6 btn">Eliminar</button></td>
-        </tr>
+        	<td ><button type="send" id="Registrarme" class="col-6 btn"><a th:href="@{/producto/editar/} + ${producto.id}">Editar</a></button></td>
+        	<td ><form th:action="@{/producto/eliminar}" method="post">
+                            <input type="hidden" name="id" th:value="${producto.id}"/>
+                            <button type="submit" class="btn btn-danger">Eliminar <i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                        </td >
+       </tr>
      </tbody>
 	</table>
-	<h5><a href="/">Volver al Inicio</a><h5>
+	
   </body>
 </html>

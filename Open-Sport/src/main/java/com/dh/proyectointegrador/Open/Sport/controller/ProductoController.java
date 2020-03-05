@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +38,8 @@ public class ProductoController {
 		@Autowired
 		private marcaJpaRepository marcaJpaRepository;
 		
+		
+		
 		//cuando entro POR GET en localhost:8080/producto/alta obtengo el formulario para 
 		//ingresar un producto.
 		
@@ -49,8 +52,8 @@ public class ProductoController {
 			return "/productos/nuevoProducto";
 	    }
 		
-		//cuando entro POR POST en localhost:8080/producto/alta le doy enviar al formulario 
-		//de al ta y me devuelve al home del administrador:
+		//cuando entro POR POST al mismo endpoint le doy enviar al formulario 
+		//de alta y me lleva al listado de productos, con el mensaje de que se ingresó exitosamente:
 		
 		@PostMapping("alta")
 		public String ingresarProducto(@Valid Producto producto, BindingResult bindingResult, RedirectAttributes redirAtt ) {
@@ -64,7 +67,7 @@ public class ProductoController {
 		}
 
 		//cuando entro POR GET en localhost:8080/producto/todos obtengo el listado de 
-		//productos, resultado de iterar la tabla de productos que s eingresaron con el 
+		//productos, resultado de iterar la tabla de productos que se ingresaron con el 
 		//metodo anterior, con thymeleaf crea una row por cada producto:
 		
 		@GetMapping("todos")
@@ -74,22 +77,28 @@ public class ProductoController {
 			return "/productos/listadoProductos";
 		}
 		
-		@GetMapping("/edit/{id}")
-		public String editarProducto(@PathVariable("id") Producto prod, Model model) {
-			model.addAttribute("productos", prod);
-			return "/productos/editarProducto";
+		
+		// al hacer click en editar (vinculo) en el listado de productos ejecuta el getById para el formulario de edicion
+		@GetMapping("/editar/{id}")
+		public String mostrarFormularioEditar(@PathVariable long id, Model model) {
+		    model.addAttribute("producto", productoJpaRepository.findById(id).orElse(null));
+		    return "productos/editarProducto";
 		}
 		
-		//entro por GET a localhost:8080/producto/edit y obtengo el form para editar productos:
 		
-		@PostMapping("/edit/{id}")
-		public String editadoProducto(@Valid Producto producto, BindingResult bindingResult, RedirectAttributes redirAtt) {
-			if(bindingResult.hasErrors()) {
-				return "registroProductos";
-			}
+		// al hacer click en guardar se ejecuta el POST del formulario de edicion
+		@PostMapping("/editar/{id}")
+		public String actualizarProducto( Producto producto) {
 			productoJpaRepository.save(producto);
-			redirAtt.addFlashAttribute("mensaje", "Producto editado Exitosamente :)");
-			return "redirect:/producto/todos";
+			return "productos/listadoProducto";
+		}
+		
+		@PostMapping("/eliminar")
+		public String eliminarProducto(@ModelAttribute Producto producto, RedirectAttributes redirectAttrs) {
+		    redirectAttrs
+		            .addFlashAttribute("mensaje", "Eliminado correctamente")
+		            .addFlashAttribute("clase", "warning");
+		    productoJpaRepository.deleteById(producto.getId());
+		    return "redirect:/producto/todos";
 		}
 }
-		
