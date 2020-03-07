@@ -70,8 +70,12 @@
               </div>
               <a href="#" class="nombre-producto"><h4 th:text="${producto.nombre}"></h4></a>
               <p th:text="${producto.precio}" class="precio"></p>
-              <button type="button" name="button" class="carrito"><img src="imgs/shopping-cart.png" alt="carrito"></button>
+              <form th:action="@{'/carrito/agregar/' + ${producto.id}" method="POST">
+              	<button type="submit" name="button" class="carrito"><img src="imgs/shopping-cart.png" alt="carrito"></button>
+           	  </form>
             </article>
+            
+            
            </div>
           </section>
         </div>

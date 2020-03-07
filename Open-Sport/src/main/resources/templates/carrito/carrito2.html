@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Carrito de Compras  - Open Sports</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,600,600i,700|Raleway+Dots|Raleway:200,200i,300,300i,400,700|Work+Sans:300,400,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header th:replace="/fragments/header2::header"></header>
+      <main class="page">
+        <section class="shopping-cart dark">
+          <div class="container">
+               <div class="block-heading">
+                 <h1>Carrito de Compras</h1>
+                  <p><strong>Productos Seleccionados</strong> </p>
+                </div>
+               <div class="content">
+              <div class="row">
+                <div class="col-md-12 col-lg-8">
+                  <div class="items">
+                    <div class="product">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <img class="img-fluid mx-auto d-block image" src="imgs/productos/Adidas - Hombre - Pantalón Adidas Harden Commercial.jpg">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="info">
+                            <div class="row">
+                              <div class="col-md-5 product-name">
+                                <div class="product-name">
+                                  <a href="#">Adidas - Hombre - Pantalón Adidas Harden Commercial</a>
+                                  <div class="product-info">
+                                    <div>Talle: <span class="value">Unico</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2 quantity">
+                                <label for="quantity">Cantidad:</label>
+                                <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+                              </div>
+                              <div class="col-md-3 price">
+                                <span>$ 2.800</span>
+                              </div>
+                              <div class="col-md-2">
+                                <button class="btn btn-danger">Eliminar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="product">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <img class="img-fluid mx-auto d-block image" src="imgs/productos/Nike - Mujer - Remera Nike Dri-Fit.jpg">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="info">
+                            <div class="row">
+                              <div class="col-md-5 product-name">
+                                <div class="product-name">
+                                  <a href="#">Nike - Mujer - Remera Nike Dri-Fit</a>
+                                  <div class="product-info">
+                                    <div>Talle: <span class="value">Unico</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2 quantity">
+                                <label for="quantity">Cantidad:</label>
+                                <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+                              </div>
+                              <div class="col-md-3 price">
+                                <span>$ 1.500</span>
+                              </div>
+                              <div class="col-md-2">
+                                <button class="btn btn-danger">Eliminar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <br>
+                    <div class="product">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <img class="img-fluid mx-auto d-block image" src="imgs/Productos/Adidas - Hombre - Zapatillas Adidas Grand Court 2.jpg">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="info">
+                            <div class="row">
+                              <div class="col-md-5 product-name">
+                                <div class="product-name">
+                                  <a href="#">Adidas - Hombre - Zapatillas Adidas Grand Court 2</a>
+                                  <div class="product-info">
+                                    <div>Talle: <span class="value">Unico</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-2 quantity">
+                                <label for="quantity">Cantidad:</label>
+                                <input id="quantity" type="number" value ="1" class="form-control quantity-input">
+                              </div>
+                              <div class="col-md-3 price">
+                                <span>$ 2.600</span>
+                              </div>
+                              <div class="col-md-2">
+                                <button class="btn btn-danger">Eliminar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col-md-4 order-md-2 mb-4 resume">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3">
+                      <span class="text-muted">Su compra</span>
+                      <span class="badge badge-secondary badge-pill">3</span>
+                    </h4>
+                    <ul class="list-group mb-3">
+                      <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0">Producto 1</h6>
+                          <small class="text-muted">Talle: Unico</small>
+                        </div>
+                        <span class="text-muted">$ 2.800</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0">Producto 2</h6>
+                          <small class="text-muted">Talle Unico</small>
+                        </div>
+                        <span class="text-muted">$ 1.500</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <div>
+                          <h6 class="my-0">Producto 3</h6>
+                          <small class="text-muted">Talle Unico</small>
+                        </div>
+                        <span class="text-muted">$ 2.800</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                          <h6 class="my-0">Código de Promoción</h6>
+                          <small>CODIGODEEJEMPLO</small>
+                        </div>
+                        <span class="text-success">-$ 50</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (ARS)</span>
+                        <strong>$ 6.850</strong>
+                      </li>
+                    </ul>
+          
+                    <form class="card p-2">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Promo code">
+                        <div class="input-group-append">
+                          <button type="submit" class="btn btn-secondary">Canjear</button>
+                        </div>
+                      </div>
+                    </form>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" OnClick="location.href='pago.html'">PAGAR</button>
+        
+                  <!--
+                  <div class="summary">
+                    <h3>Summary</h3>
+                    <div class="summary-item"><span class="text">Subtotal</span><span class="price">$360</span></div>
+                    <div class="summary-item"><span class="text">Discount</span><span class="price">$0</span></div>
+                    <div class="summary-item"><span class="text">Shipping</span><span class="price">$0</span></div>
+                    <div class="summary-item"><span class="text">Total</span><span class="price">$360</span></div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" OnClick="location.href='pago.html'">Checkout</button>
+                  </div>
+                  -->
+                </div>
+              </div> 
+            </div>
+          </div>
+       </section>
+     </main>
+
+      <!--
+      <footer th:replace="/fragments/footer::footer"></footer>
+      -->
+    </div>
+    <script>
+      window.addEventListener('load',function(){
+        var provincias = document.querySelector("select#Provincias");
+
+        fetch("https://apis.datos.gob.ar/georef/api/provincias")
+        .then(function(response){
+          return response.json();
+        })
+        .then(function(datosProvincias){
+          for(var i=0; i<datosProvincias.provincias.length;i++){
+            provincias.innerHTML = provincias.innerHTML+"<option value='"+datosProvincias.provincias[i].nombre+"'>"+datosProvincias.provincias[i].nombre+"</option>";
+          }
+        })
+        .catch(function(error){
+          console.log(error);
+        });
+
+        //Cuando hace click en el boton registrarme
+        var botonRegistrarme = document.querySelector("button#Registrarme");
+        botonRegistrarme.addEventListener('click',function(){
+
+          //variables para utilizar
+          var nombre = document.querySelector("input.nombre");
+          var apellido = document.querySelector("input.apellido");
+          var email = document.querySelector("input.email");
+          var contraseña = document.querySelector("input.contraseña");
+          var confirmarcontraseña = document.querySelector("input.confirmarcontraseña");
+          var numerodocumento = document.querySelector("input.numerodocumento");
+          var fechanacimiento = document.querySelector("input.fechanacimiento");
+          var telefonocontacto = document.querySelector("input.telefonocontacto");
+          var domicilio = document.querySelector("input.domicilio");
+          var codigopostal = document.querySelector("input.codigopostal");
+          var localidad = document.querySelector("input.localidad");
+
+          var errornombre = document.querySelector("span.errornombre");
+          var errorapellido = document.querySelector("span.errorapellido");
+          var erroremail = document.querySelector("span.erroremail");
+          var errorcontraseña = document.querySelector("span.errorcontraseña");
+          var errorconfirmarcontraseña = document.querySelector("span.errorconfirmarcontraseña");
+          var errornumerodocumento = document.querySelector("span.errornumerodocumento");
+          var errorfechanacimiento = document.querySelector("span.errorfechanacimiento");
+          var errortelefonocontacto =  document.querySelector("span.errortelefonocontacto");
+          var errordomicilio =  document.querySelector("span.errordomicilio");
+          var errorcodigopostal =  document.querySelector("span.errorcodigopostal");
+          var errorlocalidad =  document.querySelector("span.errorlocalidad");
+          var errorprovincias =  document.querySelector("span.errorprovincias");
+
+          //validaciones para cada variable
+          //Nombre
+          var letras = /^[a-zA-Z]+$/;
+          if (nombre.value  == ""){
+            errornombre.innerHTML = "Ingrese su Nombre";
+            errornombre.style.color = "red";
+            nombre.style.border = "solid 1px red";
+          }else if(nombre.value.length < 3 || letras.test(nombre.value) != true){
+            errornombre.innerHTML = "Ingrese un nombre válido";
+            errornombre.style.color = "red";
+            nombre.style.border = "solid 1px red";
+          }else{
+            errornombre.innerHTML = "";
+            nombre.style.border = "solid 1px lightgreen";
+          };
+
+          //Apellido
+          if (apellido.value  == ""){
+            errorapellido.innerHTML = "Ingrese su Apellido";
+            errorapellido.style.color = "red";
+            apellido.style.border = "solid 1px red";
+          }else if(apellido.value.length < 3 || letras.test(nombre.value) != true){
+            errorapellido.innerHTML = "Ingrese un apellido válido";
+            errorapellido.style.color = "red";
+            apellido.style.border = "solid 1px red";
+          }else if(letras.test(apellido.value) != true){
+            errorapellido.innerHTML = "Ingrese un apellido válido";
+            errorapellido.style.color = "red";
+            apellido.style.border = "solid 1px red";
+          }else{
+            errorapellido.innerHTML = "";
+            apellido.style.border = "solid 1px lightgreen";
+          }
+
+          //Email
+          var regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+          if(email.value == ""){
+            erroremail.innerHTML = "Este campo es obligatorio";
+            erroremail.style.color = "red";
+            email.style.border = "solid 1px red";
+          }else if(regexEmail.test(email.value) != true) {
+            erroremail.innerHTML = "No has ingresado un correo electrónico válido";
+            erroremail.style.color = "red";
+            email.style.border = "solid 1px red";
+          }else{
+            erroremail.innerHTML = "";
+            email.style.border = "solid 1px lightgreen";
+          }
+
+          //Contraseña
+          if(contraseña.value == ""){
+            errorcontraseña.innerHTML = "Este campo es obligatorio";
+            errorcontraseña.style.color = "red";
+            contraseña.style.border = "solid 1px red";
+          }else if(contraseña.value.length < 6){
+            errorcontraseña.innerHTML = "La contraseña debe contener un mínimo de 6 carácteres";
+            errorcontraseña.style.color = "red";
+            contraseña.style.border = "solid 1px red";
+          }else{
+            errorcontraseña.innerHTML = "";
+            contraseña.style.border = "solid 1px lightgreen";
+          }
+
+          //Confirmacion Contraseña
+          if(confirmarcontraseña.value == ""){
+            errorconfirmarcontraseña.innerHTML = "Este campo es obligatorio";
+            errorconfirmarcontraseña.style.color = "red";
+            confirmarcontraseña.style.border = "solid 1px red";
+          }else if(confirmarcontraseña.value != contraseña.value){
+            errorconfirmarcontraseña.innerHTML = "Las contraseñas proporcionadas no coinciden";
+            errorconfirmarcontraseña.style.color = "red";
+            confirmarcontraseña.style.border = "solid 1px red";
+          } else {
+            errorconfirmarcontraseña.innerHTML = "";
+            confirmarcontraseña.style.border = "solid 1px lightgreen";
+          }
+
+          //NumeroDocumento
+          var numeros = /^([0-9])*$/
+          if(numerodocumento.value == ""){
+            errornumerodocumento.innerHTML = "Ingrese su numero de documento";
+            errornumerodocumento.style.color = "red";
+            numerodocumento.style.border = "solid 1px red";
+          }else if(numerodocumento.value.length < 8){
+            errornumerodocumento.innerHTML = "El documento debe ser válido";
+            errornumerodocumento.style.color = "red";
+            numerodocumento.style.border = "solid 1px red";
+          }else if(numeros.test(numerodocumento.value) != true) {
+            errornumerodocumento.innerHTML = "El documento debe ser válido";
+            errornumerodocumento.style.color = "red";
+            numerodocumento.style.border = "solid 1px red";
+          } else {
+            errornumerodocumento.innerHTML = "";
+            numerodocumento.style.border = "solid 1px lightgreen";
+          }
+
+          var hoy = new Date();
+          //FechaNacimiento
+          if(fechanacimiento.value == ""){
+            errorfechanacimiento.innerHTML = "Ingrese la fecha de nacimiento";
+            errorfechanacimiento.style.color = "red";
+            fechanacimiento.style.border = "solid 1px red";
+          }else if(fechanacimiento.value.length != 10) {
+            errorfechanacimiento.innerHTML = "La fecha de nacimiento no es valida";
+            errorfechanacimiento.style.color = "red";
+            fechanacimiento.style.border = "solid 1px red";
+          }else if(fechanacimiento.valueAsDate > hoy){
+            errorfechanacimiento.innerHTML = "La fecha de nacimiento es posterior a la permitida";
+            errorfechanacimiento.style.color = "red";
+            fechanacimiento.style.border = "solid 1px red";
+          }else {
+            errorfechanacimiento.innerHTML = "";
+            fechanacimiento.style.border = "solid 1px lightgreen";
+          }
+
+          //Telefono
+          if(telefonocontacto.value == ""){
+            errortelefonocontacto.innerHTML = "Ingrese un telefono de contacto";
+            errortelefonocontacto.style.color = "red";
+            telefonocontacto.style.border = "solid 1px red";
+          }else if(telefonocontacto.value.length <= 6 || numeros.test(telefonocontacto.value) != true) {
+            errortelefonocontacto.innerHTML = "El telefono de contacto debe ser válido";
+            errortelefonocontacto.style.color = "red";
+            telefonocontacto.style.border = "solid 1px red";
+          }else{
+            errortelefonocontacto.innerHTML = "";
+            telefonocontacto.style.border = "solid 1px lightgreen";
+          }
+
+          //Domicilio
+          if(domicilio.value == ""){
+            errordomicilio.innerHTML = "Ingrese el domicilio";
+            errordomicilio.style.color = "red";
+            domicilio.style.border = "solid 1px red";
+          }else if(domicilio.value.length < 4){
+            errordomicilio.innerHTML = "El domicilio debe ser válido";
+            errordomicilio.style.color = "red";
+            domicilio.style.border = "solid 1px red";
+          }else{
+            errordomicilio.innerHTML = "";
+            domicilio.style.border = "solid 1px lightgreen";
+          }
+
+          //CodigoPostal
+          if(codigopostal.value == ""){
+            errorcodigopostal.innerHTML = "Ingrese el Código Postal";
+            errorcodigopostal.style.color = "red";
+            codigopostal.style.border = "solid 1px red";
+          }else if(codigopostal.value.length < 4){
+            errorcodigopostal.innerHTML = "El codigo postal debe ser válido";
+            errorcodigopostal.style.color = "red";
+            codigopostal.style.border = "solid 1px red";
+          }else if(numeros.test(codigopostal.value) != true) {
+            errorcodigopostal.innerHTML = "El código postal debe ser válido";
+            errorcodigopostal.style.color = "red";
+            codigopostal.style.border = "solid 1px red";
+          }else{
+            errorcodigopostal.innerHTML = "";
+            codigopostal.style.border = "solid 1px lightgreen";
+          }
+
+          //localidad
+          if(localidad.value == ""){
+            errorlocalidad.innerHTML = "Ingrese una localidad";
+            errorlocalidad.style.color = "red";
+            localidad.style.border = "solid 1px red";
+          }else if(localidad.value.length < 4){
+            errorlocalidad.innerHTML = "La localidad debe ser válida";
+            errorlocalidad.style.color = "red";
+            localidad.style.border = "solid 1px red";
+          }else{
+            errorlocalidad.innerHTML = "";
+            localidad.style.border = "solid 1px lightgreen";
+          }
+
+          //Provincias
+          if(provincias.value == ""){
+            errorprovincias.innerHTML = "Seleccione una provincia";
+            errorprovincias.style.color = "red";
+            provincias.style.border = "solid 1px red";
+          }else {
+            errorprovincias.innerHTML = "";
+            provincias.style.border = "solid 1px lightgreen";
+          };
+
+        });
+      });
+
+
+    </script>
+  </body>
+</html>
+<!- "no borrar el script! lo necesitamos para el dropdown menu" -!>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

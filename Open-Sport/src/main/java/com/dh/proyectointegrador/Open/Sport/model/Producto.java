@@ -1,11 +1,14 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
@@ -32,6 +35,9 @@ public class Producto {
 	@ManyToOne
 	@JoinColumn(name="categoria_id")
 	private Categoria categoria;
+	
+	@ManyToMany(mappedBy = "listaProductos")
+    private List<Compra> compras;
 	
 	public Producto() {
 		}
@@ -97,6 +103,10 @@ public class Producto {
 
 	public Categoria getCategoria() {
 		return categoria;
+	}
+
+	public List<Compra> getCompras() {
+		return compras;
 	}
 
 	public void setCategoria(Categoria categoria) {
