@@ -30,6 +30,7 @@ public class Compra {
     inverseJoinColumns = @JoinColumn(name = "productos_id"))
 	private List<Producto> listaProductos;
 	
+	
 	private Date fechaDeCompra;
 	private Double totalDeCompra;
 	
@@ -72,6 +73,11 @@ public class Compra {
 	}
 
 	public Double getTotalDeCompra() {
+		Double totalDePrecios = 0.00;
+		for(int i = 0; i < listaProductos.size();i++) {
+			totalDePrecios = totalDePrecios + listaProductos.get(i).getPrecio();
+		};
+
 		return totalDeCompra;
 	}
 
@@ -90,4 +96,6 @@ public class Compra {
 	public List<Producto> verCarrito() {
 		return this.listaProductos;
 	}
+	
+	
 }
