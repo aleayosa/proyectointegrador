@@ -1,13 +1,15 @@
 package com.dh.proyectointegrador.Open.Sport.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 /**
  * POJO USUARIO.
@@ -23,17 +25,41 @@ public class Usuario {
 	@Id	
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Integer ID;
+	
+	@Min(3)
+	@NotBlank(message="El apellido es obligatorio")
+	@Pattern(regexp = "^[a-zA-Z]")
 	private String apellido;
+	
+	@Min(2)
+	@NotBlank(message="El nombre es obligatorio")
+	@Pattern(regexp = "^[a-zA-Z]")
 	private String nombre;
-	@Column(nullable=false)
+	
+	@NotBlank(message="El DNI es obligatorio")
+	@Max(8)
+	@Pattern(regexp= "^[0-9]")
 	private Integer dni;
+	
 	private String fechaDeNacimiento;
+	
+	@NotBlank(message="El email es obligatorio")
+	@Pattern(regexp= "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")
 	private String email;
+	
+	@Min(6)
+	@Max(30)
+	@NotBlank(message="La contraseña es obligatoria. Debe tener mínimo 6 y máximo 30 caracteres.")
 	private String password;
+	
 	private String domicilio;
 	private String localidad;
 	private String provincia;
+	
+	@Pattern(regexp= "^[0-9]")
 	private String telefono;
+	
+	@Pattern(regexp= "^[0-9]")
 	private String codigoPostal;
 	
 	public Usuario(Integer iD, String apellido, String nombre, Integer dni, String fechaDeNacimiento, String email,

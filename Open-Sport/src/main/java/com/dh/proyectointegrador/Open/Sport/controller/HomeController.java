@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -35,18 +34,22 @@ public class HomeController {
 	}
 	
 	@PostMapping("agregar/{productos_id}")
-	public String agregarProductoAlCarrito(@PathVariable("productos_id") Long productos_id, BindingResult bindingResult, RedirectAttributes redirAtt) {
+	public String agregarProductoAlCarrito(@PathVariable("productos_id") Long productos_id,RedirectAttributes redirAtt) {
 		Optional<Producto> unProducto = this.productoJpaRepository.findById(productos_id);
 		Producto producto = unProducto.get();
 		Optional<Compra> unaCompra = this.compraJpaRepository.findById((Integer) 1);
 		Compra compra = unaCompra.get();
 		
 		compra.agregarProductos(producto);
-		if (bindingResult.hasErrors()) {
-			return "/home/home";
-		}
+		
 		this.compraJpaRepository.save(compra);
+		
+		compra.getTotalDeCompra();
+
 		redirAtt.addFlashAttribute("mensaje", "Producto agregado exitosamente");
-		return "redirect:/carrito/ver_carrito";
-	}	
+		
+		return "redirect:/ver_carrito";
+	}
+	
+	
 }
