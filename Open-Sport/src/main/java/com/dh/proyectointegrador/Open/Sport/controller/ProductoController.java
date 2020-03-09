@@ -90,9 +90,9 @@ public class ProductoController {
 		
 		// al hacer click en guardar se ejecuta el POST del formulario de edicion
 		@PostMapping("/editar/{id}")
-		public String actualizarProducto( Producto producto) {
+		public String actualizarProducto( Producto producto, RedirectAttributes redirAtt ) {
 			productoJpaRepository.save(producto);
-			return "productos/listadoProducto";
+			return "redirect:/producto/todos";
 		}
 		
 		@PostMapping("/eliminar")
