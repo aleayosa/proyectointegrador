@@ -14,55 +14,63 @@
       <header th:replace="/fragments/header2::header"></header>
       <main>
         <div class="row container-fluid justify-content-center ">
-          <form id="formRegistro" class="row col-lg-4 col-md-10" action="" method="POST">
+          <form id="formRegistro" class="row col-lg-4 col-md-10" th:action="@{/registro/alta}" th:object="${usuario}" method="POST">
             <h3 class="offset-1 col-10">Registrate</h3>
             <div class="row col-12 datos">
+
               <label class="campos col-12" for="Nombre">Nombre:</label>
-              <input class="nombre completar" type="text" id="Nombre" name="nombre">
+              <input class="nombre completar" type="text" th:field="*{nombre}" id="Nombre">
               <span class="col-8 errornombre"></span>
+              <td th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></td>
 
               <label class="campos col-12" for="Apellido">Apellido:</label>
-              <input class="apellido completar" type="text" id="Apellido" name="apellido">
+              <input class="apellido completar" type="text" id="Apellido" th:field="*{apellido}">
               <span class="col-8 errorapellido"></span>
+              <td th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></td>
 
               <label class="campos col-12" for="Email"> Email: </label>
-              <input class="email completar" type="email" id="Email" name="email">
+              <input class="email completar" type="email" id="Email" th:field="*{email}">
               <span class="col-8 erroremail"></span>
+              <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
 
               <label class="campos col-12" for="Contraseña"> Contraseña: </label>
-              <input class="contraseña completar" type="password" id="Contraseña" name="password" >
+              <input class="contraseña completar" type="password" id="Contraseña" th:field="*{password}" >
               <span class="col-8 errorcontraseña"></span>
+              <td th:if="${#fields.hasErrors('contraseña')}" th:errors="*{contraseña}"></td>
 
               <label class="campos col-12" for="ConfirmarContraseña:"> Confirmar contraseña: </label>
               <input class="confirmarcontraseña completar" type="password" id="ConfirmarContraseña">
               <span class="col-8 errorconfirmarcontraseña"></span>
 
               <label class="campos col-12" for="NumeroDocumento">Número de Documento:</label>
-              <input class="numerodocumento completar" type="text" id="NumeroDocumento" name="dni">
+              <input class="numerodocumento completar" type="text" id="NumeroDocumento" th:field="*{dni}">
               <span class="col-8 errornumerodocumento"></span>
+              <td th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}"></td>
 
               <label class="campos col-12" for="FechaNacimiento"> Fecha de Nacimiento: </label>
-              <input class="fechanacimiento completar" type="date" id="FechaNacimiento" name="fechaDeNacimiento">
+              <input class="fechanacimiento completar" type="date" id="FechaNacimiento" th:field="*{fecha_de_nacimiento}">
               <span class="col-8 errorfechanacimiento"></span>
 
               <label class="campos col-12" for="TelefonoContacto">Telefono de contacto:</label>
-              <input class="telefonocontacto completar" type="text" id="TelefonoContacto" name="telefono" >
+              <input class="telefonocontacto completar" type="text" id="TelefonoContacto" th:field="*{telefono}">
               <span class="col-8 errortelefonocontacto"></span>
+              <td th:if="${#fields.hasErrors('telefono')}" th:errors="*{telefono}"></td>
 
               <label class="campos col-12" for="Domicilio">Domicilio:</label>
-              <input class="domicilio completar" type="text"  id="Domicilio" name="domicilio">
+              <input class="domicilio completar" type="text"  id="Domicilio" th:field="*{domicilio}">
               <span class="col-8 errordomicilio"></span>
 
               <label class="campos col-12" for="CodigoPostal">Codigo Postal:</label>
-              <input class="codigopostal completar" type="text" id="CodigoPostal" name="codigoPostal">
+              <input class="codigopostal completar" type="text" id="CodigoPostal" th:field="*{codigo_postal}">
               <span class="col-8 errorcodigopostal"></span>
+              <td th:if="${#fields.hasErrors('codigoPostal')}" th:errors="*{codigoPostal}"></td>
 
               <label class="campos col-12" for="Localidad">Localidad:</label>
-              <input class="localidad completar" type="text"  id="Localidad" name="localidad">
+              <input class="localidad completar" type="text"  id="Localidad" th:field="*{localidad}">
               <span class="col-8 errorlocalidad"></span>
 
               <label class="campos col-12" for="Provincias">Provincias:</label>
-              <select class="provincias completar" id="Provincias" name="provincia">
+              <select class="provincias completar" id="Provincias" th:field="*{provincia}">
                 <opction value="">Selecciona una provincia</option>
               </select>
               <span class="col-8 errorprovincias"></span>
