@@ -26,7 +26,7 @@ public class UsuarioController {
 	private usuarioJpaRepository usuarioJpaRepository;
 
 	@GetMapping("registro")
-	public String getFormDeRegistro() {
+	public String getFormDeRegistro(Usuario usuario) {
 		return "registro/registro";
 }
 
@@ -65,7 +65,7 @@ public class UsuarioController {
 			totalDeCompra += unUsuario.getTotalDeCompra();
 		} 
 		
-		model.addAttribute("totalDelCompra", totalDeCompra);		
+		model.addAttribute("totalCompra", totalDeCompra);
 		
 		return "/carrito/carrito";
 	}

@@ -17,6 +17,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 import com.sun.istack.NotNull;
 
@@ -35,18 +36,17 @@ public class Usuario {
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Integer ID;
 	
-	@Min(3)
 	@NotEmpty(message="El apellido ES obligatorio")
 	@Pattern(regexp = "^[a-zA-Z]")
 	private String apellido;
 	
-	@Min(2)
+	@Size(min = 2)
 	@NotBlank(message="El nombre es obligatorio")
 	@Pattern(regexp = "^[a-zA-Z]")
 	private String nombre;
 	
 	@NotNull
-	@Max(8)
+//	@Size(max = 8)
 	private Integer dni;
 	
 	private String fechaDeNacimiento;
