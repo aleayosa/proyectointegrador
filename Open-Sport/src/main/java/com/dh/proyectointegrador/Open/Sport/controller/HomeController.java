@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.dh.proyectointegrador.Open.Sport.model.Compra;
 import com.dh.proyectointegrador.Open.Sport.model.Producto;
-import com.dh.proyectointegrador.Open.Sport.repository.compraJpaRepository;
+import com.dh.proyectointegrador.Open.Sport.model.Usuario;
+import com.dh.proyectointegrador.Open.Sport.repository.usuarioJpaRepository;
 import com.dh.proyectointegrador.Open.Sport.repository.productoJpaRepository;
 
 @Controller
@@ -23,7 +23,7 @@ public class HomeController {
 	private productoJpaRepository productoJpaRepository;
 	
 	@Autowired
-	private compraJpaRepository compraJpaRepository;
+	private usuarioJpaRepository usuarioJpaRepository;
 
 	
 	@GetMapping("home")
@@ -37,15 +37,14 @@ public class HomeController {
 	public String agregarProductoAlCarrito(@PathVariable("productos_id") Long productos_id,RedirectAttributes redirAtt) {
 		Optional<Producto> unProducto = this.productoJpaRepository.findById(productos_id);
 		Producto producto = unProducto.get();
-		Optional<Compra> unaCompra = this.compraJpaRepository.findById((Integer) 1);
-		Compra compra = unaCompra.get();
 		
-		compra.agregarProductos(producto);
+		Optional<Usuario> usuario = this.usuarioJpaRepository.findById((Integer) 1);
+		Usuario unUsuario = usuario.get();
 		
-		this.compraJpaRepository.save(compra);
+		unUsuario.agregarProductos(producto);
 		
-		compra.getTotalDeCompra();
-
+		this.usuarioJpaRepository.save(unUsuario);
+		
 		redirAtt.addFlashAttribute("mensaje", "Producto agregado exitosamente");
 		
 		return "redirect:/ver_carrito";

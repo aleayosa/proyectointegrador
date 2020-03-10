@@ -19,25 +19,25 @@ import javax.validation.constraints.NotBlank;
 public class Producto {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
-	private Long id;
+	protected Long id;
 	@NotBlank(message ="Este campo no puede quedar vacío")
 	@Column(nullable=false)
-	private String nombre;
+	protected String nombre;
 	
 	@ManyToOne
 	@JoinColumn(name="marca_id")
-	private Marca marca;
+	protected Marca marca;
 	
-	private String descripcion;
-	private Double precio;
-	private String imagen;
+	protected String descripcion;
+	protected Double precio;
+	protected String imagen;
 	
 	@ManyToOne
 	@JoinColumn(name="categoria_id")
-	private Categoria categoria;
+	protected Categoria categoria;
 	
 	@ManyToMany(mappedBy = "listaProductos")
-    private List<Compra> compras;
+    protected List<Usuario> usuario;
 	
 	public Producto() {
 		}
@@ -105,8 +105,8 @@ public class Producto {
 		return categoria;
 	}
 
-	public List<Compra> getCompras() {
-		return compras;
+	public List<Usuario> getCompras() {
+		return usuario;
 	}
 
 	public void setCategoria(Categoria categoria) {
