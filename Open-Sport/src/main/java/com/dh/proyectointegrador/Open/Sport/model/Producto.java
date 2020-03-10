@@ -20,7 +20,7 @@ public class Producto {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Long id;
-	@NotBlank(message ="Este campo no puede quedar vacío")
+	@NotBlank(message ="Debes ingresar un nombre para el producto")
 	@Column(nullable=false)
 	private String nombre;
 	
@@ -42,7 +42,7 @@ public class Producto {
 	public Producto() {
 		}
 
-	public Producto(Long id, @NotBlank(message = "Este campo no puede quedar vacío") String nombre, Marca marca,
+	public Producto(Long id, @NotBlank(message = "Debes ingresar un nombre para el producto") String nombre, Marca marca,
 			String descripcion, Double precio, String imagen, Categoria categoria) {
 		this.id = id;
 		this.nombre = nombre;

@@ -21,9 +21,9 @@
    	<form th:action="@{/producto/alta}" th:object="${producto}" method="POST">
    		<div class="row col-9 datos">
    			<div class="row col-12">
-              <label class="campos col-md-4" for="inputNombre">Nombre del Producto:</label>
-              <input class="nombre completar col-md-6" type="text" id="inputNombre" th:field="*{nombre}" placeholder="Ingrese el nombre del producto"/>
-              <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+              <label class="campos col-4" for="inputNombre">Nombre del Producto:</label>
+              <input class="nombre completar col-6" type="text" id="inputNombre" th:field="*{nombre}" placeholder="Ingrese el nombre del producto"/>
+              <span class="nombre completar col-6 offset-6" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
 	       </div>
 	       <div class="row col-12">
 	    	  <label class="campos col-md-4" for="inputMarca">Marca:</label>
