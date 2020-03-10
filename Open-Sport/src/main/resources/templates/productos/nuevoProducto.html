@@ -19,12 +19,15 @@
   	<h3> Ingrese los datos del producto a dar de alta </h3>
 
    	<form th:action="@{/producto/alta}" th:object="${producto}" method="POST">
+   		
    		<div class="row col-9 datos">
+   			
    			<div class="row col-12">
               <label class="campos col-4" for="inputNombre">Nombre del Producto:</label>
               <input class="nombre completar col-6" type="text" id="inputNombre" th:field="*{nombre}" placeholder="Ingrese el nombre del producto"/>
-              <span class="nombre completar col-6 offset-6" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+              <small class="nombre completar col-6 offset-6" th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></small>
 	       </div>
+	     
 	       <div class="row col-12">
 	    	  <label class="campos col-md-4" for="inputMarca">Marca:</label>
               <select class="marcas completar col-md-6 " name="marca" id="marca">
@@ -51,6 +54,7 @@
               <label class="campos col-md-4" for="inputImagen">Imagen:</label>
               <input class="imagen completar col-md-6 form-control-file" type="file" id="inputImagen" name="imagen">
 	       </div>
+	       
 	       <div class="row col-12">
 		      <div class="row col-5 Botones justify-content-center" id="botones">
               	<button type="submit" class="col-5 btn btn-dark">Enviar</button>

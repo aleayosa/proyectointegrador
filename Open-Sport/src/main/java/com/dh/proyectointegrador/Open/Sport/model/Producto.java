@@ -20,8 +20,8 @@ public class Producto {
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	protected Long id;
+	
 	@NotBlank(message ="Debes ingresar un nombre para el producto")
-
 	@Column(nullable=false)
 	protected String nombre;
 	

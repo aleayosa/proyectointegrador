@@ -41,7 +41,7 @@ public class HomeController {
 		Optional<Usuario> usuario = this.usuarioJpaRepository.findById((Integer) 1);
 		Usuario unUsuario = usuario.get();
 		
-		unUsuario.agregarProductos(producto);
+//		unUsuario.agregarProductos(producto);
 		
 		this.usuarioJpaRepository.save(unUsuario);
 		

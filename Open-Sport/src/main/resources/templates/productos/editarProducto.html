@@ -16,7 +16,7 @@
             
             <div class="form-group">
                 <label for="nombre">Nombre del producto</label>
-                <input autocomplete="off" autofocus th:field="*{nombre}" id="nombre"
+                <input autocomplete="off" th:field="*{nombre}" id="nombre"
                        placeholder="Escribe el nombre del producto" type="text"
                        class="form-control" th:classappend="${#fields.hasErrors('nombre')} ? 'is-invalid' : ''">
                 <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>

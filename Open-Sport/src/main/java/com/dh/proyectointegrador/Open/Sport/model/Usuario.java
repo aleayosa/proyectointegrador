@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +17,10 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import com.sun.istack.NotNull;
+
 
 /**
  * POJO USUARIO.
@@ -31,41 +33,23 @@ import com.sun.istack.NotNull;
 @Table(name="usuarios")
 public class Usuario {
 	
-	@Id	
+	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
-	private Integer ID;
+	private Integer id;
 	
-	@Min(3)
-	@NotEmpty(message="El apellido ES obligatorio")
-	@Pattern(regexp = "^[a-zA-Z]")
-	private String apellido;
-	
-	@Min(2)
-	@NotBlank(message="El nombre es obligatorio")
-	@Pattern(regexp = "^[a-zA-Z]")
 	private String nombre;
-	
-	@NotNull
-	@Max(8)
-	private Integer dni;
-	
+	private String apellido;
+	private String dni;
 	private String fechaDeNacimiento;
-	
-	@NotBlank(message="El email es obligatorio")
-	@Pattern(regexp= "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")
 	private String email;
-	
-	@Min(6)
-	@Max(30)
-	@NotBlank(message="La contraseña es obligatoria. Debe tener mínimo 6 y máximo 30 caracteres.")
 	private String password;
-	
+	private String telefono;
 	private String domicilio;
 	private String localidad;
+	private Integer codigoPostal;
 	private String provincia;
-	private String telefono;
-	private String codigoPostal;
 	
+		
 	@ManyToMany(cascade = CascadeType.ALL)
 	@JoinTable(name = "usuario_productos",
     joinColumns = @JoinColumn(name = "usuario_id"),
@@ -73,103 +57,131 @@ public class Usuario {
 	private List<Producto> listaProductos;
 		
 	public Usuario() {
-		
 	}
-	
-	
-	
-	public Usuario(Integer iD, @NotEmpty(message = "El apellido ES obligatorio") String apellido, String nombre,
-			Integer dni, String fechaDeNacimiento, String email, String password, String domicilio, String localidad,
-			String provincia, String telefono, String codigoPostal) {
-		ID = iD;
-		this.apellido = apellido;
+
+	public Usuario(Integer id, String nombre, String apellido, String dni, String fechaDeNacimiento, String email,
+			String password, String telefono, String domicilio, String localidad, Integer codigoPostal,
+			String provincia, List<Producto> listaProductos) {
+		super();
+		this.id = id;
 		this.nombre = nombre;
+		this.apellido = apellido;
 		this.dni = dni;
 		this.fechaDeNacimiento = fechaDeNacimiento;
 		this.email = email;
 		this.password = password;
+		this.telefono = telefono;
 		this.domicilio = domicilio;
 		this.localidad = localidad;
-		this.provincia = provincia;
-		this.telefono = telefono;
 		this.codigoPostal = codigoPostal;
+		this.provincia = provincia;
+		this.listaProductos = listaProductos;
 	}
 
+	public Integer getId() {
+		return id;
+	}
 
+	public void setId(Integer id) {
+		this.id = id;
+	}
 
-	public Integer getID() {
-		return ID;
-	}
-	public void setID(Integer iD) {
-		ID = iD;
-	}
-	public String getApellido() {
-		return apellido;
-	}
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
 	public String getNombre() {
 		return nombre;
 	}
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public Integer getDni() {
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getDni() {
 		return dni;
 	}
-	public void setDni(Integer dni) {
+
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
+
 	public String getFechaDeNacimiento() {
 		return fechaDeNacimiento;
 	}
+
 	public void setFechaDeNacimiento(String fechaDeNacimiento) {
 		this.fechaDeNacimiento = fechaDeNacimiento;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getDomicilio() {
-		return domicilio;
-	}
-	public void setDomicilio(String domicilio) {
-		this.domicilio = domicilio;
-	}
-	public String getLocalidad() {
-		return localidad;
-	}
-	public void setLocalidad(String localidad) {
-		this.localidad = localidad;
-	}
-	public String getProvincia() {
-		return provincia;
-	}
-	public void setProvincia(String provincia) {
-		this.provincia = provincia;
-	}
+
 	public String getTelefono() {
 		return telefono;
 	}
+
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
-	public String getCodigoPostal() {
+
+	public String getDomicilio() {
+		return domicilio;
+	}
+
+	public void setDomicilio(String domicilio) {
+		this.domicilio = domicilio;
+	}
+
+	public String getLocalidad() {
+		return localidad;
+	}
+
+	public void setLocalidad(String localidad) {
+		this.localidad = localidad;
+	}
+
+	public Integer getCodigoPostal() {
 		return codigoPostal;
 	}
-	public void setCodigoPostal(String codigoPostal) {
+
+	public void setCodigoPostal(Integer codigoPostal) {
 		this.codigoPostal = codigoPostal;
-	} 
-	
+	}
+
+	public String getProvincia() {
+		return provincia;
+	}
+
+	public void setProvincia(String provincia) {
+		this.provincia = provincia;
+	}
+
+	public List<Producto> getListaProductos() {
+		return listaProductos;
+	}
+
+	public void setListaProductos(List<Producto> listaProductos) {
+		this.listaProductos = listaProductos;
+	}
+
 	public void agregarProductos(Producto producto) {
 		if(this.listaProductos == null) {
 			this.listaProductos = new ArrayList<>();
@@ -190,5 +202,4 @@ public class Usuario {
 
 		return totalDePrecios;
 	}
-	
 }

@@ -90,8 +90,13 @@ public class ProductoController {
 		
 		// al hacer click en guardar se ejecuta el POST del formulario de edicion
 		@PostMapping("/editar/{id}")
-		public String actualizarProducto( Producto producto, RedirectAttributes redirAtt ) {
+		public String actualizarProducto( @Valid Producto producto, BindingResult bindingResult, RedirectAttributes redirAtt ) {
+			
+			if (bindingResult.hasErrors()) {
+				return "/productos/nuevoProducto";
+			}
 			productoJpaRepository.save(producto);
+			redirAtt.addFlashAttribute("mensaje", "Producto guardado exitosamente");
 			return "redirect:/producto/todos";
 		}
 		
