@@ -67,6 +67,8 @@ public class UsuarioController {
 		
 		model.addAttribute("totalCompra", totalDeCompra);
 		
+		model.addAttribute("cantidadProductos", listaDeProductosDelCarrito.size());
+		
 		return "/carrito/carrito";
 	}
 		

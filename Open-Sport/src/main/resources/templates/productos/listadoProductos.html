@@ -42,12 +42,11 @@
         	<td th:text="${producto.imagen}"></td>
         	<td th:text="${(producto.categoria != null ? producto.categoria.nombre : 'No tiene')}"></td>
         	<td ><button type="send" id="Registrarme" class="col-6 btn"><a th:href="@{/producto/editar/} + ${producto.id}">Editar</a></button></td>
-        	<td ><form th:action="@{/producto/eliminar}" method="post">
-                            <input type="hidden" name="id" th:value="${producto.id}"/>
-                            <button type="submit" class="btn btn-danger">Eliminar <i class="fa fa-trash"></i>
-                            </button>
-                        </form>
-                        </td >
+        	
+        	<td><form th:action="@{/producto/eliminar}" method="post">
+                     <input type="hidden" name="id" th:value="${producto.id}"/>
+                     <button type="submit" class="btn btn-danger">Eliminar <i class="fa fa-trash"></i></button>
+                 </form></td>
        </tr>
      </tbody>
 	</table>

@@ -12,11 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import com.sun.istack.NotNull;
@@ -36,23 +33,20 @@ public class Usuario {
 	@GeneratedValue (strategy = GenerationType.AUTO)
 	private Integer ID;
 	
-	@NotEmpty(message="El apellido ES obligatorio")
-	@Pattern(regexp = "^[a-zA-Z]", message="Debe ser un apellido válido")
+	@NotEmpty(message="El apellido es obligatorio")
 	private String apellido;
 	
 	@Size(min = 2, message="Debe ser un nombre válido")
 	@NotBlank(message="El nombre es obligatorio")
-	@Pattern(regexp = "^[a-zA-Z]",message="Debe ser un nombre válido")
 	private String nombre;
 	
 	@NotNull
-//	@Size(max = 8)
+
 	private Integer dni;
 	
 	private String fechaDeNacimiento;
 	
 	@NotBlank(message="El email es obligatorio")
-	@Pattern(regexp= "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$", message="Debe ser un email válido")
 	private String email;
 	
 	@Size(min = 6, max = 30, message="Debe tener mínimo 6 y máximo 30 caracteres.")
