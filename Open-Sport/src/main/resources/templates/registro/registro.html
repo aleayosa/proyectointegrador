@@ -19,25 +19,22 @@
             <div class="row col-12 datos">
 
               <label class="campos col-12" for="Nombre">Nombre:</label>
-              <input class="nombre completar" type="text" id="Nombre" name="nombre" >
-              <span class="col-8 errornombre" ></span>
-              
-
+              <input class="nombre completar" type="text" id="Nombre" >
+              <span class="col-8 errornombre"></span>
+              <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+         
               <label class="campos col-12" for="Apellido">Apellido:</label>
               <input class="apellido completar" type="text" id="Apellido" name="apellido">
               <span class="col-8 errorapellido"></span>
-              
 
               <label class="campos col-12" for="Email"> Email: </label>
-              <input class="email completar" type="email" id="Email" name="email">
+              <input class="email completar" type="text" id="Email" name="email">
               <span class="col-8 erroremail"></span>
-              
 
               <label class="campos col-12" for="Contraseña"> Contraseña: </label>
               <input class="contraseña completar" type="password" id="Contraseña" name="password">
               <span class="col-8 errorcontraseña"></span>
               
-
               <label class="campos col-12" for="ConfirmarContraseña:"> Confirmar contraseña: </label>
               <input class="confirmarcontraseña completar" type="password" id="ConfirmarContraseña">
               <span class="col-8 errorconfirmarcontraseña"></span>
@@ -86,6 +83,8 @@
       </main>
       <footer th:replace="/fragments/footer::footer"></footer>
     </div>
+    
+    
     <script>
       window.addEventListener('load',function(){
         var provincias = document.querySelector("select#Provincias");

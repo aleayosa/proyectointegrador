@@ -24,23 +24,23 @@ import com.dh.proyectointegrador.Open.Sport.model.Usuario;
 public class UsuarioController {
 	@Autowired
 	private usuarioJpaRepository usuarioJpaRepository;
-	
+
 	@GetMapping("registro")
 	public String getFormDeRegistro() {
 		return "registro/registro";
 }
-	
+
 	@PostMapping("alta")
 	public String registrarUsuarios(@Valid Usuario usuario, BindingResult bindingResult, RedirectAttributes redirAtt ) {
-		
+
 		if (bindingResult.hasErrors()) {
 			return "/registro/registro";
 		}
-		
+
 		usuarioJpaRepository.save(usuario);
-		
+
 		redirAtt.addFlashAttribute("mensaje", "Usuario guardado exitosamente");
-		
+
 		return "redirect:/home";
 	}
 	

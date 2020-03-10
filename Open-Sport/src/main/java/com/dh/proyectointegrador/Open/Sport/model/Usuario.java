@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
 import com.sun.istack.NotNull;
@@ -35,7 +36,7 @@ public class Usuario {
 	private Integer ID;
 	
 	@Min(3)
-	@NotBlank(message="El apellido es obligatorio")
+	@NotEmpty(message="El apellido ES obligatorio")
 	@Pattern(regexp = "^[a-zA-Z]")
 	private String apellido;
 	
@@ -70,17 +71,16 @@ public class Usuario {
     joinColumns = @JoinColumn(name = "usuario_id"),
     inverseJoinColumns = @JoinColumn(name = "productos_id"))
 	private List<Producto> listaProductos;
-	
+		
 	public Usuario() {
 		
 	}
-	public Usuario(Integer iD,
-			@Min(3) @NotBlank(message = "El apellido es obligatorio") @Pattern(regexp = "^[a-zA-Z]") String apellido,
-			@Min(2) @NotBlank(message = "El nombre es obligatorio") @Pattern(regexp = "^[a-zA-Z]") String nombre,
-			@Max(8) Integer dni, String fechaDeNacimiento,
-			@NotBlank(message = "El email es obligatorio") @Pattern(regexp = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$") String email,
-			@Min(6) @Max(30) @NotBlank(message = "La contraseña es obligatoria. Debe tener mínimo 6 y máximo 30 caracteres.") String password,
-			String domicilio, String localidad, String provincia, String telefono, String codigoPostal) {
+	
+	
+	
+	public Usuario(Integer iD, @NotEmpty(message = "El apellido ES obligatorio") String apellido, String nombre,
+			Integer dni, String fechaDeNacimiento, String email, String password, String domicilio, String localidad,
+			String provincia, String telefono, String codigoPostal) {
 		ID = iD;
 		this.apellido = apellido;
 		this.nombre = nombre;
@@ -94,6 +94,9 @@ public class Usuario {
 		this.telefono = telefono;
 		this.codigoPostal = codigoPostal;
 	}
+
+
+
 	public Integer getID() {
 		return ID;
 	}
