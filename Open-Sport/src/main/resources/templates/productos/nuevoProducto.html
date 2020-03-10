@@ -37,7 +37,8 @@
 	       </div>
 	       <div class="row col-12">
 	    	  <label class="campos col-md-4" for="inputPrecio">Precio del Producto:</label>
-              <input class="precio completar col-md-6 " type="number" id="inputPrecio" placeholder="Ingrese el valor en $" name="precio"/>
+              <input class="precio completar col-md-6 " type="text" id="inputPrecio" placeholder="Ingrese el valor en $" name="precio"/>
+              <small class="nombre completar col-6 offset-6" th:if="${#fields.hasErrors('precio')}" th:errors="*{precio}"></small>
            </div>
 	       <div class="row col-12">
               <label class="campo col-md-4" for="inputCategoria">Género:</label>
@@ -48,11 +49,13 @@
            </div>
 	       <div class="row col-12">
               <label class="campos col-md-4" for="inputDescripcion">Descripción del Producto:</label>
-              <input class="descripcion completar col-md-6" type="text" id="inputDescipcion" name="descripcion" placeholder="Ingrese una breve descripción del producto"/>
+              <input class="descripcion completar col-md-6" type="textArea" id="inputDescipcion" name="descripcion" placeholder="Ingrese una breve descripción del producto"/>
+              <small class="nombre completar col-6 offset-6" th:if="${#fields.hasErrors('descripcion')}" th:errors="*{descripcion}"></small>
            </div>
 	       <div class="row col-12">
               <label class="campos col-md-4" for="inputImagen">Imagen:</label>
               <input class="imagen completar col-md-6 form-control-file" type="file" id="inputImagen" name="imagen">
+              <small class="nombre completar col-6 offset-6" th:if="${#fields.hasErrors('imagen')}" th:errors="*{imagen}"></small>
 	       </div>
 	       
 	       <div class="row col-12">

@@ -12,6 +12,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 @Entity
@@ -29,8 +32,13 @@ public class Producto {
 	@JoinColumn(name="marca_id")
 	protected Marca marca;
 	
+	@Size(min=10, message="Esperábamos una descripción mas completa... ")
 	protected String descripcion;
+	
+	@NotNull(message ="El precio es un campo obligatorio")
 	protected Double precio;
+	
+	@NotBlank(message ="Necesitamos que cargues una imagen")
 	protected String imagen;
 	
 	@ManyToOne
@@ -43,8 +51,15 @@ public class Producto {
 	public Producto() {
 		}
 
-	public Producto(Long id, @NotBlank(message = "Debes ingresar un nombre para el producto") String nombre, Marca marca,
-			String descripcion, Double precio, String imagen, Categoria categoria) {
+	
+
+	public Producto(Long id, @NotBlank(message = "Debes ingresar un nombre para el producto") String nombre, 
+			Marca marca,
+			@Size(min=10, message="Esperábamos una descripción mas completa... ") String descripcion,
+			@NotNull(message = "El precio es un campo obligatorio") Double precio,
+			@NotBlank(message = "Necesitamos que cargues una imagen") String imagen,
+			Categoria categoria) {
+		
 		this.id = id;
 		this.nombre = nombre;
 		this.marca = marca;
@@ -53,6 +68,8 @@ public class Producto {
 		this.imagen = imagen;
 		this.categoria = categoria;
 	}
+
+
 
 	public Long getId() {
 		return id;
