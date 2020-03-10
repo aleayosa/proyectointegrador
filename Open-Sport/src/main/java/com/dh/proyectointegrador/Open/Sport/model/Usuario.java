@@ -37,12 +37,12 @@ public class Usuario {
 	private Integer ID;
 	
 	@NotEmpty(message="El apellido ES obligatorio")
-	@Pattern(regexp = "^[a-zA-Z]")
+	@Pattern(regexp = "^[a-zA-Z]", message="Debe ser un apellido válido")
 	private String apellido;
 	
-	@Size(min = 2)
+	@Size(min = 2, message="Debe ser un nombre válido")
 	@NotBlank(message="El nombre es obligatorio")
-	@Pattern(regexp = "^[a-zA-Z]")
+	@Pattern(regexp = "^[a-zA-Z]",message="Debe ser un nombre válido")
 	private String nombre;
 	
 	@NotNull
@@ -52,12 +52,11 @@ public class Usuario {
 	private String fechaDeNacimiento;
 	
 	@NotBlank(message="El email es obligatorio")
-	@Pattern(regexp= "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")
+	@Pattern(regexp= "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$", message="Debe ser un email válido")
 	private String email;
 	
-	@Min(6)
-	@Max(30)
-	@NotBlank(message="La contraseña es obligatoria. Debe tener mínimo 6 y máximo 30 caracteres.")
+	@Size(min = 6, max = 30, message="Debe tener mínimo 6 y máximo 30 caracteres.")
+	@NotBlank(message="La contraseña es obligatoria. ")
 	private String password;
 	
 	private String domicilio;

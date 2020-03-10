@@ -25,18 +25,21 @@
 			
 
               <label class="campos col-12" for="Apellido">Apellido:</label>
-              <input class="apellido completar" type="text" id="Apellido" name="apellido">
+              <input class="apellido completar" type="text" id="Apellido" th:field="*{apellido}">
               <span class="col-8 errorapellido"></span>
+              <span th:if="${#fields.hasErrors('apellido')}" th:errors="*{apellido}"></span>
 
 
               <label class="campos col-12" for="Email"> Email: </label>
-              <input class="email completar" type="email" id="Email" name="email">
+              <input class="email completar" type="email" id="Email" th:field="*{email}">
               <span class="col-8 erroremail"></span>
+              <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
 
 
               <label class="campos col-12" for="Contraseña"> Contraseña: </label>
-              <input class="contraseña completar" type="password" id="Contraseña" name="password">
+              <input class="contraseña completar" type="password" id="Contraseña" th:field="*{password}">
               <span class="col-8 errorcontraseña"></span>
+              <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></span>
 
 
               <label class="campos col-12" for="ConfirmarContraseña:"> Confirmar contraseña: </label>
@@ -44,13 +47,15 @@
               <span class="col-8 errorconfirmarcontraseña"></span>
 
               <label class="campos col-12" for="NumeroDocumento">Número de Documento:</label>
-              <input class="numerodocumento completar" type="text" id="NumeroDocumento" name="dni">
+              <input class="numerodocumento completar" type="text" id="NumeroDocumento" th:field="*{dni}">
               <span class="col-8 errornumerodocumento"></span>
+              <span th:if="${#fields.hasErrors('dni')}" th:errors="*{dni}"></span>
 
 
               <label class="campos col-12" for="FechaNacimiento"> Fecha de Nacimiento: </label>
               <input class="fechanacimiento completar" type="date" id="FechaNacimiento" name="fecha_de_nacimiento">
               <span class="col-8 errorfechanacimiento"></span>
+              
 
               <label class="campos col-12" for="TelefonoContacto">Telefono de contacto:</label>
               <input class="telefonocontacto completar" type="text" id="TelefonoContacto" name="telefono">
