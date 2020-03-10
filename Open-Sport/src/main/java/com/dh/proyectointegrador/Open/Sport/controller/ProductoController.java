@@ -78,7 +78,11 @@ public class ProductoController {
 		
 		// al hacer click en editar (vinculo) en el listado de productos ejecuta el getById para el formulario de edicion
 		@GetMapping("/editar/{id}")
-		public String mostrarFormularioEditar(@PathVariable long id, Model model) {
+		public String mostrarFormularioEditar(@PathVariable long id, Producto producto, Model model) {
+			List<Categoria> listaDeCategorias = categoriaJpaRepository.findAll();
+			model.addAttribute("listaDeCategorias", listaDeCategorias);
+			List<Marca> listaDeMarcas = marcaJpaRepository.findAll();
+			model.addAttribute("listaDeMarcas", listaDeMarcas);
 		    model.addAttribute("producto", productoJpaRepository.findById(id).orElse(null));
 		    return "productos/editarProducto";
 		}
@@ -86,9 +90,9 @@ public class ProductoController {
 		
 		// al hacer click en guardar se ejecuta el POST del formulario de edicion
 		@PostMapping("/editar/{id}")
-		public String actualizarProducto( Producto producto) {
+		public String actualizarProducto( Producto producto, RedirectAttributes redirAtt ) {
 			productoJpaRepository.save(producto);
-			return "productos/listadoProducto";
+			return "redirect:/producto/todos";
 		}
 		
 		@PostMapping("/eliminar")
