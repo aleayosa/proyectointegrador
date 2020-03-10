@@ -4,44 +4,21 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
-@Entity
-@Table(name="compra")
 public class Compra {
-	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Integer nroFactura;
-	@ManyToOne
 	private Usuario cliente;
-	
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "compra_productos",
-    joinColumns = @JoinColumn(name = "compra_nro_factura"),
-    inverseJoinColumns = @JoinColumn(name = "productos_id"))
-	private List<Producto> listaProductos;
-	
-	
+  	private List<Producto> listadoProductos;
 	private Date fechaDeCompra;
 	private Double totalDeCompra;
 	
 	public Compra() {
-		this.listaProductos = new ArrayList<Producto>();
+		this.listadoProductos = new ArrayList<Producto>();
 	}
 	public Compra(Integer nroFactura, Usuario cliente, List<Producto> productos, Date fechaDeCompra,
 			Double totalDeCompra) {
 		this.nroFactura = nroFactura;
 		this.cliente = cliente;
-		this.listaProductos = productos;
+		this.listadoProductos = productos;
 		this.fechaDeCompra = fechaDeCompra;
 		this.totalDeCompra = totalDeCompra;
 	}
@@ -74,8 +51,8 @@ public class Compra {
 
 	public Double getTotalDeCompra() {
 		Double totalDePrecios = 0.00;
-		for(int i = 0; i < listaProductos.size();i++) {
-			totalDePrecios = totalDePrecios + listaProductos.get(i).getPrecio();
+		for(int i = 0; i < listadoProductos.size();i++) {
+			totalDePrecios = totalDePrecios + listadoProductos.get(i).getPrecio();
 		};
 
 		return totalDeCompra;
@@ -86,15 +63,15 @@ public class Compra {
 	}
 	
 	public void agregarProductos(Producto producto) {
-		if(this.listaProductos == null) {
-			this.listaProductos = new ArrayList<>();
+		if(this.listadoProductos == null) {
+			this.listadoProductos = new ArrayList<>();
 		}
-		this.listaProductos.add(producto);
+		this.listadoProductos.add(producto);
 	}
 	
 
 	public List<Producto> verCarrito() {
-		return this.listaProductos;
+		return this.listadoProductos;
 	}
 	
 	
