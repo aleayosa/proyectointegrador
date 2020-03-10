@@ -19,22 +19,25 @@
             <div class="row col-12 datos">
 
               <label class="campos col-12" for="Nombre">Nombre:</label>
-              <input class="nombre completar" type="text" id="Nombre" >
-              <span class="col-8 errornombre"></span>
-              <span th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
-         
+              <input class="nombre completar" type="text" id="Nombre" name="nombre" >
+              <span class="col-8 errornombre" ></span>
+
+
               <label class="campos col-12" for="Apellido">Apellido:</label>
               <input class="apellido completar" type="text" id="Apellido" name="apellido">
               <span class="col-8 errorapellido"></span>
 
+
               <label class="campos col-12" for="Email"> Email: </label>
-              <input class="email completar" type="text" id="Email" name="email">
+              <input class="email completar" type="email" id="Email" name="email">
               <span class="col-8 erroremail"></span>
+
 
               <label class="campos col-12" for="Contraseña"> Contraseña: </label>
               <input class="contraseña completar" type="password" id="Contraseña" name="password">
               <span class="col-8 errorcontraseña"></span>
-              
+
+
               <label class="campos col-12" for="ConfirmarContraseña:"> Confirmar contraseña: </label>
               <input class="confirmarcontraseña completar" type="password" id="ConfirmarContraseña">
               <span class="col-8 errorconfirmarcontraseña"></span>
@@ -42,7 +45,7 @@
               <label class="campos col-12" for="NumeroDocumento">Número de Documento:</label>
               <input class="numerodocumento completar" type="text" id="NumeroDocumento" name="dni">
               <span class="col-8 errornumerodocumento"></span>
-              
+
 
               <label class="campos col-12" for="FechaNacimiento"> Fecha de Nacimiento: </label>
               <input class="fechanacimiento completar" type="date" id="FechaNacimiento" name="fecha_de_nacimiento">
@@ -51,7 +54,7 @@
               <label class="campos col-12" for="TelefonoContacto">Telefono de contacto:</label>
               <input class="telefonocontacto completar" type="text" id="TelefonoContacto" name="telefono">
               <span class="col-8 errortelefonocontacto"></span>
-              
+
 
               <label class="campos col-12" for="Domicilio">Domicilio:</label>
               <input class="domicilio completar" type="text"  id="Domicilio" name="domicilio">
@@ -60,7 +63,7 @@
               <label class="campos col-12" for="CodigoPostal">Codigo Postal:</label>
               <input class="codigopostal completar" type="text" id="CodigoPostal" name="codigo_postal">
               <span class="col-8 errorcodigopostal"></span>
-              
+
 
               <label class="campos col-12" for="Localidad">Localidad:</label>
               <input class="localidad completar" type="text"  id="Localidad" name="localidad">
@@ -72,19 +75,17 @@
               </select>
               <span class="col-8 errorprovincias"></span>
             </div>
-       
+
             <div class="row col-12 Botones justify-content-center" id="botones">
               <button type="submit" value="Registrar" id="Registrarme" class="col-5 btn btn-dark">Registrar</button>
               <button type="reset" value="Borrar todo" id="borrar"  class="col-5 btn btn-light">Borrar</button>
             </div>
-       
+
           </form>
         </div>
       </main>
       <footer th:replace="/fragments/footer::footer"></footer>
     </div>
-    
-    
     <script>
       window.addEventListener('load',function(){
         var provincias = document.querySelector("select#Provincias");
@@ -105,7 +106,7 @@
         //Cuando hace click en el boton registrarme
         var botonRegistrarme = document.querySelector("form#formRegistro");
         botonRegistrarme.onSubmit=function(evt){
-						
+
           //variables para utilizar
           var nombre = document.querySelector("input.nombre");
           var apellido = document.querySelector("input.apellido");
@@ -339,7 +340,7 @@
             errorprovincias.style.color = "red";
             provincias.style.border = "solid 1px red";
             evt.preventDefault();
-          } 
+          }
           else {
             errorprovincias.innerHTML = "";
             provincias.style.border = "solid 1px lightgreen";
